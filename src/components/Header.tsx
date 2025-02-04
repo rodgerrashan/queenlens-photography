@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-gray-100 text-gray-900 p-4">
+    <header className="bg-slate-50 text-gray-900 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">QueenLens</div>
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Desktop CTA Button */}
-        <button className="hidden md:block bg-gray-900 text-gray-100 px-4 py-1 rounded hover:bg-blue-950">
+        <button className="hidden md:block bg-gray-900 text-slate-50 px-4 py-1 rounded hover:bg-blue-950">
           Let&apos;s Talk
         </button>
 
@@ -56,7 +56,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 md:hidden">
+        <div className="fixed inset-0 bg-slate-50 z-50 md:hidden">
           <div className="flex flex-col items-center justify-center h-full space-y-6">
             {navLinks.map((link) => (
               <a
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
             ))}
             <button 
               onClick={toggleMenu}
-              className="bg-gray-900 text-gray-100 px-6 py-2 rounded hover:bg-blue-950"
+              className="bg-gray-900 text-slate-50 px-6 py-2 rounded hover:bg-blue-950"
             >
               Let&apos;s Talk
             </button>

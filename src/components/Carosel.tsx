@@ -32,10 +32,10 @@ export default function Carousel() {
           <motion.div
             key={slides[currentIndex].src}
             className="absolute w-full h-full"
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 0 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.8 }}
+            exit={{ opacity: 0, x: 0 }}
+            transition={{ duration: 1,  }}
           >
             <Image
             src={slides[currentIndex].src}
@@ -45,9 +45,9 @@ export default function Carousel() {
                 className="w-full h-full object-cover"
             />
             
-            <div className={`${cinzelFont.className} absolute bottom-0 left-0 bg-gradient-to-t from-white/90  via-white/30  to-transparent text-black p-4 sm:p-6 w-full`}>
-              <h2 className="text-xl sm:text-5xl md:text-8xl font-semibold max-w-5xl ps-2">{slides[currentIndex].title}</h2>
-              <p className="text-sm sm:text-lg md:text-2xl max-w-5xl ps-2">{slides[currentIndex].description}</p>
+            <div className={`${cinzelFont.className} absolute bottom-0 left-0 bg-gradient-to-t from-slate-50/100  via-white/60  to-transparent text-black p-4 sm:p-6 w-full`}>
+              <h2 className="text-5xl sm:text-5xl md:text-8xl font-semibold max-w-6xl ps-3">{slides[currentIndex].title}</h2>
+              <p className="text-lg sm:text-lg md:text-2xl max-w-5xl ps-2">{slides[currentIndex].description}</p>
             </div>
           </motion.div>
         </AnimatePresence>
