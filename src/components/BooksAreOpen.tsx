@@ -11,7 +11,7 @@ export default function BooksAreOpen() {
         </p>
         <div className="pt-4">
         <Link href="/about">
-        <button className="border-2 rounded-3xl border-gray-50 bg-gray-950 hover:bg-gray-50 hover:text-gray-950 text-gray-50 px-4 py-2 rounded-3xl shadow-md transition-colors duration-300">
+        <button className="border-2 rounded-3xl border-gray-50 bg-gray-950 hover:bg-gray-50 hover:text-gray-950 text-gray-50 px-4 py-2 shadow-md transition-colors duration-300">
         <p className="px-4 font-bold">Inquire</p>
         </button>
       </Link>

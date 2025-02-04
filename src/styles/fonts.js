@@ -1,5 +1,10 @@
 
-import { Cinzel, Lato, Lora } from "next/font/google";
+import { Cinzel, Lato, Lora,Montserrat_Alternates } from "next/font/google";
+
+export const montserratAlternatesFont = Montserrat_Alternates({
+  subsets: ['latin'],
+  weight: ['400', '700'], 
+});
 
 export const cinzelFont = Cinzel({
     subsets: ["latin"],
