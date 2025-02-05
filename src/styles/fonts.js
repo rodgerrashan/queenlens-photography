@@ -1,5 +1,5 @@
 
-import { Cinzel, Lato, Lora,Montserrat_Alternates,Open_Sans } from "next/font/google";
+import { Cinzel, Lato, Lora,Montserrat_Alternates,Open_Sans,Montserrat } from "next/font/google";
 
 
 export const  openSansFont = Open_Sans({
@@ -9,6 +9,12 @@ export const  openSansFont = Open_Sans({
 });
 
 export const montserratAlternatesFont = Montserrat_Alternates({
+  subsets: ['latin'],
+  weight: ['400', '700'], 
+});
+
+
+export const montserratFont = Montserrat({
   subsets: ['latin'],
   weight: ['400', '700'], 
 });

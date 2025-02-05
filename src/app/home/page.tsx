@@ -5,6 +5,10 @@ import Portfolio from '@/components/Portfolio';
 import BooksAreOpen from '@/components/BooksAreOpen';
 import OurServices from '../../components/OurServices';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
+import InstaLink from '@/components/InstaLink';
+import AboutAtHome from '@/components/AboutAtHome';
+import Footer from '@/components/Footer';
+
 type HomeProps = object;
 
 const Home: React.FC<HomeProps> = () => {
@@ -16,6 +20,11 @@ const Home: React.FC<HomeProps> = () => {
       <BooksAreOpen/>
       <OurServices/>
       <TestimonialCarousel/>
+      <InstaLink/>
+      <AboutAtHome/>
+      <Footer/>
+
+
 
     </div>
   );

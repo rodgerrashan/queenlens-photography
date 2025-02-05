@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { usePathname } from "next/navigation";
 import { Menu, X } from 'lucide-react'; // Using lucide-react for icons
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -23,7 +25,14 @@ const Header: React.FC = () => {
     <header className="bg-slate-50 text-gray-900 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold">QueenLens</div>
+        <div className="text-2xl font-bold"><Link href="/home">
+            <Image
+            src={"/images/logo/brand.png"}
+            alt="QueenLens Photography"
+            width={200}
+            height={200}
+            />
+            </Link></div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-4">

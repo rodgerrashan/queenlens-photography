@@ -17,3 +17,12 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
+
+  .neon-text {
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    background-clip: text;
+    z-index: 1000;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+  }
