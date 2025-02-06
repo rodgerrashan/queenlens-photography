@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { openSansFont,montserratAlternatesFont} from '@/styles/fonts';
+import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
@@ -50,7 +51,7 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto p-4 mt-10">
+    <div className="relative w-full max-w-6xl mx-auto p-4 mt-10 mb-20">
       <h2 className= {`${montserratAlternatesFont.className} text-center text-3xl font-bold mb-2 `}>What Our Clients Say</h2>
       <div className="flex items-center justify-center">
         <button onClick={handlePrev} className="absolute left-0 p-4">
@@ -59,7 +60,17 @@ export default function TestimonialCarousel() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M15 19l-7-7 7-7"></path>
           </svg>
         </button>
-        
+
+        <AnimatePresence mode= "wait">
+          <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col lg:flex-row items-center space-x-4"
+          >
+            
         <div className="flex flex-col lg:flex-row items-center space-x-4">
           {/* Image Section */}
           <div className="relative w-[300px] h-[300px] m-20">
@@ -82,12 +93,20 @@ export default function TestimonialCarousel() {
           </div>
 
           {/* Text Section */}
-          <div className=" p-2 max-w-md z-20 px-8">
-            <h3 className="text-xl font-semibold mb-2 ">{testimonials[currentIndex].title}</h3>
-            <p className= {`${openSansFont.className}text-left mb-4 `}>{testimonials[currentIndex].text}</p>
-            <p className="mt-2 font-bold text-right">— {testimonials[currentIndex].author}</p>
-          </div>
+          <div className="p-2 max-w-md z-20 px-8 h-48 overflow-y-visible">
+  <h3 className="text-xl font-semibold mb-2">{testimonials[currentIndex].title}</h3>
+  <p className={`${openSansFont.className} text-left mb-4`}>
+    {testimonials[currentIndex].text}
+  </p>
+  <p className="mt-2 font-bold text-right">— {testimonials[currentIndex].author}</p>
+</div>
+
         </div>
+            
+          </motion.div>
+
+        </AnimatePresence>
+        
         <button onClick={handleNext} className="absolute right-0 p-4">
           <span className="sr-only">Next</span>
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -95,6 +114,7 @@ export default function TestimonialCarousel() {
           </svg>
         </button>
       </div>
+      
     </div>
   );
 }

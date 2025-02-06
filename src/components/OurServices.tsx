@@ -37,7 +37,8 @@ const services = [
 ];
 export default function OurServices() {
     return(
-        <div className="bg-slate-100 py-10 px-5 max-w-5xl mx-auto">
+      <div className = "bg-slate-100">
+        <div className=" py-10 px-5 max-w-5xl mx-auto">
       <h1 className= {`${montserratAlternatesFont.className} text-center text-3xl font-bold mb-10`}>Our Services</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-3">
         {services.map((service, index) => (
@@ -53,9 +54,12 @@ export default function OurServices() {
           </div>
         ))}
       </div>
-      {/* <div className="p-8 text-center">
-  <p className="text-blue-500 hover:text-blue-950">View all</p>
-</div> */}
+      <div className="pt-6 text-center">
+  <p className="text-blue-500 hover:text-blue-950">See more</p>
+</div>
     </div>
+
+      </div>
+        
     );
 }

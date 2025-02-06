@@ -6,7 +6,7 @@ export default function Portfolio() {
   return (
     <>
         <section className="p-8  text-center">
-          <h2 className={`${cinzelFont.className} text-2xl font-bold`}>Through the Lens</h2>
+          <h2 className={`${cinzelFont.className} text-3xl font-bold`}>Through the Lens</h2>
           <p className={`${cinzelFont.className} mt-4`}>QUEENLENS SHOWCASE</p>
           <p className= {`${latoFont.className}  mt-4 max-w-2xl mx-auto`}>
             At QueenLens Photography, every image tells a unique story. We believe in capturing not just moments, but emotions and memories that last a lifetime. Explore our portfolio which highlights the artistry, passion, and dedication we bring to every session, whether it&apos;s a heartfelt wedding, a joyful birthday, or a professional product shoot. Discover how our lens can transform moments into extraordinary memories and find inspiration for your next unforgettable photobook.&quot;
@@ -17,13 +17,13 @@ export default function Portfolio() {
 <section className="max-w-4xl  flex flex-col md:flex-row justify-center mx-auto px-4">
   <div className="flex flex-col justify-center items-center">
     <div className="flex flex-row justify-center">
-    <div className="m-1">
+    <div className="m-1 ">
       <Image 
         src="/images/portfolio/img (1).jpg" 
         alt="Image 1" 
         width={400} 
         height={400}
-        className="rounded-lg h-48 object-cover"
+        className="rounded-lg h-48 object-cover "
       />
     </div>
     <div className="m-1">
