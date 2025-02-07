@@ -2,18 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import slides from "@/data/carouselSlides.json";
 import Image from 'next/image'
 
 import { cinzelFont } from "@/styles/fonts";
-
-const slides = [
-  { src: "/images/carosel/img1.jpg", title: "Capturing Love’s Grandest Moments", description: "Your big day with timeless shots that tell the story of your love. Every glance, every embrace, forever cherished." },
-  { src: "/images/carosel/img2.jpg", title: "Moments Before ‘I Do’", description: "Elegant and intimate pre-wedding photos that capture the excitement and love leading up to your special day." },
-  { src: "/images/carosel/img3.jpg", title: "Love, Framed Perfectly", description: "Showcasing the joy, laughter, and intimacy of your relationship in a series of beautifully candid shots." },
-  { src: "/images/carosel/img4.jpg", title: "Making Birthdays Last Forever", description: "Life’s milestones with fun, colorful captures that bring out the spirit of your special day." },
-  { src: "/images/carosel/img5.jpg", title: "Little Moments, Big Memories", description: "Heartwarming portraits that preserve the innocence and joy of your little one’s early days." },
-  { src: "/images/carosel/img6.jpg", title: "Bring Your Brand to Life", description: "Showcase your products with professional shots that highlight every detail, bringing out the best of your brand." },
-];
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

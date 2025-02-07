@@ -4,33 +4,9 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { openSansFont,montserratAlternatesFont} from '@/styles/fonts';
 import { motion, AnimatePresence } from "framer-motion";
+import testimonials from '@/data/testimonals.json';
 
-const testimonials = [
-  {
-    image: '/images/testimonals/Theekshani.jpg',
-    title: 'Our outdoor shoot in the wild are breathtaking!',
-    text: "You perfectly captured the raw beauty of the surroundings and made the entire experience so enjoyable. The natural light, the candid moments, and your attention to detail truly set these photos apart. I can’t wait to frame these!",
-    author: "Miss. Theekshani Promodya",
-  },
-  {
-    image: '/images/testimonals/Ovini.jpg',
-    title: 'I’m so happy with the portraits you took!',
-    text: "You captured my personality perfectly, and the photos look so natural and effortless. The session was relaxed, and your creative ideas made all the difference. These are definitely the best pictures I’ve ever had taken!",
-    author: 'Miss. Ovini Wijesooriya',
-  },
-  {
-    image: '/images/testimonals/Vindya.jpg',
-    title: 'The casual shoot was amazing!',
-    text: "You, Queenlens made the whole experience so much fun, and the photos turned out fantastic. The natural lighting and relaxed vibe you created really brought out the best moments. I’ll definitely book you again for future shoots!",
-    author: 'Miss. Vindya Yapa',
-  },
-  {
-    image: '/images/testimonals/Dilini.jpg',
-    title: "We’ll cherish these memories forever!",
-    text: "Thank you so much Queenlens for capturing my birthday so beautifully! The photos are vibrant and full of life, perfectly showcasing the joy and excitement of the day. You were so patient and great with us.",
-    author: 'Mrs. Dilini Wikramasinghe',
-  },
-];
+
 
 export default function TestimonialCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);

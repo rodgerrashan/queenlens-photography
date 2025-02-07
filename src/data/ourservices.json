@@ -1,0 +1,33 @@
+[
+    {
+      "title": "Wedding Photography",
+      "description": "From the ceremony to the reception, we document every moment of your special day with elegance and attention to detail.",
+      "link": "/wedding-photography"
+    },
+    {
+      "title": "Couple Pre Shoot",
+      "description": "Celebrate your love with stunning portraits, perfect for engagements, anniversaries, or simply because.",
+      "link": "/couple-pre-shoot"
+    },
+    {
+      "title": "Graduation Shoots",
+      "description": "Celebrations to graduation moments, with vibrant and heartfelt photography.",
+      "link": "/graduation-shoots"
+    },
+    {
+      "title": "Baby Photography",
+      "description": "Preserve the innocence and wonder of your little ones, as well as the bonds that make your family unique.",
+      "link": "/baby-photography"
+    },
+    {
+      "title": "Birthday Photography",
+      "description": "Our birthday photography service is crafted to preserve the laughter, surprises, and cherished memories of your celebration.",
+      "link": "/birthday-photography"
+    },
+    {
+      "title": "Product Photography",
+      "description": "Showcase your products in the best light, whether for e-commerce or promotional purposes, with high-quality, attention-grabbing images.",
+      "link": "/product-photography"
+    }
+  ]
+  
