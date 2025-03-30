@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import slides from "@/data/carouselSlides.json";
+import slides from "../../../public/data/carouselSlides.json";
 import Image from 'next/image'
 
 import { cinzelFont } from "@/styles/fonts";
@@ -19,7 +19,7 @@ export default function Carousel() {
 
   return (
     <div className="relative w-screen  overflow-hidden">
-      <div className="relative h-[400px] sm:h-[500px] md:h-[700px]">
+      <div className="relative h-[400px] sm:h-[500px] md:h-[600px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={slides[currentIndex].src}
@@ -32,7 +32,7 @@ export default function Carousel() {
             <Image
             src={slides[currentIndex].src}
             width={2000}
-            height={5000}
+            height={3000}
             alt={slides[currentIndex].title}
                 className="w-full h-full object-cover"
             />

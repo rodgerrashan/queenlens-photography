@@ -1,7 +1,7 @@
 // pages/services.js
 import Link from 'next/link';
 import {montserratAlternatesFont,latoFont} from '@/styles/fonts';
-import services from'@/data/ourservices.json';
+import services from'../../../public/data/ourservices.json';
 export default function OurServices() {
     return(
       <div className = "bg-slate-100">
