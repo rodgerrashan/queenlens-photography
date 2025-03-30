@@ -59,8 +59,8 @@ export default function GalleryLayout1() {
                 transition={{ duration: 0.5 }}
               >
                 <Image
-                  alt={images[5].alt}
-                  src={images[5].src}
+                  alt={images[4].alt}
+                  src={images[2].src}
                   width={400}
                   height={400}
                   className="rounded-xl object-cover p-2 hover:scale-105 transition-transform duration-300"

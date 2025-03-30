@@ -20,8 +20,6 @@ const Gallery: React.FC<HomeProps> = () => {
         button_text="Contact Us"
         bg_image="bg-image.jpg"
       />
-
-
       <Footer/>
       <Copyrights/>
 
