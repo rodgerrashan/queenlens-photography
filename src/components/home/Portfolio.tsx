@@ -8,7 +8,7 @@ export default function Portfolio() {
         <section className="p-8  text-center">
           <h2 className={`${cinzelFont.className} text-3xl font-bold`}>Through the Lens</h2>
           <p className={`${cinzelFont.className} mt-4`}>QUEENLENS SHOWCASE</p>
-          <p className= {`${latoFont.className}  mt-4 max-w-2xl mx-auto`}>
+          <p className= {`${latoFont.className}  mt-4 max-w-2xl mx-auto text-lg`}>
             At QueenLens Photography, every image tells a unique story. We believe in capturing not just moments, but emotions and memories that last a lifetime. Explore our portfolio which highlights the artistry, passion, and dedication we bring to every session, whether it&apos;s a heartfelt wedding, a joyful birthday, or a professional product shoot. Discover how our lens can transform moments into extraordinary memories and find inspiration for your next unforgettable photobook.&quot;
           </p>
         </section>

@@ -15,7 +15,7 @@ export default function TestimonialCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 6000);
+    }, 15000);
     return () => clearInterval(interval);
   }, []);
 
@@ -59,8 +59,8 @@ export default function TestimonialCarousel() {
             <Image
               alt="Testimonial"
               src={testimonials[currentIndex].image}
-              width={300}
-              height={300}
+              width={280}
+              height={280}
               className="absolute z-20  shadow-lg -rotate-3"
               style={{
                 top: "0px",
@@ -71,11 +71,11 @@ export default function TestimonialCarousel() {
 
           {/* Text Section */}
           <div className="p-2 max-w-md z-20 px-8 h-48 overflow-y-visible">
-  <h3 className="text-xl font-semibold mb-2">{testimonials[currentIndex].title}</h3>
-  <p className={`${openSansFont.className} text-left mb-4`}>
+  <h3 className="text-xl font-semibold mb-2 px-2">{testimonials[currentIndex].title}</h3>
+  <p className={`${openSansFont.className} text-left mb-4 px-2`}>
     {testimonials[currentIndex].text}
   </p>
-  <p className="mt-2 font-bold text-right">— {testimonials[currentIndex].author}</p>
+  <p className="mt-2 font-bold text-right px-3">— {testimonials[currentIndex].author}</p>
 </div>
 
         </div>

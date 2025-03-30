@@ -6,7 +6,7 @@ export default function InstaLink() {
     >
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="bg-black bg-opacity-50 w-auto h-auto px-5 py-1 rounded-2xl">
-          <div className="text-white text-xl text-center neon-text font-bold">
+          <div className="text-white text-lg md:text-2xl  text-center neon-text font-bold">
             <a href="https://www.instagram.com/queenlens_photography/profilecard/?igsh=ZHp4OWM0enJraDlv" className="hover:underline">@instagram.com/queenlens_photography/</a>
           </div>
         </div>
