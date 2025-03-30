@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import Copyrights from '@/components/Copyrights';
 import Intro from '@/components/About/Intro';
 import Slogen from '@/components/About/slogen';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 
 const AboutPage = () => {

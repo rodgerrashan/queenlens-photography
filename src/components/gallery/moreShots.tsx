@@ -1,5 +1,5 @@
 import { latoFont, montserratAlternatesFont } from "@/styles/fonts";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function MoreShots() {
     return (

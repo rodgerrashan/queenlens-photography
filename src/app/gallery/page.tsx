@@ -4,7 +4,7 @@ import Copyrights from '@/components/Copyrights';
 import SubHeading from '@/components/gallery/subheading';
 import AdMsg from '@/components/gallery/adMsg';
 import MasonryGallery from '@/components/gallery/masonryGallery';
-import Image from 'next/image';
+// import Image from 'next/image';
 import MoreShots from '@/components/gallery/moreShots';
 
 
