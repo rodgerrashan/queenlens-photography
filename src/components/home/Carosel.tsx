@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import slides from "@/data/carouselSlides.json";
+import slides from "../../../public/data/carouselSlides.json";
 import Image from 'next/image'
 
 import { cinzelFont } from "@/styles/fonts";

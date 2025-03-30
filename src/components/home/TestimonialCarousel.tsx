@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { openSansFont,montserratAlternatesFont} from '@/styles/fonts';
 import { motion, AnimatePresence } from "framer-motion";
-import testimonials from '@/data/testimonals.json';
+import testimonials from '../../../public/data/testimonals.json';
+
 
 
 
