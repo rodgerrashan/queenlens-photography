@@ -1,33 +1,41 @@
-import React from 'react';
+"use client";
+import React, { useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Copyrights from '@/components/Copyrights';
 import Intro from '@/components/About/Intro';
 import Slogen from '@/components/About/slogen';
+import OurTeam from '@/components/About/OurTeam';
+import Memories from '@/components/About/Memories';
+import Why from '@/components/About/Why';
 // import Image from 'next/image';
 
 
+
+
 const AboutPage = () => {
+    const section2Ref = useRef<HTMLDivElement | null>(null);
+
+  const scrollToSection = () => {
+    if (section2Ref.current) {
+      section2Ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
     return (
         <div>
             <Header/>
-            <Slogen/>
+            <Slogen scrollToSection={scrollToSection}/>
         
-            {/* <Image
-                src="/images/team.jpg"
-                alt="About Us"
-                width={1000}
-                height={400}
-                className="w-full max-h-none object-cover"
-            /> */}
+            
 
             <Intro/>
+
             
-            <h1>About Us</h1>
-            <p>Welcome to Queenlens Photography! We are passionate about capturing your precious moments.</p>
-
-
-
+            <OurTeam/>
+            <Memories/>
+            <Why/>
+        
 
             <Footer/>
             <Copyrights/>
@@ -37,3 +45,7 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+
+
+  
