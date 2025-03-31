@@ -5,7 +5,7 @@ import services from'../../../public/data/ourservices.json';
 export default function Intro() {
     return (
         <>
-        <div className = 'pb-10'>
+        <div>
                     <div >
                     <h2 className= {`${cinzelFont.className} pt-6 text-3xl font-bold text-center text-gray-950 px-4`}>Queenlens Photography Services</h2>
                     <p className= {`${latoFont.className}  mt-4 max-w-2xl mx-auto text-center  text-gray-950  px-4 pb-3`}>
@@ -34,6 +34,11 @@ export default function Intro() {
     </div>
 
       </div>
+      <div className='items-center justify-center flex flex-col'>
+        <div className="w-32 h-1 bg-gray-300  rounded-full"></div>
+        
+
+        </div>
         
         </>
     );
