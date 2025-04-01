@@ -45,7 +45,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-gray-200 p-6 rounded-xl  mt-5 mb-5">
+    <div className="max-w-lg mx-auto bg-gray-100 p-6 rounded-xl  mt-5 mb-5">
       <h2 className="text-xl font-semibold text-center">Contact Form</h2>
       <p className='text-sm font-medium text-left pt-4'>Fill out the form below, and we’ll get back to you as soon as possible.</p>
       <form onSubmit={handleSubmit} className="mt-4">

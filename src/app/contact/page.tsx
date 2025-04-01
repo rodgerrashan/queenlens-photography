@@ -12,6 +12,8 @@ import Memories from '@/components/About/Memories';
 import Why from '@/components/About/Why';
 import ContactIntro from '@/components/contact/ContactIntro';
 import ContactForm from '@/components/contact/ContactForm';
+import Reachus from '@/components/contact/Reachus';
+import FinalNotes from '@/components/contact/FinalNotes';
 // import Image from 'next/image';
 
 
@@ -31,6 +33,8 @@ const ContactPage = () => {
             <Header/>
             <ContactIntro/>
             <ContactForm/>
+            <Reachus/>
+            <FinalNotes/>
 
 
             <Footer/>

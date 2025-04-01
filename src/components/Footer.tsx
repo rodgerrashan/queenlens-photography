@@ -39,9 +39,9 @@ const Footer = () => {
           <div className='min-w-36 mx-9'>
             <h3 className='text-xl font-bold mb-2'>Services</h3>
             <ul className='space-y-2 text-gray-600'>
-              {['Wedding Photography', 'Preshoot Sessions', 'Couple Shoots', 'Birthday Photography', 'Graduation Photography', 'Baby Photography', 'Product Photography'].map((service) => (
+              {['Wedding Shoots', 'Couple Memories', 'Casual Clicks', 'Birthday Moments', 'Baby Smiles', 'Graduation Frames'].map((service) => (
                 <li key={service}>
-                  <Link href={`/${service.toLowerCase().replace(/ /g, '-')}`} className='hover:text-blue-950 transition'>
+                  <Link href={`/services/${service.toLowerCase().replace(/ /g, '-')}`} className='hover:text-blue-950 transition'>
                     {service}
                   </Link>
                 </li>

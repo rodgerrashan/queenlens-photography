@@ -1,6 +1,11 @@
 
 import { Cinzel, Lato, Lora, Montserrat_Alternates, Open_Sans, Montserrat } from "next/font/google";
+import { Cedarville_Cursive } from "next/font/google";
 
+
+export const cedarvilleCursiveFont = Cedarville_Cursive({
+  weight: ['400'],
+});
 
 export const  openSansFont = Open_Sans({
   subsets: ['latin'],

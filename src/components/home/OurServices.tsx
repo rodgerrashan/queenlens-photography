@@ -22,7 +22,8 @@ export default function OurServices() {
         ))}
       </div>
       <div className="pt-6 text-center">
-  <p className="text-blue-500 hover:text-blue-950">See more</p>
+        <Link href="/services" className="text-blue-500 hover:underline text-lg font-semibold"><p>See more</p></Link>
+  
 </div>
     </div>
 

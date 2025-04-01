@@ -1,33 +1,35 @@
 [
     {
-      "title": "Wedding Photography",
+      "title": "Wedding Shoots",
       "description": "From the ceremony to the reception, we document every moment of your special day with elegance and attention to detail.",
-      "link": "/wedding-photography"
+      "link": "/services/wedding-shoots"
     },
     {
-      "title": "Couple Pre Shoot",
+      "title": "Couple Memories",
       "description": "Celebrate your love with stunning portraits, perfect for engagements, anniversaries, or simply because.",
-      "link": "/couple-pre-shoot"
+      "link": "/services/couple-memories"
     },
     {
-      "title": "Graduation Shoots",
-      "description": "Celebrations to graduation moments, with vibrant and heartfelt photography.",
-      "link": "/graduation-shoots"
+      "title": "Casual clicks",
+      "description": "Capture the essence of everyday life with our casual photography service, perfect for family gatherings, outings, or just because.",
+      "link": "/services/casual-clicks"
     },
     {
-      "title": "Baby Photography",
-      "description": "Preserve the innocence and wonder of your little ones, as well as the bonds that make your family unique.",
-      "link": "/baby-photography"
-    },
-    {
-      "title": "Birthday Photography",
+      "title": "Birthday Memories",
       "description": "Our birthday photography service is crafted to preserve the laughter, surprises, and cherished memories of your celebration.",
-      "link": "/birthday-photography"
+      "link": "/services/birthday-memories"
     },
+
     {
-      "title": "Product Photography",
-      "description": "Showcase your products in the best light, whether for e-commerce or promotional purposes, with high-quality, attention-grabbing images.",
-      "link": "/product-photography"
+      "title": "Baby Smiles",
+      "description": "Preserve the innocence and wonder of your little ones, as well as the bonds that make your family unique.",
+      "link": "/services/baby-smiles"
+    },
+    
+    {
+      "title": "Graduation Frames",
+      "description": "Celebrations to graduation moments, with vibrant and heartfelt photography.",
+      "link": "/services/graduation-frames"
     }
   ]
   
