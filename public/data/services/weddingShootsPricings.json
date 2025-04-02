@@ -1,33 +1,44 @@
 [
     {
-      "title": "Essentials Package",
-      "description": "Perfect for Small Events & Quick Sessions",
+      "title": "Silver Package",
+      "description": "An ideal choice for memorable moments, offering essential coverage.",
       "details": [
-        "Up to 2 hours of coverage",
-        "30 professionally edited images",
-        "Digital photo delivery & online gallery"
+        "Wedding Day Couple Shoot Session",
+        "Full Day Wedding Function Coverage",
+        "Wedding enlargement (20”×30” Framed)",
+        "100 Thank You Cards (5”×8”)",
+        "Going Away Shoot",
+        "All Soft Copies"
       ],
       "price": "$100"
     },
     {
-      "title": "Premium Package",
+      "title": "Platinum Package",
       "description": "Complete Coverage for Life's Biggest Moments",
       "details": [
-        "Up to 8 hours of coverage",
-        "Photos: 100+ professionally edited images",
-        "Includes: Digital photo delivery, online gallery, 1 custom photo album",
-        "Ideal For: Weddings, full-day events, or special celebrations"
+        "Pre Shoot Session (Both Photo & Video)",
+        "Wedding Day Couple Shoot Session",
+        "Full Day Wedding Function Coverage",
+        "Wedding enlargement (20”×30” Framed)",
+        "100 Thank You Cards (5”×8”)",
+        "Going Away Shoot",
+        "All Soft Copies",
+        "Wedding Album (8”×12” or 12”×15”)"
       ],
       "price": "$100",
       "highlight": true
     },
     {
-      "title": "Classic Package",
+      "title": "Gold Package",
       "description": "Full Photography Experience",
       "details": [
-        "Up to 4 hours of coverage",
-        "Photos: 60 professionally edited images",
-        "Digital photo delivery, online gallery, and print options"
+        "Wedding Day Couple Shoot Session",
+        "Full Day Wedding Function Coverage",
+        "Wedding enlargement (20”×30” Framed)",
+        "100 Thank You Cards (5”×8”)",
+        "Going Away Shoot",
+        "All Soft Copies",
+        "Wedding Album (8”×12” or 12”×15”)"
       ],
       "price": "$100"
     }

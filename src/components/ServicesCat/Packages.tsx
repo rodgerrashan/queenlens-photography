@@ -16,7 +16,7 @@ interface PackagesProps {
 
 export default function Packages({ packages }: PackagesProps) {
     return (
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 p-6 max-w-4xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 p-6 max-w-5xl mx-auto">
             {packages.map((pkg, index) => (
                 <motion.div
                     key={index}
@@ -30,7 +30,23 @@ export default function Packages({ packages }: PackagesProps) {
                     <p className="text-sm text-center mb-4">{pkg.description}</p>
                     <ul className="text-sm mb-4 space-y-2">
                         {pkg.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-2">• {detail}</li>
+                            <li key={i} className="flex items-start gap-2">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="h-5 w-5 text-green-500 flex-shrink-0"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M5 13l4 4L19 7"
+                                    />
+                                </svg>
+                                {detail}
+                            </li>
                         ))}
                     </ul>
                     <p className="text-lg font-semibold text-center">Starts at <span className="text-blue-600">{pkg.price}</span></p>
