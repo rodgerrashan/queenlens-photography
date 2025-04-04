@@ -22,7 +22,7 @@ export default function Faq() {
       </section>
 
       <section>
-        <div className="pt-5 pb-10 px-5 max-w-3xl mx-auto">
+        <div className="pt-5 pb-10 px-5 max-w-md lg:max-w-lg xl:max-w-2xl mx-auto">
           <div className="grid grid-cols-1 gap-4 px-1">
             {services.map((service, index) => (
               <div
@@ -33,10 +33,10 @@ export default function Faq() {
                   className="flex items-center justify-between cursor-pointer"
                   onClick={() => toggleDescription(index)}
                 >
-                  <div className="flex items-center gap-2">
-                    <IoHelpCircle className="w-16 h-16" />
+                  <div className="flex items-center gap-2 justify-center">
+                    <IoHelpCircle className="w-10 h-10" />
                     <h2
-                      className={`${latoFont.className} text-2xl font-bold`}
+                      className={`${latoFont.className} text-lg md:text-xl font-bold max-w-60 lg:max-w-80`}
                     >
                       {service.title}
                     </h2>

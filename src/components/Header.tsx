@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-slate-50 text-gray-900 p-4">
+    <header className="bg-slate-50 text-gray-900 p-3">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
@@ -31,8 +31,8 @@ const Header: React.FC = () => {
             <Image
               src={"/images/logo/brand.png"}
               alt="QueenLens Photography"
-              width={120}
-              height={120}
+              width={110}
+              height={60}
             />
           </Link>
         </div>
