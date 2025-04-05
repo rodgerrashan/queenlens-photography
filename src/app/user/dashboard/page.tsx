@@ -7,6 +7,8 @@ import HelloworldCopyrights from "@/components/HelloWorld/HelloworldCopyrights";
 import HelloworldHeader from "@/components/HelloWorld/HelloworldHeader";
 import UserCard from "@/components/Dashboard/userCard";
 import Submissions from "@/components/Dashboard/submissions";
+import SoftwareVersion from "@/components/Dashboard/software-version";
+import Notifications from "@/components/Dashboard/notifications";
 
 
 export default function Dashboard() {
@@ -22,7 +24,6 @@ export default function Dashboard() {
   }
 
   const [user, setUser] = useState<User | null>(null);
-  const [allUsers, setAllUsers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -34,8 +35,7 @@ export default function Dashboard() {
           setUser(data.user);
           getUserData(userId!);
           console.log("Current user:", data.user);
-          // Only fetch all users if the current user fetch was successful
-          fetchAllUsers();
+          
         } else {
           Router.push("/login");
         }
@@ -69,7 +69,7 @@ export default function Dashboard() {
   if (!user) return <p>Loading...</p>;
 
   return (
-    <>
+    <div className="bg-gray-100">
       <div className = "bg-gray-100 ">
         <HelloworldHeader />
         <div className="bg-gray-100  flex flex-col items-start justify-center py-2 px-10">
@@ -88,13 +88,18 @@ export default function Dashboard() {
 
         
       </div>
+      <Notifications/>
+
+      <Submissions />
       <div className="bg-gray-100 flex flex-col items-start justify-center py-2 px-10">
         
-        <Submissions />
+        
       </div>
 
+
+      <SoftwareVersion />
       <HelloworldCopyrights />
-    </>
+    </div>
   );
 }
 

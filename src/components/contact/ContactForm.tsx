@@ -101,8 +101,19 @@ export default function ContactForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
+      const notifyData = {
+        message: `You have a new message from ${formData.firstName} ${formData.lastName}.`,
+        time: new Date().toISOString(),
+      };
+
+      const responseNotification = await fetch('/api/notifications', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(notifyData),
+      });
       
-      if (response.ok) {
+      if (response.ok && responseNotification.ok) {
         // setSuccess('Message sent successfully!');
         // setFormData({ firstName: '', lastName: '', email: '', phone: '', service: '', message: '', read: false });
         router.push('/thank-you');

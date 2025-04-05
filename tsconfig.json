@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/mongodb.js", "src/scripts/seed-admin.js", "src/app/api/contact-submissions/route.js", "src/lib/dbConnect.js", "src/app/api/admin/delete-user/route.js", "src/app/api/admin/get-users/route.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/mongodb.js", "src/scripts/seed-admin.js", "src/app/api/contact-submissions/route.js", "src/lib/dbConnect.js", "src/app/api/admin/delete-user/route.js", "src/app/api/admin/get-users/route.js", "src/app/api/contact-submissions/toggle/[id]/route.js"],
   "exclude": ["node_modules"]
 }
