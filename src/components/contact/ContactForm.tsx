@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 type FormErrors = {
@@ -12,6 +13,7 @@ type FormErrors = {
 };
 
 export default function ContactForm() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -19,6 +21,8 @@ export default function ContactForm() {
     phone: '',
     service: '',
     message: '',
+    read:false,
+    
   });
   
   const [errors, setErrors] = useState<FormErrors>({});
@@ -99,11 +103,14 @@ export default function ContactForm() {
       });
       
       if (response.ok) {
-        setSuccess('Message sent successfully!');
-        setFormData({ firstName: '', lastName: '', email: '', phone: '', service: '', message: '' });
+        // setSuccess('Message sent successfully!');
+        // setFormData({ firstName: '', lastName: '', email: '', phone: '', service: '', message: '', read: false });
+        router.push('/thank-you');
+
+        
       } else {
         const data = await response.json();
-        setSuccess(data.message || 'Failed to send message. Please try again.');
+        setSuccess(data.message || 'Failed to send message. Please speak directly.');
       }
     } catch (error) {
       console.error('Error:', error);

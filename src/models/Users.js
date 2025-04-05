@@ -46,6 +46,28 @@ export async function createUser(email, password, role = "user") {
     }
 }
 
+
+export async function findAllUsers() {
+    try {
+        // Connect to the database
+        const { db } = await dbConnect();
+
+        // Find all users
+        const users = await db.collection("users").find({}).toArray();
+
+        if (users.length === 0) {
+            console.warn("⚠️ No users found.");
+        } else {
+            console.log("✅ Users found:", users.length);
+        }
+
+        return users;
+    } catch (error) {
+        console.error("❌ Error finding users:", error);
+        throw new Error("Error finding users.");
+    }
+}
+
 export async function findUser(email) {
     try {
         // Connect to the database
@@ -64,6 +86,28 @@ export async function findUser(email) {
     } catch (error) {
         console.error("❌ Error finding user:", error);
         throw new Error("Error finding user.");
+    }
+}
+
+
+export async function findUserById(userId) {
+    try {
+        // Connect to the database
+        const { db } = await dbConnect();
+
+        // Find the user by ID
+        const user = await db.collection("users").findOne({ _id: new mongoose.Types.ObjectId(userId) });
+
+        if (!user) {
+            console.warn("⚠️ User not found with ID:", userId);
+        } else {
+            console.log("✅ User found:", user._id);
+        }
+
+        return user;
+    } catch (error) {
+        console.error("❌ Error finding user by ID:", error);
+        throw new Error("Error finding user by ID.");
     }
 }
 

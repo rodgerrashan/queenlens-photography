@@ -23,13 +23,19 @@ export async function POST(req: Request) {
       expiresIn: "1h",
     });
 
+    if (!token) {
+      return NextResponse.json({ message: "Token generation failed" }, { status: 500 });
+    }
+
+    console.log(user._id, user.role, token, user.email);
+
     return NextResponse.json(
-      { message: "Login successful", token },
+      { message: "Login successful", token, id: user._id, role: user.role },
       {
-        status: 200,
-        headers: {
-          "Set-Cookie": `token=${token}; HttpOnly; Path=/; SameSite=Strict`,
-        },
+      status: 200,
+      headers: {
+        "Set-Cookie": `token=${token}; HttpOnly; Path=/; SameSite=Strict`,
+      },
       }
     );
   } catch (error) {
