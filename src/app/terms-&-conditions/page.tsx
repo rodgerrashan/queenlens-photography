@@ -2,7 +2,6 @@ import React from 'react';
 import BackButton from '@/components/BackButton';
 import { cinzelFont, latoFont } from "@/styles/fonts";
 import Link from 'next/link';
-import { Copyright } from 'lucide-react';
 import Copyrights from '@/components/Copyrights';
 import Image from 'next/image';
 import { IoCall, IoMail } from 'react-icons/io5';

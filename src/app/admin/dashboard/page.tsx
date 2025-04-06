@@ -123,9 +123,8 @@ export default function Dashboard() {
 
           <div className = "p-2 ml-5">
             <UserCard 
-              role={user.role} 
-              email={user.email} 
-              
+            role={user.role}
+            email={user.email} userId={""}              
             />
           </div>
 

@@ -24,13 +24,28 @@ const LoadingPlaceholder = () => (
   </div>
 );
 
-const MasonryGallery = ({ 
-  images = [], 
-  columnsCountBreakPoints = { 350: 1, 750: 2, 900: 3, 1200: 4 },
-  gapSize = 16,
-  animateLoad = true 
-}) => {
-  const [loadedImages, setLoadedImages] = useState({});
+
+interface GalleryImage {
+  id: number;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  blurDataURL: string;
+}
+
+
+interface MasonryGalleryProps {
+  images: GalleryImage[];
+  columnsCountBreakPoints: { [key: number]: number };
+  gapSize: number;
+  animateLoad: boolean;
+}
+
+const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images, columnsCountBreakPoints, gapSize, animateLoad }) => {
+
+
+  const [loadedImages, setLoadedImages] = useState<Record<string | number, boolean>>({});
   const [isMounted, setIsMounted] = useState(false);
   const [imagesReady, setImagesReady] = useState(false);
 
@@ -48,7 +63,7 @@ const MasonryGallery = ({
   }, [images]);
 
   // Track when each image loads
-  const handleImageLoad = (imageId) => {
+  const handleImageLoad = (imageId: number | string) => {
     setLoadedImages(prev => ({
       ...prev,
       [imageId]: true

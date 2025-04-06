@@ -3,6 +3,10 @@ import { NextRequest, NextResponse } from "next/server";
 import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb";
 
+import { MongoClient } from "mongodb";
+
+const clientPromise: Promise<MongoClient> = client.connect();
+
 export async function PUT(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }

@@ -1,6 +1,5 @@
 import { montserratAlternatesFont, latoFont } from "@/styles/fonts";
 import services from'../../../public/data/whyChoosUs.json';
-import Link from "next/link";
 
 
 

@@ -1,7 +1,5 @@
 const bcrypt = require("bcrypt");
 const { createUser } = require("../models/Users.js");
-const userDbConnect = require("../lib/userDbConnect.js");
-const { MongoClient } = require("mongodb");
 require("dotenv").config();
 
 
