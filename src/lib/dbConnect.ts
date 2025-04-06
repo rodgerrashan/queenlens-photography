@@ -20,7 +20,7 @@ declare global {
 if (!global.mongoose) {
   global.mongoose = { conn: null, promise: null };
 }
-let cached = global.mongoose;
+const cached = global.mongoose;
 
 async function dbConnect() {
   if (cached?.conn) {

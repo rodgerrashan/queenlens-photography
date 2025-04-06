@@ -1,5 +1,5 @@
-"use client"
-import { useState, useEffect} from "react";
+"use client";
+import { useState, useEffect, Suspense} from "react";
 import { useSearchParams } from 'next/navigation';
 import Router from "next/router";
 import { cinzelFont } from "@/styles/fonts";
@@ -11,12 +11,24 @@ import SoftwareVersion from "@/components/Dashboard/software-version";
 import Notifications from "@/components/Dashboard/notifications";
 import Image from "next/image";
 
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center min-h-screen">
+    <div className="p-4">
+      <Image
+        src="/Images/logo/smLogo.png"
+        alt="Loading..."
+        width={128}
+        height={128}
+        className="animate-pulse"
+      />
+    </div>
+  </div>
+);
 
 export default function Dashboard() {
-
   const searchParams = useSearchParams();
   const userId = searchParams.get('userId');
-  
 
   interface User {
     _id?: string;
@@ -27,7 +39,6 @@ export default function Dashboard() {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    // Fetch current user data
     fetch("/api/auth/me")
       .then((res) => res.json())
       .then((data) => {
@@ -35,7 +46,6 @@ export default function Dashboard() {
           setUser(data.user);
           getUserData(userId!);
           console.log("Current user:", data.user);
-          
         } else {
           Router.push("/login");
         }
@@ -62,65 +72,48 @@ export default function Dashboard() {
     }
   };
 
-  if (!user) return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="p-4">
-        <Image
-          src="/Images/logo/smLogo.png"
-          alt="Loading..."
-          width={128}
-          height={128}
-          className="animate-pulse"
-        />
-      </div>
-      
-      
-    </div>
-  );
-
   return (
-    <div className="bg-gray-100">
-      <div className = "bg-gray-100 ">
-        <HelloworldHeader />
-        <div className="min-h-screen">
-        <div className="bg-gray-100  flex flex-col items-start justify-center py-2 px-10">
-          <h1 className={`${cinzelFont.className} text-3xl font-bold mt-5`}>
-            Welcome to the Dashboard!
-          </h1>
+    <Suspense fallback={<LoadingSpinner />}>
+      <div className="bg-gray-100">
+        <div className="bg-gray-100">
+          <HelloworldHeader />
+          <div className="min-h-screen">
+            <div className="bg-gray-100 flex flex-col items-start justify-center py-2 px-10">
+              <h1 className={`${cinzelFont.className} text-3xl font-bold mt-5`}>
+                Welcome to the Dashboard!
+              </h1>
+            </div>
+
+            <div className="p-2 ml-5">
+              <Suspense fallback={<p>Loading user data...</p>}>
+                {user && (
+                  <UserCard
+                    role={user.role}
+                    email={user.email}
+                    userId={userId || ''}
+                  />
+                )}
+              </Suspense>
+            </div>
+
+            <Suspense fallback={<p>Loading notifications...</p>}>
+              <Notifications />
+            </Suspense>
+
+            <Suspense fallback={<p>Loading submissions...</p>}>
+              <Submissions />
+            </Suspense>
+
+            <div className="bg-gray-100 flex flex-col items-start justify-center py-2 px-10">
+            </div>
+
+            <Suspense fallback={<p>Loading version info...</p>}>
+              <SoftwareVersion />
+            </Suspense>
           </div>
-
-          <div className="p-2 ml-5">
-  {user ? (
-    <UserCard
-      role={user.role}
-      email={user.email}
-      userId={userId || ''}
-    />
-  ) : (
-    <p>Loading user data...</p>
-  )}
-</div>
-          <Notifications/>
-
-      <Submissions />
-      <div className="bg-gray-100 flex flex-col items-start justify-center py-2 px-10">
-        
-        
-      </div>
-
-
-      <SoftwareVersion />
-
-        
-      </div>
-      
-
-
         </div>
-        
-      <HelloworldCopyrights />
-    </div>
+        <HelloworldCopyrights />
+      </div>
+    </Suspense>
   );
 }
-
-
