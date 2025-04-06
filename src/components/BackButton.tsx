@@ -1,6 +1,5 @@
 "use client"
 import { IoArrowBack } from "react-icons/io5";
-import { SlArrowLeft } from "react-icons/sl";
 
 export default function BackButton() {
   return (

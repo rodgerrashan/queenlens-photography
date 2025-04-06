@@ -4,7 +4,7 @@ export async function GET(request) {
   try {
     const client = await clientPromise;
     const db = client.db("contact");
-    const contacts = await db.collection("contacts").find({}).toArray();
+    const contacts = await db.collection("contacts").find({}).sort({ _id: -1 }).toArray();
 
     return new Response(JSON.stringify(contacts), {
       status: 200,

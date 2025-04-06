@@ -1,11 +1,12 @@
 {
   "name": "queenlens-photography",
-  "version": "0.1.0",
+  "version": "1.11.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run generate-version && next build",
     "start": "next start",
+    "generate-version": "node generate-version.js",
     "lint": "next lint"
   },
   "dependencies": {

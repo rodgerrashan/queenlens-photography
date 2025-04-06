@@ -2,9 +2,9 @@ import React from 'react';
 import { FaUser } from 'react-icons/fa6';
 
 interface UserCardProps {
-    email: string;
-    role: string;
-    userId: string
+    email?: string;
+    role?: string;
+    userId?: string;
 }
 
 const UserCard: React.FC<UserCardProps> = ({ email = "noreply@ql.com", role = "dev" , userId = "none"}) => {

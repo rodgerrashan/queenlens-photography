@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { montserratAlternatesFont, latoFont,cinzelFont } from "@/styles/fonts";
 import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
 import services from "../../../public/data/faq.json";
@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import { IoHelpCircle } from "react-icons/io5";
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleDescription = (index) => {
+  const toggleDescription = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 

@@ -37,6 +37,7 @@ export default function ChangeCredentials() {
 
             if (res.ok) {
                 setMessage(data.message);
+                window.location.href = '/login';
                 setError('');
             } else {
                 setError(data.error || 'Failed to reset password');

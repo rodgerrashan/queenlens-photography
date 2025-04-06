@@ -5,8 +5,6 @@ import Copyrights from '@/components/Copyrights';
 import Intro from '@/components/Services/Intro';
 import Faq from '@/components/Services/Faq';
 
-import { cinzelFont, latoFont } from "@/styles/fonts";
-
 
 
 

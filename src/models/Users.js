@@ -1,6 +1,6 @@
 import dbConnect from "../lib/dbConnect";
 import bcrypt from "bcrypt";
-import mongoose, { Schema, model, models } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema({
     email: { type: String, required: true, unique: true },

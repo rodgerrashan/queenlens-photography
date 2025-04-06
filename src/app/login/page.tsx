@@ -61,7 +61,7 @@ export default function Login() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 border rounded-full focus:outline-0 focus:ring focus:ring-gray-900"
+          className="w-full p-2 px-4 border rounded-full focus:outline-0 focus:ring focus:ring-gray-900"
           required
         />
         </div>
@@ -71,7 +71,7 @@ export default function Login() {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 border rounded-full focus:outline-none focus:ring focus:ring-gray-900"
+          className="w-full p-2 px-4 border rounded-full focus:outline-none focus:ring focus:ring-gray-900"
           required
         />
         </div>

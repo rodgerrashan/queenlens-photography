@@ -9,6 +9,7 @@ import UserCard from "@/components/Dashboard/userCard";
 import Submissions from "@/components/Dashboard/submissions";
 import SoftwareVersion from "@/components/Dashboard/software-version";
 import Notifications from "@/components/Dashboard/notifications";
+import Image from "next/image";
 
 
 export default function Dashboard() {
@@ -18,7 +19,7 @@ export default function Dashboard() {
   
 
   interface User {
-    _id: Key | null | undefined;
+    _id?: string;
     email: string;
     role: string;
   }
@@ -62,7 +63,21 @@ export default function Dashboard() {
     }
   };
 
-  if (!user) return <p>Loading...</p>;
+  if (!user) return (
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="p-4">
+        <Image
+          src="/Images/logo/smLogo.png"
+          alt="Loading..."
+          width={128}
+          height={128}
+          className="animate-pulse"
+        />
+      </div>
+      
+      
+    </div>
+  );
 
   return (
     <div className="bg-gray-100">
@@ -75,14 +90,17 @@ export default function Dashboard() {
           </h1>
           </div>
 
-          <div className = "p-2 ml-5">
-            <UserCard 
-              role={user.role} 
-              email={user.email} 
-              userId = {userId || ''}
-              
-            />
-          </div>
+          <div className="p-2 ml-5">
+  {user ? (
+    <UserCard
+      role={user.role}
+      email={user.email}
+      userId={userId || ''}
+    />
+  ) : (
+    <p>Loading user data...</p>
+  )}
+</div>
           <Notifications/>
 
       <Submissions />

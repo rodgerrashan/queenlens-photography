@@ -15,6 +15,7 @@ interface Submission {
   read: boolean;
 }
 
+
 async function toggleSubmissionReadStatus(id: string, read: boolean) {
   console.log("Toggling submission read status:", id, read);
   try {
@@ -70,7 +71,7 @@ export default function Submissions() {
         {/* Desktop Table - Hidden on mobile */}
         <div className="hidden md:block overflow-x-auto">
           <table className="w-full border-collapse">
-            <thead className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+            <thead className="bg-gray-200 text</div>-gray-600 uppercase text-sm leading-normal">
               <tr>
                 <th className="py-3 px-4 text-left">Date</th>
                 <th className="py-3 px-4 text-left">Email</th>
