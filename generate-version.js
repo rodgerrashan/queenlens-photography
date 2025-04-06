@@ -38,9 +38,10 @@ const newVersion = incrementVersion(pkg.version, versionType);
 
 // Prepare the data for version.json
 const versionData = {
-  versionName: "Alexandriana",
+  name: "Alexandriana",
   version: newVersion,
-  buildTime: new Date().toISOString(),
+  releaseDate: new Date().toISOString(),
+  author: ".Helloworld Dev"
 };
 
 // Write new version into version.json

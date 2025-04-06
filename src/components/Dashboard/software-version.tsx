@@ -1,15 +1,36 @@
 "use client"
 import React from 'react';
 import { cinzelFont } from "@/styles/fonts";
+import { useEffect, useState } from 'react';
+
+
+interface VersionInfo {
+    name: string;
+    version: string;
+    releaseDate: string;
+    author: string;
+}
+
+const useVersionInfo = () => {
+    const [versionInfo, setVersionInfo] = useState<VersionInfo>({
+        name: '',
+        version: '',
+        releaseDate: '',
+        author: ''
+    });
+
+    useEffect(() => {
+        fetch('/version.json')
+            .then(response => response.json())
+            .then(data => setVersionInfo(data))
+            .catch(error => console.error('Error loading version info:', error));
+    }, []);
+
+    return versionInfo;
+};
 
 const SoftwareVersion: React.FC = () => {
-    const versionInfo = {
-        name: 'Alexandriana',
-        version: '1.0.3',
-        build: 'dev-1.0.148.0d',
-        releaseDate: 'April 15, 2025',
-        author: '.helloworld team',
-    };
+    const versionInfo = useVersionInfo();
 
     return (
         <>
@@ -55,9 +76,7 @@ const SoftwareVersion: React.FC = () => {
                             <p className="text-gray-800 text-md mb-2">
                                 <strong>Version:</strong> {versionInfo.version}
                             </p>
-                            <p className="text-gray-800 text-md mb-2">
-                                <strong>Build:</strong> {versionInfo.build}
-                            </p>
+                            
                             <p className="text-gray-800 text-md mb-2">
                                 <strong>Release Date:</strong> {versionInfo.releaseDate}
                             </p>

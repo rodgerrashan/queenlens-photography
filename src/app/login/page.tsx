@@ -7,9 +7,12 @@ import Image from "next/image";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsLoading(true);
     const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,12 +25,12 @@ export default function Login() {
       }else if(data.role === "user"){
         window.location.href = `/user/dashboard?userId=${data.id}`;
       }
-    
-      
     } else {
       alert(data.message);
     }
-  };
+    setIsLoading(false);
+    };
+
 
 
   return (
@@ -78,6 +81,7 @@ export default function Login() {
         <button
         type="submit"
         className="font-semibold w-full bg-gray-950 text-white py-2 rounded-full hover:bg-blue-950 transition duration-200"
+        disabled={isLoading}
         >
         Login
         </button>

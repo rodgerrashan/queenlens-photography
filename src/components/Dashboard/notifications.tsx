@@ -52,7 +52,16 @@ const Notifications: React.FC = () => {
     };
 
     if (loading) {
-        return <div className="text-center text-gray-500">Loading notifications...</div>;
+        return (
+            <div className="bg-gray-100 px-10 mb-10">
+      <h1 className="text-2xl  font-bold mb-4 md:mb-6">Notifications</h1>
+      <div className="w-12 h-12 relative mx-auto">
+        <div className="w-full h-full border-4 border-gray-200 rounded-full"></div>
+        <div className="w-full h-full border-4 border-gray-900 rounded-full absolute top-0 left-0 animate-[spin_1s_linear_infinite] border-t-transparent"></div>
+      </div>
+
+      </div>
+        );
     }
 
     if (error) {

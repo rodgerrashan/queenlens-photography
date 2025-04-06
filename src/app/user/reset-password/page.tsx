@@ -50,7 +50,7 @@ export default function ChangeCredentials() {
     return (
         <>
             <div
-                className="flex flex-col items-center justify-center min-h-screen bg-slate-50 p-6"
+                className="flex flex-col items-center justify-center min-h-screen bg-slate-50 p-6 "
                 style={{
                     backgroundImage: "url('/images/backgrounds/loginbg.jpg')",
                     backgroundSize: 'cover',

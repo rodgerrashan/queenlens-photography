@@ -208,7 +208,7 @@ export default function Submissions() {
                         { icon: FaPhone, href: `tel:${submission.phone}`, color: 'text-black' },
                       ].map(({ icon: Icon, href, color }) => (
                         <a key={href} href={href} target='_blank' rel='noopener noreferrer'>
-                          <Icon className={`${color} text-2xl hover:scale-110 transition`} />
+                          <Icon className={`${color} text-3xl hover:scale-110 transition p-2`} />
                         </a>
                       ))}
                     </div>
