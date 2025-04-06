@@ -2,7 +2,7 @@
 
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
-import { findUser, verifyPassword,createUser } from "../../../../models/Users";
+import { findUser, verifyPassword } from "../../../../models/Users";
 
 export async function POST(req: Request) {
   try {

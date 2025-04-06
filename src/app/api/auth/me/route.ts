@@ -18,7 +18,7 @@ export async function GET() {
 
     return Response.json({ user: decoded }, { status: 200 });
 
-  } catch (err) {
+  } catch {
     return Response.json({ user: null, error: "Invalid token" }, { status: 401 });
   }
 }

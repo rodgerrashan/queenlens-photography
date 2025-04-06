@@ -1,6 +1,11 @@
 import jwt from "jsonwebtoken";
+import { Request, Response, NextFunction } from 'express';
 
-export function authMiddleware(req: { cookies: { token: any; }; user: string | jwt.JwtPayload; }, res: { status: (arg0: number) => { (): any; new(): any; json: { (arg0: { message: string; }): void; new(): any; }; }; }, next: () => void) {
+interface AuthRequest extends Request {
+  user?: string | jwt.JwtPayload;
+}
+
+export function authMiddleware(req: AuthRequest, res: Response, next: NextFunction) {
   const token = req.cookies.token;
 
   if (!token) {
@@ -15,7 +20,7 @@ export function authMiddleware(req: { cookies: { token: any; }; user: string | j
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
     next();
-  } catch (err) {
+  } catch{
     res.status(401).json({ message: "Invalid token" });
   }
 }

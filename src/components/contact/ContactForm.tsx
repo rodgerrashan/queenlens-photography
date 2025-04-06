@@ -134,7 +134,7 @@ export default function ContactForm() {
   return (
     <div className="mx-auto sm:max-w-lg bg-gray-200 p-6 sm:rounded-2xl mt-5 mb-5">
       <h2 className="text-xl font-semibold text-center">Contact Form</h2>
-      <p className='text-sm font-medium text-left pt-4'>Fill out the form below, and we'll get back to you as soon as possible.</p>
+      <p className='text-sm font-medium text-left pt-4'>Fill out the form below, and we&apos ll get back to you as soon as possible.</p>
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="mb-2">
           <input 

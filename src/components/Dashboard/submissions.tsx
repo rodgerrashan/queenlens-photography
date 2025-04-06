@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FaEnvelope, FaEnvelopeOpen, FaPhone, FaWhatsapp } from "react-icons/fa";
+import {FaEnvelopeOpen, FaPhone, FaWhatsapp } from "react-icons/fa";
 
 // Define the Submission interface
 interface Submission {

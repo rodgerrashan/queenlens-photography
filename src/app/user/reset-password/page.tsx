@@ -42,7 +42,7 @@ export default function ChangeCredentials() {
             } else {
                 setError(data.error || 'Failed to reset password');
             }
-        } catch (err) {
+        } catch{
             setError('An unexpected error occurred');
         }
     };

@@ -45,7 +45,7 @@ export default function Dashboard() {
         console.error("Error fetching user:", error);
         Router.push("/login");
       });
-  }, []);
+  }, [userId]);
 
   const getUserData = async (id: string) => {
     try {

@@ -1,7 +1,7 @@
 "use client";
-import { SetStateAction, useState } from "react";
-import { montserratAlternatesFont, latoFont,cinzelFont } from "@/styles/fonts";
-import { ChevronDown, ChevronUp, HelpCircle } from "lucide-react";
+import { useState } from "react";
+import {latoFont,cinzelFont } from "@/styles/fonts";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import services from "../../../public/data/faq.json";
 import { motion } from "framer-motion";
 import { IoHelpCircle } from "react-icons/io5";

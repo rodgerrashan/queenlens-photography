@@ -2,7 +2,6 @@ import React from 'react';
 import BackButton from '@/components/BackButton';
 import { cinzelFont, latoFont } from "@/styles/fonts";
 import Link from 'next/link';
-import { Copyright } from 'lucide-react';
 import Copyrights from '@/components/Copyrights';
 import Image from 'next/image';
 import { IoCall, IoMail } from 'react-icons/io5';
@@ -11,8 +10,6 @@ import { IoCall, IoMail } from 'react-icons/io5';
 const commonParagraphStyles = `${latoFont.className} mt-4 max-w-2xl mx-auto text-center text-gray-950`;
 const commonHeading1Styles = `${cinzelFont.className} text-3xl font-bold text-center text-gray-950`;
 const commonHeading2Styles = `${cinzelFont.className} text-2xl text-center font-semibold mt-16 text-gray-950`;
-const commonHeading3Styles = `${cinzelFont.className} text-xl text-center font-medium mt-4 text-gray-950`;
-const commonHeading4Styles = `${cinzelFont.className} text-lg text-center font-medium mt-3 text-gray-950`;
 const commonListStyles = `list-disc list-inside mt-4 max-w-2xl mx-auto text-gray-950 text-left`;
 
 const TermsAndConditions: React.FC = () => {

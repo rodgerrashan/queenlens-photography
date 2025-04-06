@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     await createUser(email, password);
 
     return NextResponse.json({ message: "User created" }, { status: 201 });
-  } catch (err) {
+  } catch {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
 }

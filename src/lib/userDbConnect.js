@@ -1,5 +1,7 @@
-const { MongoClient } = require("mongodb");
-require("dotenv").config();
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -24,4 +26,4 @@ async function userDbConnect() {
     return { db, client };
 }
 
-module.exports = userDbConnect;
+export default userDbConnect;

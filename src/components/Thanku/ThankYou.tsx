@@ -1,10 +1,10 @@
 import { FaCloud, FaInstagram, FaFacebook } from "react-icons/fa";
-import { cinzelFont, latoFont } from "@/styles/fonts";
+import { cinzelFont} from "@/styles/fonts";
 import Link from "next/link";
 
 export default function ThankYou() {
   return (
-    <div className="flex flex-col items-center justify-start   p-6 pt-1 text-center mb-8 mt-5">
+    <div className="flex flex-col items-center justify-start   p-6 pt-1 text-center mb-16 mt-5 min-h-96">
       <h1 className={`${cinzelFont.className} text-2xl font-bold text-black mb-4 uppercase`}>
         Thank You for Reaching Out!
       </h1>

@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect, Key } from "react";
+import { useState, useEffect} from "react";
 import { useSearchParams } from 'next/navigation';
 import Router from "next/router";
 import { cinzelFont } from "@/styles/fonts";
@@ -25,7 +25,6 @@ export default function Dashboard() {
   }
 
   const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Fetch current user data
@@ -45,7 +44,7 @@ export default function Dashboard() {
         console.error("Error fetching user:", error);
         Router.push("/login");
       });
-  }, []);
+  }, [userId]);
 
   const getUserData = async (id: string) => {
     try {

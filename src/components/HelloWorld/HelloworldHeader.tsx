@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaEnvelope, FaPhone, FaTelegram, FaWhatsapp } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaWhatsapp } from "react-icons/fa";
 
 export default function HelloworldHeader() {
     return (

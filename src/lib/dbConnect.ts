@@ -12,15 +12,18 @@ interface MongooseCache {
 }
 
 declare global {
-  // Prevent TypeScript from complaining on hot reload
+  // eslint-disable-next-line no-var
   var mongoose: MongooseCache | undefined;
 }
 
 // Initialize cache
-let cached = global.mongoose ?? { conn: null, promise: null };
+if (!global.mongoose) {
+  global.mongoose = { conn: null, promise: null };
+}
+let cached = global.mongoose;
 
 async function dbConnect() {
-  if (cached.conn) {
+  if (cached?.conn) {
     return { conn: cached.conn, db: cached.conn.connection.db };
   }
 

@@ -1,4 +1,4 @@
-import { cinzelFont, latoFont, montserratAlternatesFont } from "@/styles/fonts";
+import { cinzelFont, latoFont } from "@/styles/fonts";
 export default function ContactIntro() {
     return (
         <>

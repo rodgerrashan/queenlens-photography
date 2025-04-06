@@ -1,6 +1,10 @@
 // lib/mongodb.ts
 import { MongoClient } from "mongodb";
 
+declare global {
+  var _mongoClientPromise: Promise<MongoClient> | undefined;
+}
+
 const uri = process.env.MONGODB_URI as string;
 
 if (!uri) {
@@ -12,18 +16,15 @@ const options = {};
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;
 
-declare global {
-  // Allow global variable for development to avoid multiple connections
-  var _mongoClientPromise: Promise<MongoClient> | undefined;
-}
-
 if (process.env.NODE_ENV === "development") {
-  if (!global._mongoClientPromise) {
+  // In development, use a single MongoClient instance
+  if (!globalThis._mongoClientPromise) {
     client = new MongoClient(uri, options);
-    global._mongoClientPromise = client.connect();
+    globalThis._mongoClientPromise = client.connect();
   }
-  clientPromise = global._mongoClientPromise!;
+  clientPromise = globalThis._mongoClientPromise!;
 } else {
+  // In production, create a new MongoClient instance
   client = new MongoClient(uri, options);
   clientPromise = client.connect();
 }

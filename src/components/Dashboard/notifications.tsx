@@ -2,8 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { FaBell } from 'react-icons/fa';
 
+interface Notification {
+    message: string;
+    time: string;
+}
+
 const Notifications: React.FC = () => {
-    const [notifications, setNotifications] = useState<any[]>([]);
+    const [notifications, setNotifications] = useState<Notification[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
     const [viewAll, setViewAll] = useState<boolean>(false);
@@ -37,7 +42,7 @@ const Notifications: React.FC = () => {
                 setLoading(true);
                 const data = await fetchNotifications();
                 setNotifications(data);
-            } catch (err) {
+            } catch{
                 setError('Failed to load notifications.');
             } finally {
                 setLoading(false);
