@@ -62,16 +62,13 @@ export default function Dashboard() {
     }
   };
 
-  
-
-  
-
   if (!user) return <p>Loading...</p>;
 
   return (
     <div className="bg-gray-100">
       <div className = "bg-gray-100 ">
         <HelloworldHeader />
+        <div className="min-h-screen">
         <div className="bg-gray-100  flex flex-col items-start justify-center py-2 px-10">
           <h1 className={`${cinzelFont.className} text-3xl font-bold mt-5`}>
             Welcome to the Dashboard!
@@ -82,13 +79,11 @@ export default function Dashboard() {
             <UserCard 
               role={user.role} 
               email={user.email} 
+              userId = {userId || ''}
               
             />
           </div>
-
-        
-      </div>
-      <Notifications/>
+          <Notifications/>
 
       <Submissions />
       <div className="bg-gray-100 flex flex-col items-start justify-center py-2 px-10">
@@ -98,6 +93,14 @@ export default function Dashboard() {
 
 
       <SoftwareVersion />
+
+        
+      </div>
+      
+
+
+        </div>
+        
       <HelloworldCopyrights />
     </div>
   );

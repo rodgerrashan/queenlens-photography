@@ -128,3 +128,27 @@ export async function verifyPassword(inputPassword, hashedPassword) {
         throw new Error("Error verifying password.");
     }
 }
+
+export async function updateUserPassword(userId, hashedPassword) {
+    try {
+        // Connect to the database
+        const { db } = await dbConnect();
+
+        // Update the user's password
+        const result = await db.collection("users").updateOne(
+            { _id: new mongoose.Types.ObjectId(userId) },
+            { $set: { password: hashedPassword, updatedAt: new Date() } }
+        );
+
+        if (result.matchedCount === 0) {
+            console.warn("⚠️ No user found with ID:", userId);
+            throw new Error("User not found.");
+        }
+
+        console.log("✅ Password updated for user:", userId);
+        return result;
+    } catch (error) {
+        console.error("❌ Error updating new password:", error);
+        throw new Error("Error updating password.");
+    }
+}
