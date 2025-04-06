@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Silver Package",
+        "description": "Ideal for capturing the joy and pride of your graduation day with candid moments.",
+        "details": [
+            "20+ Premium Edited Softcopies"
+        ],
+        "price": "$100"
+    },
+    {
+        "title": "Platinum Package",
+        "description": "A premium package to preserve the most cherished memories of your graduation milestones.",
+        "details": [
+            "30+ Premium Edited Softcopies",
+            "Graduation Cinematic Video",
+            "50 Edited Softcopies"
+        ],
+        "price": "$100",
+        "highlight": true
+    },
+    {
+        "title": "Gold Package",
+        "description": "A complete photography package to celebrate your graduation day in style.",
+        "details": [
+            "25+ Premium Edited Softcopies",
+            "50 Edited Softcopies"
+        ],
+        "price": "$100"
+    }
+]

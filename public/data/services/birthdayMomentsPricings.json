@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Silver Package",
+        "description": "Perfect for capturing the joy and candid moments of your birthday celebration.",
+        "details": [
+            "25+ Premium Edited Images",
+            "100 Edited Softcopies"
+        ],
+        "price": "$100"
+    },
+    {
+        "title": "Platinum Package",
+        "description": "A premium package to preserve the most cherished memories of your birthday.",
+        "details": [
+            "50+ Premium Edited Images",
+            "8”×12” Enlargement",
+            "Cinematic Video",
+            "100 Softcopies"
+        ],
+        "price": "$100",
+        "highlight": true
+    },
+    {
+        "title": "Gold Package",
+        "description": "A complete photography package to celebrate your birthday in style.",
+        "details": [
+            "40+ Premium Edited Images",
+            "8”×12” Enlargement",
+            "100 Softcopies"
+        ],
+        "price": "$100"
+    }
+]

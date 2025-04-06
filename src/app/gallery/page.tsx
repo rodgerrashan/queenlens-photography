@@ -8,11 +8,24 @@ import MasonryGallery from '@/components/gallery/masonryGallery';
 import MoreShots from '@/components/gallery/moreShots';
 
 
+
+
 type HomeProps = object;
 
 const Gallery: React.FC<HomeProps> = () => {
+  interface GalleryImage {
+    id: number;
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+    blurDataURL: string;
+  }
+  
+  
+  
 
-  const section1_images=[
+  const section1_images: GalleryImage[] =[
     {id: 1,src: `/images/gallery/section1/image(1).jpg`, width:800, height:600, alt:"Image 1", blurDataURL: "/images/gallery/section1/image(1).jpg"},
     {id: 2,src: `/images/gallery/section1/image(2).jpg`, width:1000, height:1200, alt:"Image 2", blurDataURL: "/images/gallery/section1/image(2).jpg"},
     {id: 3,src: `/images/gallery/section1/image(3).jpg`, width:800, height:600, alt:"Image 3", blurDataURL: "/images/gallery/section1/image(3).jpg"},

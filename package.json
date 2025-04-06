@@ -1,26 +1,38 @@
 {
   "name": "queenlens-photography",
-  "version": "0.1.0",
+  "version": "1.12.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run generate-version && next build",
     "start": "next start",
+    "generate-version": "node generate-version.js",
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^12.0.6",
+    "@types/jsonwebtoken": "^9.0.9",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^12.6.2",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.474.0",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.1",
     "next": "^15.2.4",
+    "next-auth": "^4.24.11",
+    "nodemailer": "^6.10.0",
     "queenlens-photography": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "react-responsive-masonry": "^2.7.1"
+    "react-responsive-masonry": "^2.7.1",
+    "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-responsive-masonry": "^2.6.0",
@@ -28,6 +40,7 @@
     "eslint-config-next": "15.1.6",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }

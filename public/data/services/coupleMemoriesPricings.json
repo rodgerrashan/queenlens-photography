@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Silver Package",
+        "description": "Perfect for capturing intimate couple moments with essential coverage.",
+        "details": [
+            "25+ Premium Edited Images",
+            "100 Softcopies"
+        ],
+        "price": "$100"
+    },
+    {
+        "title": "Platinum Package",
+        "description": "A comprehensive package to preserve your most cherished couple memories.",
+        "details": [
+            "50+ Premium Edited Images",
+            "8”×12” Enlargement",
+            "Cinematic Love Story Video",
+            "100 Edited Softcopies"
+        ],
+        "price": "$100",
+        "highlight": true
+    },
+    {
+        "title": "Gold Package",
+        "description": "A complete photography experience to celebrate your love story.",
+        "details": [
+            "40+ Premium Edited Images",
+            "8”×12” Enlargement",
+            "100 Edited Softcopies"
+        ],
+        "price": "$100"
+    }
+]

@@ -13,7 +13,7 @@ export default function Carousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000); // Slide every 5 seconds
+    }, 10000); // Slide every 10 seconds
     return () => clearInterval(interval);
   }, []);
 
