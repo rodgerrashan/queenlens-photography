@@ -1,12 +1,13 @@
+"use server"
 import clientPromise from "@/lib/mongodb";
-import { ObjectId } from "mongodb"; // Import ObjectId for MongoDB _id conversion
+import { ObjectId } from "mongodb"; 
 
 export async function DELETE(request) {
   try {
     const url = new URL(request.url);
     const id = url.pathname.split("/").pop().trim(); // Extract _id from the URL
 
-    console.log("Extracted _id:", id);
+    console.log("Extracted _id: for deletion", id);
 
     if (!id || !ObjectId.isValid(id)) {
       return new Response(JSON.stringify({ error: "Valid _id is required" }), {
@@ -30,6 +31,7 @@ export async function DELETE(request) {
     // Check if user exists
     const userExists = await usersCollection.findOne({ _id: new ObjectId(id) });
     if (!userExists) {
+      console.log("user cannot found");
       return new Response(JSON.stringify({ error: "User not found" }), {
         status: 404,
         headers: { "Content-Type": "application/json" },

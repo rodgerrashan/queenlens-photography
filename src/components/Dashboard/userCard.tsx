@@ -22,6 +22,7 @@ const UserCard: React.FC<UserCardProps> = ({ email = "noreply@ql.com", role = "d
 
             if (response.ok) {
                 console.log('Logged out successfully');
+                window.history.replaceState(null, '', '/login');
                 window.location.href = '/login';
             } else {
                 console.error('Failed to log out');

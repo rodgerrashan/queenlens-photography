@@ -63,42 +63,49 @@ export default function Dashboard() {
     }
   };
 
-  const fetchAllUsers = () => {
-    fetch("/api/admin/get-users")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data) {
-          console.log("All users:", data);
-          setAllUsers(data);
-        }
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching all users:", error);
-        setIsLoading(false);
-      });
+  const fetchAllUsers = async () => {
+    try {
+      const response = await fetch("/api/admin/get-users");
+      if (response.ok) {
+        const data = await response.json();
+        console.log("All users:", data);
+        setAllUsers(data);
+      } else {
+        console.error("Failed to fetch all users");
+      }
+    } catch (error) {
+      console.error("Error fetching all users:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  function handleDeleteUser(id: string): void {
+  async function handleDeleteUser(id: string): Promise<void> {
     console.log("Deleting user with ID:", id);
-    if (confirm("Are you sure you want to delete this user?")) {
-      fetch(`/api/admin/delete-user/${id}`, {
+    const userConfirmed = confirm("Are you sure you want to delete this user?");
+    if (!userConfirmed) return;
+
+    try {
+      const response = await fetch(`/api/admin/delete-user/${id}`, {
         method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.success) {
-            alert("User deleted successfully!");
-            // Refresh the user list
-            fetchAllUsers();
-          } else {
-            alert(data.message || "Failed to delete user.");
-          }
-        })
-        .catch((error) => {
-          console.error("Error deleting user:", error);
-          alert("An error occurred while deleting the user.");
-        });
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          alert("User deleted successfully!");
+          // Refresh the user list
+          fetchAllUsers();
+        } else {
+          alert(data.message || "Failed to delete user.");
+        }
+      } else {
+        const errorData = await response.json();
+        alert(errorData.message || "Failed to delete user.");
+      }
+    } catch (error) {
+      console.error("Error deleting user:", error);
+      alert("An error occurred while deleting the user.");
     }
   }
 
@@ -148,6 +155,7 @@ export default function Dashboard() {
                 if (response.ok) {
                   alert("User added successfully!");
                   fetchAllUsers(); 
+                  
                 } else {
                   const data = await response.json();
                   alert(data.message || "Failed to add user.");
