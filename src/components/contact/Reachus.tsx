@@ -6,7 +6,9 @@ import { IoCall, IoLogoWhatsapp, IoMail } from 'react-icons/io5';
 export default function Reachus() {
 
     return(
-        <div className = "bg-gray-200 flex flex-col items-center my-10 px-8 py-4 ">
+        <div 
+        id='contactBox'
+        className = "bg-gray-200 flex flex-col items-center my-10 px-8 py-4 ">
             <div className = "max-w-3xl ">
                 <h2 className={`${latoFont.className} pt-6 text-3xl font-bold text-left text-gray-950  `}>Prefer to Speak with Us Directly?</h2>
                 <p className={`${latoFont.className} mt-4 max-w-2xl mx-auto text-left  text-gray-950  px-4 pb-3`}>

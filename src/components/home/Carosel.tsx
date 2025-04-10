@@ -33,13 +33,13 @@ export default function Carousel() {
             src={slides[currentIndex].src}
             width={2000}
             height={3000}
-            alt={slides[currentIndex].title}
+            alt={slides[currentIndex].alt}
                 className="w-full h-full object-cover"
             />
             
             <div className={`${cinzelFont.className} absolute bottom-0 left-0 bg-gradient-to-t from-slate-50/100  via-white/60  to-transparent text-black p-4 sm:p-6 w-full`}>
               <h2 className="text-5xl sm:text-5xl md:text-8xl font-semibold max-w-6xl ps-3">{slides[currentIndex].title}</h2>
-              <p className="text-lg sm:text-lg md:text-2xl max-w-5xl ps-2">{slides[currentIndex].description}</p>
+              <p className="text-lg sm:text-lg md:text-2xl max-w-5xl ps-3">{slides[currentIndex].description}</p>
             </div>
           </motion.div>
         </AnimatePresence>

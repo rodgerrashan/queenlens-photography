@@ -1,35 +1,37 @@
 [
-    {
-      "title": "Wedding Shoots",
-      "description": "From the ceremony to the reception, we document every moment of your special day with elegance and attention to detail.",
-      "link": "/services/wedding-shoots"
-    },
-    {
-      "title": "Couple Memories",
-      "description": "Celebrate your love with stunning portraits, perfect for engagements, anniversaries, or simply because.",
-      "link": "/services/couple-memories"
-    },
-    {
-      "title": "Casual Clicks",
-      "description": "Capture the essence of everyday life with our casual photography service, perfect for family gatherings, outings, or just because.",
-      "link": "/services/casual-clicks"
-    },
-    {
-      "title": "Birthday Moments",
-      "description": "Our birthday photography service is crafted to preserve the laughter, surprises, and cherished memories of your celebration.",
-      "link": "/services/birthday-moments"
-    },
-
-    {
-      "title": "Baby Smiles",
-      "description": "Preserve the innocence and wonder of your little ones, as well as the bonds that make your family unique.",
-      "link": "/services/baby-smiles"
-    },
-    
-    {
-      "title": "Graduation Frames",
-      "description": "Celebrations to graduation moments, with vibrant and heartfelt photography.",
-      "link": "/services/graduation-frames"
-    }
-  ]
-  
+  {
+    "title": "Wedding Shoots",
+    "description": "Experience the magic of your wedding day with our expert photographers.",
+    "link": "/services/wedding-shoots"
+  },
+  {
+    "title": "Couple Memories",
+    "description": "Fall in love all over again with stunning couple portraits.",
+    "link": "/services/couple-memories"
+  },
+  {
+    "title": "Birthday Moments",
+    "description": "Make birthdays unforgettable with vibrant photography services.",
+    "link": "/services/birthday-moments"
+  },
+  {
+    "title": "Model Grace",
+    "description": "Unleash your inner model with professional photography sessions.",
+    "link": "/services/model-grace"
+  },
+  {
+    "title": "Baby Smiles",
+    "description": "Capture the innocence and joy of your little ones with family photography.",
+    "link": "/services/baby-smiles"
+  },
+  {
+    "title": "Event Memories",
+    "description": "Relive your special events with captivating photos taken by our experts.",
+    "link": "/services/event-memories"
+  },
+  {
+    "title": "Graduation Frames",
+    "description": "Celebrate academic achievements with memorable graduation photos.",
+    "link": "/services/graduation-frames"
+  }
+]

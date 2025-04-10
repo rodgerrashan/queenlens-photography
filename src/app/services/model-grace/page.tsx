@@ -6,13 +6,13 @@ import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
 import casualClicksPricings from "../../../../public/data/services/casualClicksPricings.json";
 
-export default function CasualClicks() {
+export default function ModelGrace() {
     return (
         <>
             <Header />
 
             <Intro
-                title="Casual Clicks"
+                title="Model Grace need to e make"
                 description="Celebrate the beauty of everyday life with our casual photography. From spontaneous smiles to candid moments, we create memories that feel natural and timeless."
             />
 

@@ -1,33 +1,38 @@
 [
-    {
-      "src": "/images/carosel/img1.jpg",
-      "title": "Capturing Love’s Grandest Moments",
-      "description": "Your big day with timeless shots that tell the story of your love. Every glance, every embrace, forever cherished."
-    },
-    {
-      "src": "/images/carosel/img2.jpg",
-      "title": "Moments Before ‘I Do’",
-      "description": "Elegant and intimate pre-wedding photos that capture the excitement and love leading up to your special day."
-    },
-    {
-      "src": "/images/carosel/img3.jpg",
-      "title": "Love, Framed Perfectly",
-      "description": "Showcasing the joy, laughter, and intimacy of your relationship in a series of beautifully candid shots."
-    },
-    {
-      "src": "/images/carosel/img4.jpg",
-      "title": "Making Birthdays Last Forever",
-      "description": "Life’s milestones with fun, colorful captures that bring out the spirit of your special day."
-    },
-    {
-      "src": "/images/carosel/img5.jpg",
-      "title": "Little Moments, Big Memories",
-      "description": "Heartwarming portraits that preserve the innocence and joy of your little one’s early days."
-    },
-    {
-      "src": "/images/carosel/img6.jpg",
-      "title": "Bring Your Brand to Life",
-      "description": "Showcase your products with professional shots that highlight every detail, bringing out the best of your brand."
-    }
-  ]
-  
+  {
+    "src": "/images/carosel/queenlens-wedding-photoshoot-kandy.jpg",
+    "title": "Beautiful Wedding Moments",
+    "description": "Capture the magic of your special day with our expert wedding photography services in Sri Lanka.",
+    "alt": "Bride and groom during a wedding ceremony in Kandy, Sri Lanka."
+  },
+  {
+    "src": "/images/carosel/queenlens-model-photography.jpg",
+    "title": "Professional model posing",
+    "description": "Showcase your unique style with professional model photoshoots in Sri Lanka.",
+    "alt": "Professional model posing elegantly in a studio setting."
+  },
+  {
+    "src": "/images/carosel/queenlens-casual-photoshoot.jpg",
+    "title": "Natural Outdoor Elegance",
+    "description": "We capture the essence of your personality in stunning photographs. Ideal for individuals, couples, or families.",
+    "alt": "Candid outdoor portrait of an individual enjoying nature."
+  },
+  {
+    "src": "/images/carosel/img4.jpg",
+    "title": "Making Birthdays Last Forever",
+    "description": "Life’s milestones with fun, colorful captures that bring out the spirit of your special day.",
+    "alt": "Colorful birthday celebration with balloons and cake."
+  },
+  {
+    "src": "/images/carosel/queenlens-event-coverage.jpg",
+    "title": "Corporate event photography",
+    "description": "Preserve the highlights of your events with our comprehensive event photography services.",
+    "alt": "Professional corporate event coverage showcasing networking and presentations."
+  },
+  {
+    "src": "/images/carosel/queenlens-model-photography-kandy.jpg",
+    "title": "Fashion model showcasing",
+    "description": "Elevate your portfolio with high-quality professional model shoots.",
+    "alt": "Fashion model showcasing attire during a photoshoot in Kandy, Sri Lanka."
+  }
+]

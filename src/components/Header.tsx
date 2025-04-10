@@ -1,4 +1,6 @@
 "use client";
+
+
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react"; // Using lucide-react for icons
@@ -6,7 +8,10 @@ import Image from "next/image";
 import Link from "next/link"; // Updated to use Link component
 import { motion, AnimatePresence } from "framer-motion";
 
+
+
 const Header: React.FC = () => {
+
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,6 +26,8 @@ const Header: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  
 
   return (
     <header className="bg-slate-50 text-gray-900 p-3">
@@ -53,9 +60,13 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Desktop CTA Button */}
-        <button className="hidden md:block bg-gray-900 text-slate-50 px-4 py-1 rounded hover:bg-blue-950 transition-transform transform hover:scale-105">
-          Let&apos;s Talk
-        </button>
+        <Link href="https://wa.me/+94719991164" target="_blank" rel="noopener noreferrer">
+  <button 
+    className="hidden md:block bg-gray-900 text-slate-50 px-4 py-1 rounded hover:bg-blue-950 transition-transform transform hover:scale-105">
+    Let&apos;s Talk
+  </button>
+</Link>
+        
 
         {/* Mobile Hamburger Menu */}
         <div className="md:hidden">
