@@ -15,14 +15,14 @@ import section2_images from '../../../public/data/gallery/galleryLayout2.json';
 type HomeProps = object;
 
 const Gallery: React.FC<HomeProps> = () => {
-  interface GalleryImage {
-    id: number;
-    src: string;
-    width: number;
-    height: number;
-    alt: string;
-    blurDataURL: string;
-  }
+  // interface GalleryImage {
+  //   id: number;
+  //   src: string;
+  //   width: number;
+  //   height: number;
+  //   alt: string;
+  //   blurDataURL: string;
+  // }
   return (
     <>
     <Header/>
