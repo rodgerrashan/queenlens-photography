@@ -1,23 +1,20 @@
-"use client"
-import Image from "next/image";
-
-export default function AppError(){
-
-  return(
-    <>
-    <div className="flex justify-center items-center min-h-screen">
-          <div className="p-4">
-            <Image
-              src="/Images/logo/smLogo.png"
-              alt="Loading..."
-              width={128}
-              height={128}
-              className="animate-pulse"
-            />
-          </div>
-          
-          
-        </div>
-    </>
-  );
+'use client' // Error boundaries must be Client Components
+ 
+export default function GlobalError({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string }
+  reset: () => void
+}) {
+  return (
+    // global-error must include html and body tags
+    <html>
+      <body>
+        <h2>Something went wrong!</h2>
+        <p>{error.message}</p>
+        <button onClick={() => reset()}>Try again</button>
+      </body>
+    </html>
+  )
 }

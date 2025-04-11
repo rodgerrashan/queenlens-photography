@@ -9,7 +9,6 @@ import InstaLink from '@/components/home/InstaLink';
 import AboutAtHome from '@/components/home/AboutAtHome';
 import Footer from '@/components/Footer';
 import Copyrights from '@/components/Copyrights';
-import { NextSeo } from 'next-seo';
 type HomeProps = object;
 
 
