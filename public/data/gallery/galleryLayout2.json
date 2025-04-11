@@ -1,66 +1,98 @@
 [
   {
     "id": 1,
-    "src": "/images/gallery/section1/image(1).jpg",
-    "width": 800,
-    "height": 600,
-    "alt": "Image 1",
-    "blurDataURL": "/images/gallery/section1/image(1).jpg"
+    "src": "/images/gallery/section2/nature-flower-queenlens-photography.jpg",
+    "width": 2400,
+    "height": 1200,
+    "alt": "nature flower queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/nature-flower-queenlens-photography.jpg"
   },
   {
     "id": 2,
-    "src": "/images/gallery/section1/image(2).jpg",
-    "width": 1000,
+    "src": "/images/gallery/section2/model-1-photoshoot-queenlens-photography.jpg",
+    "width": 1200,
     "height": 1200,
-    "alt": "Image 2",
-    "blurDataURL": "/images/gallery/section1/image(2).jpg"
+    "alt": "model photoshoot queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/model-1-photoshoot-queenlens-photography.jpg"
   },
   {
     "id": 3,
-    "src": "/images/gallery/section1/image(3).jpg",
-    "width": 800,
-    "height": 600,
-    "alt": "Image 3",
-    "blurDataURL": "/images/gallery/section1/image(3).jpg"
+    "src": "/images/gallery/section2/wedding-shoot-queenlens-photography.jpg",
+    "width": 1000,
+    "height": 1200,
+    "alt": "wedding shoot queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/wedding-shoot-queenlens-photography.jpg"
   },
   {
     "id": 4,
-    "src": "/images/gallery/section1/image(4).jpg",
+    "src": "/images/gallery/section2/nature-photoshoot-queenlens-photography.jpg",
     "width": 800,
     "height": 600,
-    "alt": "Image 4",
-    "blurDataURL": "/images/gallery/section1/image(4).jpg"
+    "alt": "nature photoshoot queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/nature-photoshoot-queenlens-photography.jpg"
   },
   {
     "id": 5,
-    "src": "/images/gallery/section1/image(5).jpg",
+    "src": "/images/gallery/section2/reading-casual-photography-ueenlens-photoshoot.jpg",
     "width": 800,
     "height": 600,
-    "alt": "Image 5",
-    "blurDataURL": "/images/gallery/section1/image(5).jpg"
+    "alt": "reading casual queenlens photoshoot - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/reading-casual-photography-ueenlens-photoshoot.jpg"
   },
   {
     "id": 6,
-    "src": "/images/gallery/section1/image(6).jpg",
+    "src": "/images/gallery/section2/casual-photoshoot-queenlens-photography.jpg",
     "width": 800,
     "height": 600,
-    "alt": "Image 6",
-    "blurDataURL": "/images/gallery/section1/image(6).jpg"
+    "alt": "casual photoshoot queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/casual-photoshoot-queenlens-photography.jpg"
   },
   {
     "id": 7,
-    "src": "/images/gallery/section1/image(7).jpg",
+    "src": "/images/gallery/section2/model-photoshoot-queenlens-photography-kandy.jpg",
     "width": 800,
     "height": 600,
-    "alt": "Image 7",
-    "blurDataURL": "/images/gallery/section1/image(7).jpg"
+    "alt": "model photoshoot kandy queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/model-photoshoot-queenlens-photography-kandy.jpg"
   },
   {
     "id": 8,
-    "src": "/images/gallery/section1/image(8).jpg",
+    "src": "/images/gallery/section2/model-2-queenlens-photography.jpg",
     "width": 800,
     "height": 600,
-    "alt": "Image 8",
-    "blurDataURL": "/images/gallery/section1/image(8).jpg"
+    "alt": "model 2 queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/model-2-queenlens-photography.jpg"
+  },
+  {
+    "id": 9,
+    "src": "/images/gallery/section2/wedding-photoshoot-queenlens-photography.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "wedding photoshoot queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/wedding-photoshoot-queenlens-photography.jpg"
+  },
+  {
+    "id": 10,
+    "src": "/images/gallery/section2/pera-1-blooming-queenlens-photography.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "pera 1 blooming queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/pera-1-blooming-queenlens-photography.jpg"
+  },
+  {
+    "id": 11,
+    "src": "/images/gallery/section2/graduation-photography-queenlens-photography.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "graduation photography queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/graduation-photography-queenlens-photography.jpg"
+  },
+  {
+    "id": 12,
+    "src": "/images/gallery/section2/model-photoshoot-queenlens-photography.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "model photoshoot queenlens photography - queenlens photography",
+    "blurDataURL": "/images/gallery/section2/model-photoshoot-queenlens-photography.jpg"
   }
 ]

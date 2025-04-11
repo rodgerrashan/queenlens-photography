@@ -10,7 +10,6 @@ import WhatsAppButton from '@/components/Whatsapputton';
 
 import section1_images from '../../../public/data/gallery/galleryLayout1.json';
 import section2_images from '../../../public/data/gallery/galleryLayout2.json';
-import section3_images from '../../../public/data/gallery/galleryLayout3.json';
 
 
 type HomeProps = object;
@@ -51,7 +50,7 @@ const Gallery: React.FC<HomeProps> = () => {
     <div className = "container mx-auto py-2 px-4 max-w-5xl ">
     <MasonryGallery
       images={section2_images}
-      columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1200: 4}}
+      columnsCountBreakPoints={{ 350: 2,  900: 3}}
       gapSize={16}
       animateLoad={true}
     />
@@ -60,25 +59,14 @@ const Gallery: React.FC<HomeProps> = () => {
 
     <section>
     <AdMsg 
-        title="Let’s Make Magic Together!"
-        description="Loving what you see? Imagine your own memories, beautifully captured. Let’s talk about your vision!"
-        button_text="Let’s Talk"
-        bg_image="/images/ads/ads-bg-1.jpg"
-      />
+  title="Capture Your Special Moments"
+  description="Love what you see? Let’s create stunning, professional photos of your wedding, portraits, or special events. Share your vision, and let’s bring it to life through our lens!"
+  button_text="Book Your Shoot Today"
+  bg_image="/images/ads/ads-bg-2.jpg"
+/>
+
 
     </section>
-{/* Section 03 */}
-
-    <div className = "container mx-auto py-2 px-4 max-w-5xl ">
-    <MasonryGallery
-      images={section3_images}
-      columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1200: 4}}
-      gapSize={16}
-      animateLoad={true}
-    />
-    </div>
-
-    
 
 
       <MoreShots/>

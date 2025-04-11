@@ -5,8 +5,7 @@ import Footer from '@/components/Footer';
 import Copyrights from '@/components/Copyrights';
 import Intro from '@/components/About/Intro';
 import Slogen from '@/components/About/slogen';
-import OurTeam from '@/components/About/OurTeam';
-import Memories from '@/components/About/Memories';
+// import OurTeam from '@/components/About/OurTeam';
 import Why from '@/components/About/Why';
 import WhatsAppButton from '@/components/Whatsapputton';
 // import Image from 'next/image';
@@ -19,8 +18,8 @@ const AboutPage = () => {
             <Header/>
             <Slogen/>
             <Intro/>
-            <OurTeam/>
-            <Memories/>
+            {/* <OurTeam/> */}
+            
             <Why/>
             <Footer/>
             <Copyrights/>
