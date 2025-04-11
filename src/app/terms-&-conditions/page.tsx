@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Copyrights from '@/components/Copyrights';
 import Image from 'next/image';
 import { IoCall, IoMail } from 'react-icons/io5';
+import WhatsAppButton from '@/components/Whatsapputton';
 
 // Common styles
 const commonParagraphStyles = `${latoFont.className} mt-4 max-w-2xl mx-auto text-center text-gray-950`;
@@ -166,6 +167,7 @@ const TermsAndConditions: React.FC = () => {
 
             </div>
            <Copyrights/>
+           <WhatsAppButton/>
             
         </>
     );

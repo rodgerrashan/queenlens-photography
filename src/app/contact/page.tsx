@@ -7,6 +7,7 @@ import ContactIntro from '@/components/contact/ContactIntro';
 import ContactForm from '@/components/contact/ContactForm';
 import Reachus from '@/components/contact/Reachus';
 import FinalNotes from '@/components/contact/FinalNotes';
+import WhatsAppButton from '@/components/Whatsapputton';
 // import Image from 'next/image';
 
 
@@ -21,12 +22,18 @@ const ContactPage = () => {
             <Header/>
             <ContactIntro/>
             <ContactForm/>
+
+            <section id='reachus'>
             <Reachus/>
+
+            </section>
+            
             <FinalNotes/>
 
 
             <Footer/>
             <Copyrights/>
+            <WhatsAppButton/>
             
         </div>
     );

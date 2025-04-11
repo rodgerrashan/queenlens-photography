@@ -19,7 +19,10 @@ const Footer = () => {
           <p className='mt-4 text-gray-700'>
             Ready to capture your story? Contact us today and start creating memories with QueenLens Photography.
           </p>
+          <Link href="/contact#reachus">
           <button className='mt-4 bg-black text-white py-2 px-4 rounded hover:bg-blue-950 transition'>Let&apos;s Talk</button>
+          </Link>
+          
         </div>
 
         {/* Section 02: Quick Links & Services */}
@@ -27,19 +30,53 @@ const Footer = () => {
           <div className='min-w-40'>
             <h3 className='text-xl font-bold mb-2'>Quick Links</h3>
             <ul className='space-y-2 text-gray-600'>
-              {['Home','Gallery','About', 'Services', 'Contact', 'FAQ', 'Privacy Policy', 'Terms & Conditions'].map((link) => (
-                <li key={link}>
-                  <Link href={`/${link.toLowerCase().replace(/ /g, '-')}`} className='hover:text-blue-950 transition'>
-                    {link}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+  <li>
+    <Link href="/home" className="hover:text-blue-950 transition">
+      Home
+    </Link>
+  </li>
+  <li>
+    <Link href="/gallery" className="hover:text-blue-950 transition">
+      Gallery
+    </Link>
+  </li>
+  <li>
+    <Link href="/about" className="hover:text-blue-950 transition">
+      About
+    </Link>
+  </li>
+  <li>
+    <Link href="/services" className="hover:text-blue-950 transition">
+      Services
+    </Link>
+  </li>
+  <li>
+    <Link href="/contact" className="hover:text-blue-950 transition">
+      Contact
+    </Link>
+  </li>
+  <li>
+    <Link href="/services#faq" className="hover:text-blue-950 transition">
+      FAQ
+    </Link>
+  </li>
+  <li>
+    <Link href="/privacy-policy" className="hover:text-blue-950 transition">
+      Privacy Policy
+    </Link>
+  </li>
+  <li>
+    <Link href="/terms-&-conditions" className="hover:text-blue-950 transition">
+      Terms & Conditions
+    </Link>
+  </li>
+</ul>
+
           </div>
           <div className='min-w-36 mx-9'>
             <h3 className='text-xl font-bold mb-2'>Services</h3>
             <ul className='space-y-2 text-gray-600'>
-              {['Wedding Shoots', 'Couple Memories', 'Casual Clicks', 'Birthday Moments', 'Baby Smiles', 'Graduation Frames'].map((service) => (
+              {['Wedding Shoots', 'Couple Memories', 'Birthday Moments','Model Grace', 'Baby Smiles', 'Event Memories', 'Graduation Frames'].map((service) => (
                 <li key={service}>
                   <Link href={`/services/${service.toLowerCase().replace(/ /g, '-')}`} className='hover:text-blue-950 transition'>
                     {service}

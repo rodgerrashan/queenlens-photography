@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
 import casualClicksPricings from "../../../../public/data/services/casualClicksPricings.json";
+import WhatsAppButton from "@/components/Whatsapputton";
 
 export default function ModelGrace() {
     return (
@@ -26,6 +27,7 @@ export default function ModelGrace() {
 
             <Footer />
             <Copyrights />
+            <WhatsAppButton/>
         </>
     );
 }

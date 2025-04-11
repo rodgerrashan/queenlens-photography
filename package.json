@@ -1,6 +1,6 @@
 {
   "name": "queenlens-photography",
-  "version": "1.12.21",
+  "version": "1.12.23",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

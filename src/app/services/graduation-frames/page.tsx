@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
 import weddingShootsPricings from "../../../../public/data/services/garduationFramesPricings.json";
+import WhatsAppButton from "@/components/Whatsapputton";
 
 
 export default function GraduationFrames() {
@@ -31,6 +32,7 @@ export default function GraduationFrames() {
 
             <Footer/>
             <Copyrights/>
+            <WhatsAppButton/>
 
         </>
     );

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
 import coupleMemoriesPricings from "../../../../public/data/services/coupleMemoriesPricings.json";
+import WhatsAppButton from "@/components/Whatsapputton";
 
 export default function CoupleMemories() {
     return (
@@ -27,6 +28,7 @@ export default function CoupleMemories() {
 
             <Footer />
             <Copyrights />
+            <WhatsAppButton/>
         </>
     );
 }

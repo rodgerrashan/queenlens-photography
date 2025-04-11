@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Copyrights from '@/components/Copyrights';
 import Intro from '@/components/Services/Intro';
 import Faq from '@/components/Services/Faq';
+import WhatsAppButton from '@/components/Whatsapputton';
 
 
 
@@ -17,11 +18,16 @@ const ServicePage = () => {
         <div>
             <Header/>
             <Intro/>
+            <section id="faq">
             <Faq/>
             
+        
+      </section>
+           
 
             <Footer/>
             <Copyrights/>
+            <WhatsAppButton/>
             
         </div>
     );

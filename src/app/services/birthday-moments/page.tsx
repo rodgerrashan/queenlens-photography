@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
 import bdayShootsPricings from "../../../../public/data/services/birthdayMomentsPricings.json";
+import WhatsAppButton from "@/components/Whatsapputton";
 
 
 export default function BirthdayMoments() {
@@ -30,6 +31,7 @@ export default function BirthdayMoments() {
 
             <Footer/>
             <Copyrights/>
+            <WhatsAppButton/>
         </>
     );
 }

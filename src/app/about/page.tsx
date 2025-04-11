@@ -8,6 +8,7 @@ import Slogen from '@/components/About/slogen';
 import OurTeam from '@/components/About/OurTeam';
 import Memories from '@/components/About/Memories';
 import Why from '@/components/About/Why';
+import WhatsAppButton from '@/components/Whatsapputton';
 // import Image from 'next/image';
 
 const AboutPage = () => {
@@ -23,6 +24,7 @@ const AboutPage = () => {
             <Why/>
             <Footer/>
             <Copyrights/>
+            <WhatsAppButton/>
             
         </div>
     );

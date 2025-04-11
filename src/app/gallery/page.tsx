@@ -6,6 +6,7 @@ import AdMsg from '@/components/gallery/adMsg';
 import MasonryGallery from '@/components/gallery/masonryGallery';
 // import Image from 'next/image';
 import MoreShots from '@/components/gallery/moreShots';
+import WhatsAppButton from '@/components/Whatsapputton';
 
 
 
@@ -114,6 +115,7 @@ const Gallery: React.FC<HomeProps> = () => {
       <MoreShots/>
       <Footer/>
       <Copyrights/>
+      <WhatsAppButton/>
     </>
       
 

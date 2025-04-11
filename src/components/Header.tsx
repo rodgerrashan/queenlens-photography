@@ -60,7 +60,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Desktop CTA Button */}
-        <Link href="https://wa.me/+94719991164" target="_blank" rel="noopener noreferrer">
+        <Link href="/contact#reachus">
   <button 
     className="hidden md:block bg-gray-900 text-slate-50 px-4 py-1 rounded hover:bg-blue-950 transition-transform transform hover:scale-105">
     Let&apos;s Talk

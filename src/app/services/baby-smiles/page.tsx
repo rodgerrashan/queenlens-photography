@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
 import babySmilesPricings from "../../../../public/data/services/babySmilesPricings.json";
+import WhatsAppButton from "@/components/Whatsapputton";
 
 export default function BabySmiles() {
     return (
@@ -26,6 +27,7 @@ export default function BabySmiles() {
 
             <Footer />
             <Copyrights />
+            <WhatsAppButton/>
         </>
     );
 }

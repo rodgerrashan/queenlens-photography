@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
 import weddingShootsPricings from "../../../../public/data/services/weddingShootsPricings.json";
+import WhatsAppButton from "@/components/Whatsapputton";
 
 
 export default function WeddingShoots() {
@@ -33,6 +34,7 @@ export default function WeddingShoots() {
 
         <Footer/>
         <Copyrights/>
+        <WhatsAppButton/>
 
         </>
     );
