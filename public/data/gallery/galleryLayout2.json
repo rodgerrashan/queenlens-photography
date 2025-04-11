@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "src": "/images/gallery/section1/image(1).jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "Image 1",
+    "blurDataURL": "/images/gallery/section1/image(1).jpg"
+  },
+  {
+    "id": 2,
+    "src": "/images/gallery/section1/image(2).jpg",
+    "width": 1000,
+    "height": 1200,
+    "alt": "Image 2",
+    "blurDataURL": "/images/gallery/section1/image(2).jpg"
+  },
+  {
+    "id": 3,
+    "src": "/images/gallery/section1/image(3).jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "Image 3",
+    "blurDataURL": "/images/gallery/section1/image(3).jpg"
+  },
+  {
+    "id": 4,
+    "src": "/images/gallery/section1/image(4).jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "Image 4",
+    "blurDataURL": "/images/gallery/section1/image(4).jpg"
+  },
+  {
+    "id": 5,
+    "src": "/images/gallery/section1/image(5).jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "Image 5",
+    "blurDataURL": "/images/gallery/section1/image(5).jpg"
+  },
+  {
+    "id": 6,
+    "src": "/images/gallery/section1/image(6).jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "Image 6",
+    "blurDataURL": "/images/gallery/section1/image(6).jpg"
+  },
+  {
+    "id": 7,
+    "src": "/images/gallery/section1/image(7).jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "Image 7",
+    "blurDataURL": "/images/gallery/section1/image(7).jpg"
+  },
+  {
+    "id": 8,
+    "src": "/images/gallery/section1/image(8).jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "Image 8",
+    "blurDataURL": "/images/gallery/section1/image(8).jpg"
+  }
+]
