@@ -8,18 +8,18 @@ export default function Reachus() {
     return(
         <div 
         id='contactBox'
-        className = "bg-gray-200 flex flex-col items-center my-10 px-8 py-4 ">
-            <div className = "max-w-3xl ">
+        className = "bg-gray-200 flex flex-col items-center justify-center my-10 px-8 py-4 ">
+            <div className = "max-w-xs md:max-w-3xl mx-auto">
                 <h2 className={`${latoFont.className} pt-6 text-3xl font-bold text-left text-gray-950  `}>Prefer to Speak with Us Directly?</h2>
-                <p className={`${latoFont.className} mt-4 max-w-2xl mx-auto text-left  text-gray-950  px-4 pb-3`}>
+                <p className={`${latoFont.className} mt-4 md:max-w-2xl mx-auto text-left  text-gray-950 px-2 pb-3 max-w-sm`}>
                 We’re just a call or email away! Whether you want to chat about your ideas or need guidance choosing the perfect package, we’re here to make the process smooth and enjoyable.
                 </p>
                 <div className='pl-5'>
 
                 <a href='mailto:dinukanipun2001@gmail.com'>
-                <div className='flex flex-row px-5 pb-2'>
+                <div className='flex flex-row px-5 pb-2 mt-5'>
                     <IoMail className='h-8 w-8'/>
-                    <p className='text-xl pl-2 font-bold'>contact@queenlensphotography.com</p>
+                    <p className='text-xs md:text-xl pl-2 font-bold my-auto'>contact@queenlensphotography.com</p>
                 </div>
 
                 </a>

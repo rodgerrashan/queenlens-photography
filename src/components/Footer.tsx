@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp, FaEnvelope, FaPhone, F
 
 const Footer = () => {
   return (
-    <div className='bg-gray-200 py-10 px-4'>
+    <div className='bg-gray-200 py-10 px-4 mt-5'>
       <footer className='container mx-auto px-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
         {/* Section 01: Branding */}
         <div className='flex flex-col items-start justify-start mb-5'>

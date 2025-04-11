@@ -17,7 +17,7 @@ const Masonry = dynamic(
 
 // Placeholder component to show while masonry components are loading
 const LoadingPlaceholder = () => (
-  <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     {Array(8).fill(0).map((_, i) => (
       <div key={i} className="bg-gray-200 rounded-lg h-64 animate-pulse"></div>
     ))}
@@ -105,13 +105,13 @@ const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images, columnsCountBre
                   <Image
                     src={image.src}
                     alt={image.alt || ''}
-                    width={image.width || 500}
-                    height={image.height || 300}
+                    width={image.width || 600}
+                    height={image.height || 1200}
                     className="w-full h-auto"
                     placeholder={image.blurDataURL ? "blur" : "empty"}
                     blurDataURL={image.blurDataURL}
                     onLoad={() => handleImageLoad(imageId)}
-                    priority={index < 4} // Load first few images with priority
+                    priority={index < 8} // Load first few images with priority
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
                 </div>
