@@ -3,9 +3,9 @@ import { useState, useEffect, Key } from "react";
 import { useSearchParams } from 'next/navigation';
 import Router from "next/router";
 import { cinzelFont } from "@/styles/fonts";
-import HelloworldCopyrights from "@/components/HelloWorld/HelloworldCopyrights";
 import HelloworldHeader from "@/components/HelloWorld/HelloworldHeader";
 import UserCard from "@/components/Dashboard/userCard";
+import Loading from "../Loading";
 
 
 export default function AdminDashboardContent() {
@@ -13,9 +13,6 @@ export default function AdminDashboardContent() {
   const searchParams = useSearchParams();
   const userId = searchParams.get('userId');
   
-
-
-
   interface User {
     _id: Key | null | undefined;
     email: string;
@@ -109,26 +106,29 @@ export default function AdminDashboardContent() {
     }
   }
 
-  if (!user) return <p>Loading...</p>;
+  if (!user) return <><Loading/></>;
 
   return (
     <>
       <div className = "bg-gray-100 ">
         <HelloworldHeader />
+        <div className="min-h-screen">
         <div className="bg-gray-100  flex flex-col items-start justify-center py-2 px-10">
           <h1 className={`${cinzelFont.className} text-3xl font-bold mt-5`}>
             Welcome to the Dashboard!
           </h1>
           </div>
-
-          <div className = "p-2 ml-5">
+          <div className="p-2 ml-5 ">
             <UserCard 
             role={user.role}
             email={user.email} userId={""}              
             />
           </div>
 
-        <div className="container mx-auto px-10 py-8 ">
+        
+        
+
+        <div className="mx-auto px-10 py-8 ">
           <h2 className={`${cinzelFont.className} text-2xl font-bold mb-6`}>User Management</h2>
           
           <div className="bg-white p-6 rounded-2xl mb-8">
@@ -177,10 +177,10 @@ export default function AdminDashboardContent() {
                   name="role" 
                   required 
                   className="border p-2 rounded-full appearance-none"
-                  defaultValue="user"
+                  defaultValue="admin"
                 >
+                  <option value="site-admin">Site Admin</option>
                   <option value="admin">Admin</option>
-                  <option value="user">User</option>
                 </select>
               </div>
               <div className="flex flex-col">
@@ -206,8 +206,13 @@ export default function AdminDashboardContent() {
           <div className="bg-white p-6 rounded-2xl">
             <h3 className="text-xl font-semibold mb-6">All Users</h3>
             {isLoading ? (
-              <p>Loading users...</p>
-            ) : allUsers && allUsers.length > 0 ? (
+  <div className="flex items-center space-x-2">
+    <div className="w-4 h-4 rounded-full bg-blue-500 animate-bounce [animation-delay:-0.3s]"></div>
+    <div className="w-4 h-4 rounded-full bg-blue-500 animate-bounce [animation-delay:-0.15s]"></div>
+    <div className="w-4 h-4 rounded-full bg-blue-500 animate-bounce"></div>
+    <span className="text-sm text-gray-600 ml-2">Loading users...</span>
+  </div>
+) :allUsers && allUsers.length > 0 ? (
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead className="bg-gray-100 text-gray-600 uppercase text-sm leading-normal">
@@ -218,22 +223,24 @@ export default function AdminDashboardContent() {
                     </tr>
                   </thead>
                   <tbody className="text-gray-700 text-sm font-normal">
-                    {allUsers.map((u) => (
-                      <tr key={u._id} className="hover:bg-gray-50  border-b border-gray-200 ">
-                        <td className="border p-2">{u.email}</td>
-                        <td className="border p-2">{u.role}</td>
-                        <td className="border p-2 space-x-2">
-                
-                          <button 
-                            onClick={() => u._id && handleDeleteUser(u._id as string)}
-                            className= "bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-xs ml-2"
-                          >
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
+  {allUsers.map((u) => (
+    <tr key={u._id} className="hover:bg-gray-50 border-b border-gray-200">
+      <td className="border p-2">{u.email}</td>
+      <td className="border p-2">{u.role}</td>
+      <td className="border p-2 space-x-2">
+        {u._id !== userId && (
+          <button
+            onClick={() => handleDeleteUser(u._id as string)}
+            className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-xs ml-2"
+          >
+            Delete
+          </button>
+        )}
+      </td>
+    </tr>
+  ))}
+</tbody>
+
                 </table>
               </div>
             ) : (
@@ -241,8 +248,9 @@ export default function AdminDashboardContent() {
             )}
           </div>
         </div>
+        </div>
       </div>
-      <HelloworldCopyrights />
+      
     </>
   );
 }

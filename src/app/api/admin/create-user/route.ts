@@ -1,8 +1,10 @@
 import { createUser } from "../../../../models/Users";
 import jwt from "jsonwebtoken";
 import { NextRequest, NextResponse } from "next/server";
+import { SendEmail } from "./SendMail";
 
 export async function POST(req: NextRequest) {
+
   console.log("Request method:", req.method);
   const body = await req.json();
   console.log("Request body:", body);
@@ -18,11 +20,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
     const { role } = decoded as jwt.JwtPayload;
-    if (role !== "admin") return NextResponse.json({ message: "Forbidden" }, { status: 403 });
+    if (role !== "site-admin") return NextResponse.json({ message: "Forbidden" }, { status: 403 });
 
     const { email, password } = body;
-    await createUser(email, password);
-
+    await createUser(email, password, role);
+    await SendEmail(email);
     return NextResponse.json({ message: "User created" }, { status: 201 });
   } catch {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });

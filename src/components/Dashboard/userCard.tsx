@@ -7,7 +7,7 @@ interface UserCardProps {
     userId?: string;
 }
 
-const UserCard: React.FC<UserCardProps> = ({ email = "noreply@ql.com", role = "dev" , userId = "none"}) => {
+const UserCard: React.FC<UserCardProps> = ({ email = "user@queenlens.com", role = "dev" , userId = "none"}) => {
     const icon = FaUser;
 
     const handleLogout = async () => {

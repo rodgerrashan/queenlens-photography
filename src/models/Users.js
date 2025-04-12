@@ -5,7 +5,7 @@ import mongoose, { Schema } from "mongoose";
 const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
-    role: { type: String, default: "user" },
+    role: { type: String, default: "admin" },
 });
 
 // Hash password before saving
@@ -25,7 +25,7 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 const User = mongoose.models.users || mongoose.model("users", userSchema);
 export default User;
 
-export async function createUser(email, password, role = "user") {
+export async function createUser(email, password, role = "admin") {
     try {
         const { db } = await dbConnect();
 

@@ -15,7 +15,7 @@ export default function GlobalError({
                   <div className="p-4">
                     <Image
                       src="/Images/logo/smLogo.png"
-                      alt="Loading..."
+                      alt="Queenlens Loading..."
                       width={128}
                       height={128}
                       className="animate-pulse"

@@ -102,7 +102,7 @@ export default function Submissions() {
                       : submission.message}
                   </td>
                   <td className="py-2 px-4">
-                    <div className="flex justify-center space-x-3">
+                    <div className="flex justify-center space-x-5">
                       {[
                         { icon: FaWhatsapp, href: `https://wa.me/+94${submission.phone}`, color: 'text-green-600' },
                         { icon: FaEnvelopeOpen, href: `mailto:${submission.email}`, color: 'text-blue-400' },
