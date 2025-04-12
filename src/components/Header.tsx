@@ -38,8 +38,8 @@ const Header: React.FC = () => {
             <Image
               src={"/images/logo/brand.png"}
               alt="QueenLens Photography"
-              width={110}
-              height={60}
+              width={240}
+              height={75}
             />
           </Link>
         </div>
