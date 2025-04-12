@@ -13,6 +13,7 @@
     "@types/express": "^5.0.1",
     "@types/jsonwebtoken": "^9.0.9",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
