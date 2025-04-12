@@ -106,7 +106,7 @@ export default function AdminDashboardContent() {
     }
   }
 
-  if (!user) return <><Loading/></>;
+  if (!user) return <><p>Redirecting...</p></>;
 
   return (
     <>
