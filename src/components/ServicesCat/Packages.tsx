@@ -49,7 +49,7 @@ export default function Packages({ packages }: PackagesProps) {
                             </li>
                         ))}
                     </ul>
-                    <p className="text-lg font-semibold text-center">Starts at <span className="text-blue-600">{pkg.price}</span></p>
+                    <p className="text-lg font-semibold text-center">Starts at <span className={`${pkg.highlight? 'text-yellow-500': 'text-blue-700'} pl-1`}>{pkg.price}</span></p>
                 </motion.div>
             ))}
         </div>

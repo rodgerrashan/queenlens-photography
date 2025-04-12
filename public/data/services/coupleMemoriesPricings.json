@@ -6,7 +6,7 @@
             "25+ Premium Edited Images",
             "100 Softcopies"
         ],
-        "price": "$100"
+        "price": "LKR 12,990/="
     },
     {
         "title": "Platinum Package",
@@ -17,7 +17,7 @@
             "Cinematic Love Story Video",
             "100 Edited Softcopies"
         ],
-        "price": "$100",
+        "price": "LKR 24,990/=",
         "highlight": true
     },
     {
@@ -28,6 +28,6 @@
             "8”×12” Enlargement",
             "100 Edited Softcopies"
         ],
-        "price": "$100"
+        "price": "LKR 18,990/="
     }
 ]

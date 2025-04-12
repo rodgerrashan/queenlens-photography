@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Copyrights from "@/components/Copyrights";
 import Packages from "@/components/ServicesCat/Packages";
-import casualClicksPricings from "../../../../public/data/services/casualClicksPricings.json";
+import casualClicksPricings from "../../../../public/data/services/EventMemoriesPricings.json";
 import WhatsAppButton from "@/components/Whatsapputton";
 
 export default function EventMemories() {

@@ -6,7 +6,7 @@
             "25+ Premium Edited Images",
             "100 Edited Softcopies"
         ],
-        "price": "$100"
+        "price": "LKR 11,790/="
     },
     {
         "title": "Platinum Package",
@@ -17,7 +17,7 @@
             "Cinematic Video",
             "100 Softcopies"
         ],
-        "price": "$100",
+        "price": "LKR 19,790/=",
         "highlight": true
     },
     {
@@ -28,6 +28,6 @@
             "8”×12” Enlargement",
             "100 Softcopies"
         ],
-        "price": "$100"
+        "price": "LKR 14,990/="
     }
 ]

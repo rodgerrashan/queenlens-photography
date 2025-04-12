@@ -1,6 +1,6 @@
 {
   "name": "queenlens-photography",
-  "version": "1.12.26",
+  "version": "1.12.29",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -16,7 +16,7 @@
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
-    "framer-motion": "^12.6.2",
+    "framer-motion": "^12.6.5",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.474.0",
     "mongodb": "^6.15.0",

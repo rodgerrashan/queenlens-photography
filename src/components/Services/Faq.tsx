@@ -34,9 +34,9 @@ export default function Faq() {
                   onClick={() => toggleDescription(index)}
                 >
                   <div className="flex items-center gap-2 justify-center">
-                    <IoHelpCircle className="w-10 h-10" />
+                    <IoHelpCircle className=" w-8 h-8 md:w-10 md:h-10" />
                     <h2
-                      className={`${latoFont.className} text-lg md:text-xl font-bold max-w-60 lg:max-w-80`}
+                      className={`${latoFont.className} text-lg md:text-xl font-bold max-w-56  md:max-w-60 lg:max-w-80`}
                     >
                       {service.title}
                     </h2>
