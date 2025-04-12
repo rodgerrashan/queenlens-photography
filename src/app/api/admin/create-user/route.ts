@@ -22,8 +22,9 @@ export async function POST(req: NextRequest) {
     const { role } = decoded as jwt.JwtPayload;
     if (role !== "site-admin") return NextResponse.json({ message: "Forbidden" }, { status: 403 });
 
-    const { email, password } = body;
-    await createUser(email, password, role);
+    const { email, password,role_1 } = body;
+
+    await createUser(email, password, role_1);
     await SendEmail(email);
     return NextResponse.json({ message: "User created" }, { status: 201 });
   } catch {
