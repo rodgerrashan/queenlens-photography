@@ -3,14 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-type FormErrors = {
-  firstName?: string;
-  lastName?: string;
-  email?: string;
-  phone?: string;
-  service?: string;
-  message?: string;
-};
+
 
 export default function ContactForm() {
   const router = useRouter();
@@ -29,51 +22,92 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
 
-  const validateForm = (): boolean => {
+  interface FormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    service: string;
+    message: string;
+  }
+  
+  interface FormErrors {
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phone?: string;
+    service?: string;
+    message?: string;
+  }
+  
+  const validateForm = (formData: FormData, setErrors: (errors: FormErrors) => void): boolean => {
     const newErrors: FormErrors = {};
-    
+  
+    // Helper function to detect potential SQL injection patterns
+    const isSuspiciousInput = (input: string): boolean => {
+      const sqlInjectionPatterns = [
+        /--/, // SQL comment
+        /;[\s]*--/, // Statement terminator with comment
+        /[';]\s*(SELECT|INSERT|UPDATE|DELETE|DROP|UNION|ALTER)/i, // Common SQL keywords
+        /\b(OR|AND)\b.*(=|>|<)/i, // Logical operators with comparisons
+        /['"]/ // Unescaped quotes
+      ];
+      return sqlInjectionPatterns.some((pattern) => pattern.test(input));
+    };
+  
     // Validate firstName (required)
     if (!formData.firstName.trim()) {
       newErrors.firstName = 'First name is required';
     } else if (formData.firstName.length < 2) {
       newErrors.firstName = 'First name must be at least 2 characters';
+    } else if (isSuspiciousInput(formData.firstName)) {
+      newErrors.firstName = 'First name contains invalid characters';
     }
-    
+  
     // Validate lastName (if provided)
     if (formData.lastName && formData.lastName.length < 2) {
       newErrors.lastName = 'Last name must be at least 2 characters';
+    } else if (formData.lastName && isSuspiciousInput(formData.lastName)) {
+      newErrors.lastName = 'Last name contains invalid characters';
     }
-    
+  
     // Validate email (required)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!emailRegex.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
+    } else if (isSuspiciousInput(formData.email)) {
+      newErrors.email = 'Email contains invalid characters';
     }
-    
+  
     // Validate phone (if provided)
     const phoneRegex = /^\+?[0-9\s\-()]{10,20}$/;
     if (formData.phone && !phoneRegex.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number';
+    } else if (formData.phone && isSuspiciousInput(formData.phone)) {
+      newErrors.phone = 'Phone number contains invalid characters';
     }
-    
+  
     // Validate service (required)
     if (!formData.service) {
       newErrors.service = 'Please select a service';
+    } else if (isSuspiciousInput(formData.service)) {
+      newErrors.service = 'Service contains invalid characters';
     }
-    
+  
     // Validate message (required)
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters';
+    } else if (isSuspiciousInput(formData.message)) {
+      newErrors.message = 'Message contains invalid characters';
     }
-    
+  
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -88,7 +122,7 @@ export default function ContactForm() {
     e.preventDefault();
     
     // Validate form before submission
-    if (!validateForm()) {
+    if (!validateForm(formData,setErrors)) {
       return;
     }
     
