@@ -97,7 +97,12 @@ export default function Dashboardcontent() {
       userId={userId || ''}
     />
   ) : (
-    <p>Loading user data...</p>
+    <div className="flex items-center space-x-2">
+        <div className="w-4 h-4 rounded-full bg-blue-500 animate-bounce [animation-delay:-0.3s]"></div>
+        <div className="w-4 h-4 rounded-full bg-blue-500 animate-bounce [animation-delay:-0.15s]"></div>
+        <div className="w-4 h-4 rounded-full bg-blue-500 animate-bounce"></div>
+        <span className="text-sm text-gray-600 ml-2">Loading user...</span>
+      </div>
   )}
 </div>
           <Notifications/>

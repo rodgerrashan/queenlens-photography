@@ -2,10 +2,12 @@
 import clientPromise from "@/lib/mongodb";
 import { ObjectId } from "mongodb"; 
 
-export async function DELETE(request) {
+// route.ts
+export async function DELETE(request: Request) {
   try {
     const url = new URL(request.url);
-    const id = url.pathname.split("/").pop().trim(); // Extract _id from the URL
+    const id = url.pathname.split("/").pop()?.trim() ?? "";
+
 
     console.log("Extracted _id: for deletion", id);
 
@@ -25,36 +27,36 @@ export async function DELETE(request) {
       });
     }
 
-    const db = client.db("users"); // Change to your actual DB name
-    const usersCollection = db.collection("users");
+    const db = client.db("contact"); 
+    const contactsCollection = db.collection("contacts");
 
     // Check if user exists
-    const userExists = await usersCollection.findOne({ _id: new ObjectId(id) });
+    const userExists = await contactsCollection.findOne({ _id: new ObjectId(id) });
     if (!userExists) {
-      console.log("user cannot found");
-      return new Response(JSON.stringify({ error: "User not found" }), {
+      console.log("sumission cannot found");
+      return new Response(JSON.stringify({ error: "Submission not found" }), {
         status: 404,
         headers: { "Content-Type": "application/json" },
       });
     }
 
     // Delete user
-    const result = await usersCollection.deleteOne({ _id: new ObjectId(id) });
+    const result = await contactsCollection.deleteOne({ _id: new ObjectId(id) });
 
     if (result.deletedCount === 0) {
-      return new Response(JSON.stringify({ error: "Failed to delete user" }), {
+      return new Response(JSON.stringify({ error: "Failed to delete submission" }), {
         status: 500,
         headers: { "Content-Type": "application/json" },
       });
     }
 
-    return new Response(JSON.stringify({ message: "User deleted successfully" }), {
+    return new Response(JSON.stringify({ message: "Submission deleted successfully" }), {
       status: 200,
       headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
     });
 
   } catch (error) {
-    console.error("Error deleting user:", error);
+    console.error("Error deleting submission:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },

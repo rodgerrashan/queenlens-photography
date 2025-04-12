@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Silver Package",
+        "description": "Great for beginners or quick portfolio updates. Includes one look, studio session, and professionally edited high-res shots.",
+        "details": [
+            "25+ Premium Edited Images",
+            "100 Edited Softcopies"
+        ],
+        "price": "LKR 9,790/="
+    },
+    {
+        "title": "Platinum Package",
+        "description": "Experience a full-scale fashion shoot with pro styling, location options, and high-end edits. Perfect for portfolios, magazines, or brand campaigns.",
+        "details": [
+            "50+ Premium Edited Images",
+            "100 Edited Softcopies",
+            "Cinematic Short Video",
+            "Provide Female Assistant",
+            "Makeup availability"
+        ],
+        "price": "LKR 18,790/=",
+        "highlight": true
+    },
+    {
+        "title": "Gold Package",
+        "description": "Ideal for models looking to expand their portfolio. Includes multiple looks, professional retouching, and studio or outdoor sessions.",
+        "details": [
+            "40+ Premium Edited Images",
+            "100 Edited Softcopies",
+            "Provide Female Assistant"
+        ],
+        "price": "LKR 13,790/="
+    }
+]

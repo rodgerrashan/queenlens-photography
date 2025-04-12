@@ -2,6 +2,7 @@
 import { NextResponse } from 'next/server';
 import { MongoClient } from 'mongodb';
 import nodemailer from 'nodemailer';
+import { findAllUsers } from '@/models/Users';
 
 const uri = process.env.MONGODB_URI;
 const dbName = process.env.MONGODB_DB;
@@ -23,6 +24,8 @@ if (!infoEmailUser || !infoEmailPass) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
+    const users = await findAllUsers();
+    const emails = users.map(user => user.email).filter(email => !!email);
 
     // Basic validation
     if (!body.firstName || !body.email || !body.service || !body.message) {
@@ -44,7 +47,7 @@ export async function POST(request: Request) {
     const contactData = {
       ...body,
       createdAt: new Date(),
-      status: 'unread', // Mark as unread
+      status: 'unread', 
     };
 
     // Insert data
@@ -55,6 +58,9 @@ export async function POST(request: Request) {
 
     // Send email to the customer
     const transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com', // Added explicit host (adjust if using another service)
+      port: 465, // Explicit port for secure connection
+      secure: true, 
       service: 'gmail',
       auth: {
         user: infoEmailUser,
@@ -73,7 +79,7 @@ export async function POST(request: Request) {
       <p>Thank you for reaching out to us regarding <strong>${body.service}</strong>. We have received your message and our team will get back to you shortly.</p>
 
 
-      <img src="https://queenlens.lk/public/images/logo/brand.png" alt="QueenLens Photography" style="width: 80px; margin-top: 20px;">
+      
       <p>Best regards,</p>
       <p><strong>QueenLens Photography Team</strong></p>
       
@@ -103,38 +109,43 @@ export async function POST(request: Request) {
 
     await transporter.sendMail(customerMailOptions);
 
-    // Notify all users about the new unread message
-    const adminMailOptions = {
-      from: `"QueenLens Photography" <${infoEmailUser}>`,
-      to: 'rodrasjay@gmail.com',
-      subject: 'New Contact Form Submission',
-      html: `
-      <p>A new message has been submitted:</p>
-      <ul>
-        <li><strong>Name:</strong> ${body.firstName}</li>
-        <li><strong>Service:</strong> ${body.service}</li>
-      </ul>
-      <p>Please check the admin panel for more details:</p>
-      <a href="http://localhost:3000/user/dashboard/" style="
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 10px;
-        font-size: 16px;
-        color: #fff;
-        background-color: #007bff;
-        text-decoration: none;
-        border-radius: 5px;
-      ">Go to Admin Portal</a>
+    for (const email of emails){
+      await transporter.sendMail(
+        {
+          from: `"QueenLens Photography" <${infoEmailUser}>`,
+          to: email,
+          subject: 'New Contact Form Submission',
+          html: `
+          <p>A new message has been submitted:</p>
+          <ul>
+            <li><strong>Name:</strong> ${body.firstName}</li>
+            <li><strong>Service:</strong> ${body.service}</li>
+          </ul>
+          <p>Please check the admin panel for more details:</p>
+          <a href="http://localhost:3000/user/dashboard/" style="
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+          ">Go to Admin Portal</a>
+    
+    
+          <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
+                
+          <p style="font-size: 12px; color: #999; margin-top: 20px;">This is an automated message. Please do not reply directly to this email.</p>
+    
+          `,
+        }
 
+      );
 
-      <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
-            
-      <p style="font-size: 12px; color: #999; margin-top: 20px;">This is an automated message. Please do not reply directly to this email.</p>
+    }
 
-      `,
-    };
-
-    await transporter.sendMail(adminMailOptions);
+    
 
     return NextResponse.json(
       { message: 'Message sent successfully!' },

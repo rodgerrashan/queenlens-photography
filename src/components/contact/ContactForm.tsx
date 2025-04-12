@@ -184,20 +184,44 @@ export default function ContactForm() {
           {errors.phone && <p className="text-red-500 text-xs mt-1 ml-2">{errors.phone}</p>}
         </div>
         
-        <div className="mb-2">
-          <select
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            className={`w-full py-2 px-3 border rounded-full mb-2 pr-10 bg-white appearance-none ${errors.service ? 'border-red-500' : ''}`}
-          >
-            <option value="">Choose service</option>
-            <option value="Photography">Photography</option>
-            <option value="Event Coverage">Event Coverage</option>
-            <option value="Editing">Editing</option>
-          </select>
-          {errors.service && <p className="text-red-500 text-xs mt-1 ml-2">{errors.service}</p>}
-        </div>
+        <div className="mb-4 relative">
+  <select
+    name="service"
+    value={formData.service}
+    onChange={handleChange}
+    className={`w-full py-2 pl-4 pr-10 border rounded-full bg-white text-gray-700 shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-950 focus:border-gray-950 appearance-none transition-all duration-300 ${
+      errors.service ? 'border-red-500' : 'border-gray-300'
+    }`}
+  >
+    <option value="">Choose service</option>
+    <option value="Wedding Shoot">Wedding Shoot</option>
+    <option value="Couple Shoot">Couple Shoots</option>
+    <option value="Birthday Shoot">Birthday Shoots</option>
+    <option value="Model Photography">Model Photography</option>
+    <option value="Baby Shoot">Baby Shoot</option>
+    <option value="Event Coverage">Event Coverage</option>
+    <option value="Graduation Shoot">Graduation Shoot</option>
+    <option value="Other">Others</option>
+
+  </select>
+
+  {/* Custom dropdown arrow */}
+  <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+    <svg
+      className="w-4 h-4 text-gray-400"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+
+  {errors.service && (
+    <p className="text-red-500 text-xs mt-1 ml-2">{errors.service}</p>
+  )}
+</div>
+
         
         <div className="mb-4">
           <textarea 

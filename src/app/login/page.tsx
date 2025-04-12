@@ -20,9 +20,9 @@ export default function Login() {
     });
     const data = await res.json();
     if (res.ok) {
-      if(data.role === "admin"){
+      if(data.role === "site-admin"){
         window.location.href = `/admin/dashboard?userId=${data.id}`;
-      }else if(data.role === "user"){
+      }else if(data.role === "admin"){
         window.location.href = `/user/dashboard?userId=${data.id}`;
       }
     } else {
@@ -80,10 +80,10 @@ export default function Login() {
         </div>
         <button
         type="submit"
-        className="font-semibold w-full bg-gray-950 text-white py-2 rounded-full hover:bg-blue-950 transition duration-200"
+        className="font-medium w-full bg-gray-950 text-white py-2 rounded-full hover:bg-blue-950 transition duration-200"
         disabled={isLoading}
         >
-        Login
+        {isLoading ? 'Signing in...' : 'Login'}
         </button>
       </form>
 

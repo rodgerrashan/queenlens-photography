@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ThankYou() {
   return (
-    <div className="flex flex-col items-center justify-start   p-6 pt-1 text-center mb-16 mt-5 min-h-96">
+    <div className="flex flex-col items-center justify-start   p-6 pt-1 text-center mb-16 mt-5 min-h-96 ">
       <h1 className={`${cinzelFont.className} text-2xl font-bold text-black mb-4 uppercase`}>
         Thank You for Reaching Out!
       </h1>
@@ -16,7 +16,7 @@ export default function ThankYou() {
         In the meantime, feel free to explore our gallery or follow us on social media for more
         inspiration and updates. We’re looking forward to creating something beautiful together!
       </p>
-      <div className="flex gap-4">
+      <div className="flex gap-3 flex-col md:flex-row">
 
         <Link
             href="/gallery"

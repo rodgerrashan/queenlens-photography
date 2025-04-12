@@ -8,6 +8,7 @@ import Slogen from '@/components/About/slogen';
 // import OurTeam from '@/components/About/OurTeam';
 import Why from '@/components/About/Why';
 import WhatsAppButton from '@/components/Whatsapputton';
+import BehindScenes from '@/components/About/BehindScene';
 // import Image from 'next/image';
 
 const AboutPage = () => {
@@ -18,6 +19,7 @@ const AboutPage = () => {
             <Header/>
             <Slogen/>
             <Intro/>
+            <BehindScenes/>
             {/* <OurTeam/> */}
             
             <Why/>
