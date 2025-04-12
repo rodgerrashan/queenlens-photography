@@ -5,7 +5,6 @@ import Router from "next/router";
 import { cinzelFont } from "@/styles/fonts";
 import HelloworldHeader from "@/components/HelloWorld/HelloworldHeader";
 import UserCard from "@/components/Dashboard/userCard";
-import Loading from "../Loading";
 
 
 export default function AdminDashboardContent() {
