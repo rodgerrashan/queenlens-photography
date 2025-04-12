@@ -40,7 +40,7 @@ export default function Dashboardcontent() {
           Router.push("/login");
         }
       })
-      .catch((error) => {
+      .catch(() => {
         // console.error("Error fetching user:", error);
         Router.push("/login");
       });
@@ -56,7 +56,7 @@ export default function Dashboardcontent() {
         // console.error("Failed to fetch user data");
         Router.push("/login");
       }
-    } catch (error) {
+    } catch  {
       // console.error("Error fetching user data:", error);
       Router.push("/login");
     }
