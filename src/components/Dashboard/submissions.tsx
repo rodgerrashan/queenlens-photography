@@ -33,7 +33,7 @@ async function toggleSubmissionReadStatus(id: string, read: boolean) {
 
     const data = await response.json();
     return data;
-  } catch (error) {
+  } catch {
     // console.error("Error updating submission status:", error);
   }
 }
@@ -51,7 +51,7 @@ export default function Submissions() {
         }
         const data = await response.json();
         setContactSubmissions(data);
-      } catch (error) {
+      } catch {
         // console.error("Error fetching contact submissions:", error);
       }
     };

@@ -51,7 +51,7 @@ export async function SendEmail(email: string) { // Changed String to string
 
     await transporter.sendMail(adminMailOptions);
 
-  } catch (error) {
+  } catch{
     // console.error('Error in contact API:', error);
   }
 }

@@ -54,7 +54,7 @@ export async function DELETE(request: Request) {
       headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" },
     });
 
-  } catch (error) {
+  } catch  {
     // console.error("Error deleting user:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), {
       status: 500,

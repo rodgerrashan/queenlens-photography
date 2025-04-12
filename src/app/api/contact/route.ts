@@ -151,7 +151,7 @@ export async function POST(request: Request) {
       { message: 'Message sent successfully!' },
       { status: 200 }
     );
-  } catch (error) {
+  } catch {
     // console.error('Error in contact API:', error);
     return NextResponse.json(
       { message: 'Internal server error' },

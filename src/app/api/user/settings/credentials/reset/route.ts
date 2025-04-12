@@ -62,7 +62,7 @@ export async function POST(req: Request) {
       { message: "Reset link has been sent, Check your inbox" },
       { status: 200 }
     );
-  } catch (error) {
+  } catch{
     // console.error("Error:", error);
     return NextResponse.json({ message: "Server error" }, { status: 500 });
   }

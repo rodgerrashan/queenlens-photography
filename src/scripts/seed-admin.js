@@ -14,7 +14,7 @@ async function seedAdmin() {
         const newUser = await createUser(email,hashedPassword,"admin");
 
         // console.log("✅ Admin created:", newUser.insertedId);
-    } catch (error) {
+    } catch  {
         // console.error("❌ Error creating admin:", error);
     }
 }

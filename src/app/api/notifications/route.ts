@@ -32,7 +32,7 @@ export async function GET() {
     await client.close();
 
     return NextResponse.json(notifications, { status: 200 });
-  } catch (error) {
+  } catch  {
     // console.error('Error fetching notifications:', error);
     return NextResponse.json(
       { message: 'Internal server error' },
@@ -88,7 +88,7 @@ export async function POST(request: Request) {
       { message: 'Message sent successfully!' },
       { status: 200 }
     );
-  } catch (error) {
+  } catch  {
     // console.error('Error in contact API:', error);
     return NextResponse.json(
       { message: 'Internal server error' },

@@ -37,7 +37,7 @@ export default function AdminDashboardContent() {
           Router.push("/login");
         }
       })
-      .catch((error) => {
+      .catch(() => {
         // console.error("Error fetching user:", error);
         Router.push("/login");
       });
@@ -53,7 +53,7 @@ export default function AdminDashboardContent() {
         // console.error("Failed to fetch user data");
         Router.push("/login");
       }
-    } catch (error) {
+    } catch  {
       // console.error("Error fetching user data:", error);
       Router.push("/login");
     }
@@ -69,7 +69,7 @@ export default function AdminDashboardContent() {
       } else {
         // console.error("Failed to fetch all users");
       }
-    } catch (error) {
+    } catch {
       // console.error("Error fetching all users:", error);
     } finally {
       setIsLoading(false);
@@ -99,7 +99,7 @@ export default function AdminDashboardContent() {
         const errorData = await response.json();
         alert(errorData.message || "Failed to delete user.");
       }
-    } catch (error) {
+    } catch {
       // console.error("Error deleting user:", error);
       alert("An error occurred while deleting the user.");
     }

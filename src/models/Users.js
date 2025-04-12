@@ -40,7 +40,7 @@ export async function createUser(email, password, role = "admin") {
 
         // console.log("✅ User created:", result.insertedId);
         return result;
-    } catch (error) {
+    } catch  {
         // console.error("❌ Error creating user:", error.message);
         throw new Error("Error creating user.");
     }
@@ -62,7 +62,7 @@ export async function findAllUsers() {
         }
 
         return users;
-    } catch (error) {
+    } catch {
         // console.error("❌ Error finding users:", error);
         throw new Error("Error finding users.");
     }
@@ -83,7 +83,7 @@ export async function findUser(email) {
         }
 
         return user;
-    } catch (error) {
+    } catch  {
         // console.error("❌ Error finding user:", error);
         throw new Error("Error finding user.");
     }
@@ -105,7 +105,7 @@ export async function findUserById(userId) {
         }
 
         return user;
-    } catch (error) {
+    } catch {
         // console.error("❌ Error finding user by ID:", error);
         throw new Error("Error finding user by ID.");
     }
@@ -123,7 +123,7 @@ export async function verifyPassword(inputPassword, hashedPassword) {
         }
 
         return isMatch;
-    } catch (error) {
+    } catch  {
         // console.error("❌ Error verifying password:", error);
         throw new Error("Error verifying password.");
     }
@@ -147,7 +147,7 @@ export async function updateUserPassword(userId, hashedPassword) {
 
         // console.log("✅ Password updated for user:", userId);
         return result;
-    } catch (error) {
+    } catch  {
         // console.error("❌ Error updating new password:", error);
         throw new Error("Error updating password.");
     }

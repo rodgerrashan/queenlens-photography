@@ -47,7 +47,7 @@ async function handleDeleteSubmissions(
       const errorData = await response.json();
       alert(errorData.message || "Failed to delete submission.");
     }
-  } catch (error) {
+  } catch  {
     // console.error("Error deleting submission:", error);
     alert("An error occurred while deleting the submission.");
   }
@@ -67,7 +67,7 @@ export default function AdminDashboardSubmissions() {
         const data = await response.json();
         // console.log("Fetched submissions:", data);
         setContactSubmissions(data);
-      } catch (error) {
+      } catch  {
         // console.error("Error fetching contact submissions:", error);
       }
     };

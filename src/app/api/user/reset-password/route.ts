@@ -39,7 +39,7 @@ export async function POST(req: Request) {
     await updateUserPassword(userId, hashedPassword);
 
     return NextResponse.json({ message: "Password has been reset successfully" }, { status: 200 });
-  } catch (error) {
+  } catch {
     // console.error("Error:", error);
     return NextResponse.json({ message: "Server error" }, { status: 500 });
   }

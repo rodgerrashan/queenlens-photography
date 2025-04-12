@@ -26,7 +26,7 @@ const UserCard: React.FC<UserCardProps> = ({ email = "user@queenlens.com", role 
             } else {
                 // console.error('Failed to log out');
             }
-        } catch (error) {
+        } catch {
             // console.error('Error during logout:', error);
         }
     };

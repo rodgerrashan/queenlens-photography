@@ -157,7 +157,7 @@ export default function ContactForm() {
         const data = await response.json();
         setSuccess(data.message || 'Failed to send message. Please speak directly.');
       }
-    } catch (error) {
+    } catch  {
       // console.error('Error:', error);
       setSuccess('Something went wrong! Please try again later.');
     }
