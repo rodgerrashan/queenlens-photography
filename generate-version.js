@@ -25,7 +25,7 @@ function incrementVersion(version, type) {
       patch += 1; // Only increment patch by default
       break;
     default:
-      console.log(`Invalid version type: ${type}. Defaulting to 'patch'.`);
+      // console.log(`Invalid version type: ${type}. Defaulting to 'patch'.`);
       patch += 1;
       break;
   }
@@ -51,4 +51,4 @@ fs.writeFileSync(path.join(__dirname, 'public', 'version.json'), JSON.stringify(
 pkg.version = newVersion;
 fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2));
 
-console.log(`✅ version.json and ${pkgPath} updated to version ${newVersion}`);
+// console.log(`✅ version.json and ${pkgPath} updated to version ${newVersion}`);

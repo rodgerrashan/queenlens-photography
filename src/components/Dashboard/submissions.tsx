@@ -17,7 +17,7 @@ interface Submission {
 
 
 async function toggleSubmissionReadStatus(id: string, read: boolean) {
-  console.log("Toggling submission read status:", id, read);
+  // console.log("Toggling submission read status:", id, read);
   try {
     const response = await fetch(`/api/contact-submissions/toggle/${id}`, {
       method: "PUT",
@@ -34,7 +34,7 @@ async function toggleSubmissionReadStatus(id: string, read: boolean) {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Error updating submission status:", error);
+    // console.error("Error updating submission status:", error);
   }
 }
 
@@ -52,7 +52,7 @@ export default function Submissions() {
         const data = await response.json();
         setContactSubmissions(data);
       } catch (error) {
-        console.error("Error fetching contact submissions:", error);
+        // console.error("Error fetching contact submissions:", error);
       }
     };
     fetchSubmissions();

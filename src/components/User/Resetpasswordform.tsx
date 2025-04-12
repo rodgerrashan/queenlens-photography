@@ -19,7 +19,7 @@ export default function ResetPasswordForm() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        console.log(newPassword,confirmPassword);
+        // console.log(newPassword,confirmPassword);
 
         if (newPassword !== confirmPassword) {
             setError('Passwords do not match');

@@ -31,7 +31,7 @@ export default function ChangeCredentialsform() {
       body: JSON.stringify({ userId,email }),
     });
     const data = await res.json();
-    console.log(res);
+    // console.log(res);
     if (res.ok) {
         setMessage(data.message); 
     } 

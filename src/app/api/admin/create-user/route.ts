@@ -5,9 +5,9 @@ import { SendEmail } from "./SendMail";
 
 export async function POST(req: NextRequest) {
 
-  console.log("Request method:", req.method);
+  // console.log("Request method:", req.method);
   const body = await req.json();
-  console.log("Request body:", body);
+  // console.log("Request body:", body);
   if (req.method !== "POST") return NextResponse.json({ message: "Method Not Allowed" }, { status: 405 });
 
   const token = req.cookies.get("token")?.value;

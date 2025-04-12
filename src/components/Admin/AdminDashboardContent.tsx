@@ -30,7 +30,7 @@ export default function AdminDashboardContent() {
         if (data.user) {
           setUser(data.user);
           getUserData(userId!);
-          console.log("Current user:", data.user);
+          // console.log("Current user:", data.user);
           // Only fetch all users if the current user fetch was successful
           fetchAllUsers();
         } else {
@@ -38,7 +38,7 @@ export default function AdminDashboardContent() {
         }
       })
       .catch((error) => {
-        console.error("Error fetching user:", error);
+        // console.error("Error fetching user:", error);
         Router.push("/login");
       });
   }, [userId]);
@@ -50,11 +50,11 @@ export default function AdminDashboardContent() {
         const userData = await response.json();
         setUser(userData);
       } else {
-        console.error("Failed to fetch user data");
+        // console.error("Failed to fetch user data");
         Router.push("/login");
       }
     } catch (error) {
-      console.error("Error fetching user data:", error);
+      // console.error("Error fetching user data:", error);
       Router.push("/login");
     }
   };
@@ -64,20 +64,20 @@ export default function AdminDashboardContent() {
       const response = await fetch("/api/admin/get-users");
       if (response.ok) {
         const data = await response.json();
-        console.log("All users:", data);
+        // console.log("All users:", data);
         setAllUsers(data);
       } else {
-        console.error("Failed to fetch all users");
+        // console.error("Failed to fetch all users");
       }
     } catch (error) {
-      console.error("Error fetching all users:", error);
+      // console.error("Error fetching all users:", error);
     } finally {
       setIsLoading(false);
     }
   };
 
   async function handleDeleteUser(id: string): Promise<void> {
-    console.log("Deleting user with ID:", id);
+    // console.log("Deleting user with ID:", id);
     const userConfirmed = confirm("Are you sure you want to delete this user?");
     if (!userConfirmed) return;
 
@@ -100,7 +100,7 @@ export default function AdminDashboardContent() {
         alert(errorData.message || "Failed to delete user.");
       }
     } catch (error) {
-      console.error("Error deleting user:", error);
+      // console.error("Error deleting user:", error);
       alert("An error occurred while deleting the user.");
     }
   }

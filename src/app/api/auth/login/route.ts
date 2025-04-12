@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "Token generation failed" }, { status: 500 });
     }
 
-    console.log(user._id, user.role, token, user.email);
+    // console.log(user._id, user.role, token, user.email);
 
     return NextResponse.json(
       { message: "Login successful", token, id: user._id, role: user.role },
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
       }
     );
   } catch (error) {
-    console.error("Login error:", error);
+    // console.error("Login error:", error);
     return NextResponse.json({ message: "Server error" }, { status: 500 });
   }
 }

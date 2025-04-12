@@ -38,11 +38,11 @@ async function dbConnect() {
         dbName: "users", // Redundant fallback for some URI setups
       })
       .then((mongoose) => {
-        console.log("✅ Connected to MongoDB - Users DB");
+        // console.log("✅ Connected to MongoDB - Users DB");
         return mongoose;
       })
       .catch((err) => {
-        console.error("❌ MongoDB connection error:", err);
+        // console.error("❌ MongoDB connection error:", err);
         throw err;
       });
   }

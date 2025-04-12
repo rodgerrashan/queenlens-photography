@@ -9,7 +9,7 @@ import { updateUserPassword, findUserById } from "../../../../models/Users";
 export async function POST(req: Request) {
   try {
     const { token, newPassword } = await req.json();
-    console.log(newPassword);
+    // console.log(newPassword);
 
     if (!token || !newPassword) {
       return NextResponse.json({ message: "Missing token or password" }, { status: 400 });
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: "Password has been reset successfully" }, { status: 200 });
   } catch (error) {
-    console.error("Error:", error);
+    // console.error("Error:", error);
     return NextResponse.json({ message: "Server error" }, { status: 500 });
   }
 }

@@ -158,7 +158,7 @@ export default function ContactForm() {
         setSuccess(data.message || 'Failed to send message. Please speak directly.');
       }
     } catch (error) {
-      console.error('Error:', error);
+      // console.error('Error:', error);
       setSuccess('Something went wrong! Please try again later.');
     }
     

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function GlobalError({ error, reset }) {
   useEffect(() => {
-    console.error('Global Error:', error);
+    // console.error('Global Error:', error);
   }, [error]);
 
   return (

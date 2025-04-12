@@ -20,19 +20,19 @@ const UserCard: React.FC<UserCardProps> = ({ email = "user@queenlens.com", role 
             });
 
             if (response.ok) {
-                console.log('Logged out successfully');
+                // console.log('Logged out successfully');
                 window.history.replaceState(null, '', '/login');
                 window.location.href = '/login';
             } else {
-                console.error('Failed to log out');
+                // console.error('Failed to log out');
             }
         } catch (error) {
-            console.error('Error during logout:', error);
+            // console.error('Error during logout:', error);
         }
     };
 
     const handleChangePassword = () => {
-        console.log('Redirecting to change password page with user ID:', userId);
+        // console.log('Redirecting to change password page with user ID:', userId);
         window.location.href = `/user/settings/change-credentials/?userId=${userId}`;
     };
 

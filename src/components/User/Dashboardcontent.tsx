@@ -34,14 +34,14 @@ export default function Dashboardcontent() {
         if (data.user) {
           setUser(data.user);
           getUserData(userId!);
-          console.log("Current user:", data.user);
+          // console.log("Current user:", data.user);
           
         } else {
           Router.push("/login");
         }
       })
       .catch((error) => {
-        console.error("Error fetching user:", error);
+        // console.error("Error fetching user:", error);
         Router.push("/login");
       });
   }, [userId]);
@@ -53,11 +53,11 @@ export default function Dashboardcontent() {
         const userData = await response.json();
         setUser(userData);
       } else {
-        console.error("Failed to fetch user data");
+        // console.error("Failed to fetch user data");
         Router.push("/login");
       }
     } catch (error) {
-      console.error("Error fetching user data:", error);
+      // console.error("Error fetching user data:", error);
       Router.push("/login");
     }
   };

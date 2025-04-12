@@ -4,11 +4,11 @@ import { ObjectId } from "mongodb";
 
 
 export async function GET(request) {
-    console.log("GET request received for user details");
+    // console.log("GET request received for user details");
     try {
         const url = new URL(request.url);
         const id = url.pathname.split("/").pop();
-        console.log("Extracted user ID:", id);
+        // console.log("Extracted user ID:", id);
 
         if (!ObjectId.isValid(id)) {
             return new Response(JSON.stringify({ error: "Invalid user ID" }), {
@@ -46,7 +46,7 @@ export async function GET(request) {
             },
         });
     } catch (error) {
-        console.error("Error fetching user:", error);
+        // console.error("Error fetching user:", error);
         return new Response(JSON.stringify({ error: "Internal Server Error" }), {
             status: 500,
         });

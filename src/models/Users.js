@@ -38,10 +38,10 @@ export async function createUser(email, password, role = "admin") {
             createdAt: new Date(),
         });
 
-        console.log("✅ User created:", result.insertedId);
+        // console.log("✅ User created:", result.insertedId);
         return result;
     } catch (error) {
-        console.error("❌ Error creating user:", error.message);
+        // console.error("❌ Error creating user:", error.message);
         throw new Error("Error creating user.");
     }
 }
@@ -56,14 +56,14 @@ export async function findAllUsers() {
         const users = await db.collection("users").find({}).toArray();
 
         if (users.length === 0) {
-            console.warn("⚠️ No users found.");
+            // console.warn("⚠️ No users found.");
         } else {
-            console.log("✅ Users found:", users.length);
+            // console.log("✅ Users found:", users.length);
         }
 
         return users;
     } catch (error) {
-        console.error("❌ Error finding users:", error);
+        // console.error("❌ Error finding users:", error);
         throw new Error("Error finding users.");
     }
 }
@@ -77,14 +77,14 @@ export async function findUser(email) {
         const user = await db.collection("users").findOne({ email });
 
         if (!user) {
-            console.warn("⚠️ User not found:", email);
+            // console.warn("⚠️ User not found:", email);
         } else {
-            console.log("✅ User found:", user._id);
+            // console.log("✅ User found:", user._id);
         }
 
         return user;
     } catch (error) {
-        console.error("❌ Error finding user:", error);
+        // console.error("❌ Error finding user:", error);
         throw new Error("Error finding user.");
     }
 }
@@ -99,14 +99,14 @@ export async function findUserById(userId) {
         const user = await db.collection("users").findOne({ _id: new mongoose.Types.ObjectId(userId) });
 
         if (!user) {
-            console.warn("⚠️ User not found with ID:", userId);
+            // console.warn("⚠️ User not found with ID:", userId);
         } else {
-            console.log("✅ User found:", user._id);
+            // console.log("✅ User found:", user._id);
         }
 
         return user;
     } catch (error) {
-        console.error("❌ Error finding user by ID:", error);
+        // console.error("❌ Error finding user by ID:", error);
         throw new Error("Error finding user by ID.");
     }
 }
@@ -117,14 +117,14 @@ export async function verifyPassword(inputPassword, hashedPassword) {
         const isMatch = await bcrypt.compare(inputPassword, hashedPassword);
 
         if (isMatch) {
-            console.log("✅ Password verified.");
+            // console.log("✅ Password verified.");
         } else {
-            console.warn("⚠️ Password mismatch.");
+            // console.warn("⚠️ Password mismatch.");
         }
 
         return isMatch;
     } catch (error) {
-        console.error("❌ Error verifying password:", error);
+        // console.error("❌ Error verifying password:", error);
         throw new Error("Error verifying password.");
     }
 }
@@ -141,14 +141,14 @@ export async function updateUserPassword(userId, hashedPassword) {
         );
 
         if (result.matchedCount === 0) {
-            console.warn("⚠️ No user found with ID:", userId);
+            // console.warn("⚠️ No user found with ID:", userId);
             throw new Error("User not found.");
         }
 
-        console.log("✅ Password updated for user:", userId);
+        // console.log("✅ Password updated for user:", userId);
         return result;
     } catch (error) {
-        console.error("❌ Error updating new password:", error);
+        // console.error("❌ Error updating new password:", error);
         throw new Error("Error updating password.");
     }
 }

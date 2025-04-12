@@ -18,7 +18,7 @@ async function handleDeleteSubmissions(
   id: string,
   setContactSubmissions: React.Dispatch<React.SetStateAction<Submission[]>>
 ) {
-  console.log("Attempting to delete submission with ID:", id);
+  // console.log("Attempting to delete submission with ID:", id);
   const userConfirmed = confirm("Are you sure you want to delete this submission?");
   if (!userConfirmed) return;
 
@@ -27,17 +27,17 @@ async function handleDeleteSubmissions(
       method: "DELETE",
     });
 
-    console.log("Delete API response status:", response.status);
+    // console.log("Delete API response status:", response.status);
 
     if (response.ok) {
       const data = await response.json();
-      console.log("Delete API response data:", data);
+      // console.log("Delete API response data:", data);
       if (data.success) {
         alert("Submission deleted successfully!");
         // Update state immutably
         setContactSubmissions((prev) => {
           const newSubmissions = prev.filter((submission) => submission._id !== id);
-          console.log("Updated submissions after delete:", newSubmissions);
+          // console.log("Updated submissions after delete:", newSubmissions);
           return newSubmissions;
         });
       } else {
@@ -48,7 +48,7 @@ async function handleDeleteSubmissions(
       alert(errorData.message || "Failed to delete submission.");
     }
   } catch (error) {
-    console.error("Error deleting submission:", error);
+    // console.error("Error deleting submission:", error);
     alert("An error occurred while deleting the submission.");
   }
 }
@@ -65,10 +65,10 @@ export default function AdminDashboardSubmissions() {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log("Fetched submissions:", data);
+        // console.log("Fetched submissions:", data);
         setContactSubmissions(data);
       } catch (error) {
-        console.error("Error fetching contact submissions:", error);
+        // console.error("Error fetching contact submissions:", error);
       }
     };
     fetchSubmissions();
@@ -80,7 +80,7 @@ export default function AdminDashboardSubmissions() {
 
   // Log state changes for debugging
   useEffect(() => {
-    console.log("Current contactSubmissions state:", contactSubmissions);
+    // console.log("Current contactSubmissions state:", contactSubmissions);
   }, [contactSubmissions]);
 
   return (

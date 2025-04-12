@@ -8,11 +8,11 @@ export async function PUT(
 ) {
   try {
     const id = (await params).id
-    console.log("Extracted contact ID:", id);
+    // console.log("Extracted contact ID:", id);
 
     const body = await request.json();
     const currentReadStatus = body.read;
-    console.log("Current read status:", currentReadStatus);
+    // console.log("Current read status:", currentReadStatus);
 
     const client = await clientPromise;
     const db = client.db("contact");
@@ -35,7 +35,7 @@ export async function PUT(
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error updating contact read status:", error);
+    // console.error("Error updating contact read status:", error);
     return NextResponse.json(
       { error: "Internal Server Error", details: (error as Error).message },
       { status: 500 }

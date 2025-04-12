@@ -10,8 +10,8 @@ export default function HelloworldHeader() {
         <Image
           src={"/images/helloWorld/HelloWorld.png"}
           alt="HelloWorld Logo"
-          width={240}
-          height={75}
+          width={120}
+          height={35}
         />
         
         

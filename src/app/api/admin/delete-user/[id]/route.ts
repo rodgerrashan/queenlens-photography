@@ -8,7 +8,7 @@ export async function DELETE(request: Request) {
     const id = url.pathname.split("/").pop()?.trim() ?? "";
     
 
-    console.log("Extracted _id: for deletion", id);
+    // console.log("Extracted _id: for deletion", id);
 
     if (!id || !ObjectId.isValid(id)) {
       return new Response(JSON.stringify({ error: "Valid _id is required" }), {
@@ -32,7 +32,7 @@ export async function DELETE(request: Request) {
     // Check if user exists
     const userExists = await usersCollection.findOne({ _id: new ObjectId(id) });
     if (!userExists) {
-      console.log("user cannot found");
+      // console.log("user cannot found");
       return new Response(JSON.stringify({ error: "User not found" }), {
         status: 404,
         headers: { "Content-Type": "application/json" },
@@ -55,7 +55,7 @@ export async function DELETE(request: Request) {
     });
 
   } catch (error) {
-    console.error("Error deleting user:", error);
+    // console.error("Error deleting user:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), {
       status: 500,
       headers: { "Content-Type": "application/json" },

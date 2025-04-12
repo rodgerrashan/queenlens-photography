@@ -13,7 +13,7 @@ export async function GET() {
       }
     });
   } catch (error) {
-    console.error("Error fetching contacts:", error);
+    // console.error("Error fetching contacts:", error);
     return new Response(JSON.stringify({ error: "Internal Server Error" }), {
       status: 500,
     });
