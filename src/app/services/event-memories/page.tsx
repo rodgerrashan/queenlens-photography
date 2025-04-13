@@ -7,27 +7,40 @@ import Packages from "@/components/ServicesCat/Packages";
 import casualClicksPricings from "../../../../public/data/services/EventMemoriesPricings.json";
 import WhatsAppButton from "@/components/Whatsapputton";
 
+import Seo from "@/components/Seo";
+
 export default function EventMemories() {
+
+const title = "Event Photography | Professional Coverage by Queenlens";
+  const description = "From corporate events to private celebrations, trust Queenlens for expert event photography that captures every detail.";
+  const keywords = "event photography, corporate event photographers, celebration coverage";
     return (
         <>
-            <Header />
+        <Seo title = {title} description={description} keywords={keywords}/>
 
-            <Intro
-                title="Event Memories need to e make"
-                description="Celebrate the beauty of everyday life with our casual photography. From spontaneous smiles to candid moments, we create memories that feel natural and timeless."
-            />
 
-            <Packages packages={casualClicksPricings} />
-            <Reachout
-                heading="Ready to capture life's simple joys?"
-                description="Let us help you turn ordinary moments into extraordinary memories that you’ll cherish forever."
-                buttonText="Contact us to get started"
-                buttonLink="/contact"
-            />
+        <main>
+        <Header />
 
-            <Footer />
-            <Copyrights />
-            <WhatsAppButton/>
+<Intro
+    title="Event Memories need to e make"
+    description="Celebrate the beauty of everyday life with our casual photography. From spontaneous smiles to candid moments, we create memories that feel natural and timeless."
+/>
+
+<Packages packages={casualClicksPricings} />
+<Reachout
+    heading="Ready to capture life's simple joys?"
+    description="Let us help you turn ordinary moments into extraordinary memories that you’ll cherish forever."
+    buttonText="Contact us to get started"
+    buttonLink="/contact"
+/>
+
+<Footer />
+<Copyrights />
+<WhatsAppButton/>
+
+        </main>
+            
         </>
     );
 }

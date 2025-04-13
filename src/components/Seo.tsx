@@ -1,31 +1,20 @@
-import React from 'react';
-import Header from '@/components/Header';
-import Carousel from '@/components/home/Carosel';
-import Portfolio from '@/components/home/Portfolio';
-import BooksAreOpen from '@/components/home/BooksAreOpen';
-import OurServices from '../../components/home/OurServices';
-import TestimonialCarousel from '@/components/home/TestimonialCarousel';
-import InstaLink from '@/components/home/InstaLink';
-import AboutAtHome from '@/components/home/AboutAtHome';
-import Footer from '@/components/Footer';
-import Copyrights from '@/components/Copyrights';
-import WhatsAppButton from '@/components/Whatsapputton';
 import Head from 'next/head';
 
-type HomeProps = object;
+interface SeoProps {
+  title: string;
+  description: string;
+  keywords: string;
+}
 
-
-
-const Home: React.FC<HomeProps> = () => {
+export default function Seo({ title, description, keywords }: SeoProps) {
   return (
-    <>
     <Head>
-    <title>QueenLens | Professional Photography Services in Sri Lanka</title>
+    <title>{title}</title>
         <meta
           name="description"
-          content="QueenLens offers professional wedding, portrait, and event photography in Sri Lanka. Capture your best moments with a touch of elegance."
+          content={description}
         />
-        <meta name="keywords" content="QueenLens, Photography Sri Lanka, Wedding Photography, Event Photography, Portrait Photography, Professional Photographer, Birthday Shoots, Model shoots " />
+        <meta name="keywords" content={keywords} />
         <meta name="author" content="QueenLens Photography" />
 
         {/* Open Graph for social media preview */}
@@ -58,30 +47,5 @@ const Home: React.FC<HomeProps> = () => {
         />
 
     </Head>
-    <main>
-    <Header/>
-      <Carousel/>
-      <Portfolio/>
-      <BooksAreOpen/>
-      <OurServices/>
-      <TestimonialCarousel/>
-      <InstaLink/>
-      <AboutAtHome/>
-      <Footer/>
-      <Copyrights/>
-      <WhatsAppButton/>
-
-    </main>
-
-      
-      
-
-      
-
-
-
-    </>
   );
-};
-
-export default Home;
+}

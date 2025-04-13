@@ -12,6 +12,9 @@ import section1_images from '../../../public/data/gallery/galleryLayout1.json';
 import section2_images from '../../../public/data/gallery/galleryLayout2.json';
 
 
+import Seo from '@/components/Seo';
+
+
 type HomeProps = object;
 
 const Gallery: React.FC<HomeProps> = () => {
@@ -23,8 +26,21 @@ const Gallery: React.FC<HomeProps> = () => {
   //   alt: string;
   //   blurDataURL: string;
   // }
+
+
+
+  const title = "Queenlens Photography Gallery | Stunning Visuals";
+  const description = "Explore the Queenlens Photography gallery showcasing breathtaking shots from weddings, events, portraits, and more. Let our visuals inspire you.";
+  const keywords = "photography gallery, Queenlens photos, wedding gallery, event gallery, portrait gallery, professional photography showcase";
+
+
   return (
     <>
+
+    <Seo title = {title} description={description} keywords={keywords}/>
+
+
+    <main>
     <Header/>
     <SubHeading/>
 {/* Section 01 */}
@@ -73,6 +89,11 @@ const Gallery: React.FC<HomeProps> = () => {
       <Footer/>
       <Copyrights/>
       <WhatsAppButton/>
+
+
+
+    </main>
+    
     </>
       
 
