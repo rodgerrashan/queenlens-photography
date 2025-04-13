@@ -1,6 +1,22 @@
 # *
 User-agent: *
-Allow: /
+Allow: /about/
+Allow: /contact/
+Allow: /gallery/
+Allow: /home/
+Allow: /privacy-policy/
+Allow: /services/
+Allow: /terms-&-conditions/
+
+
+Disallow: /admin/
+Disallow: /api/
+Disallow: /login/
+Disallow: /middleware/
+Disallow: /thank-you/
+Disallow: /user/
+Disallow: /error/
+
 
 # Host
 Host: https://www.queenlens.lk
