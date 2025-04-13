@@ -7,7 +7,8 @@
     "build": "npm run generate-version && next build",
     "start": "next start",
     "generate-version": "node generate-version.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@types/express": "^5.0.1",
