@@ -14,7 +14,7 @@ export default function GlobalError({
             <div className="flex justify-center items-center min-h-screen">
                   <div className="p-4">
                     <Image
-                      src="/Images/logo/smLogo.png"
+                      src="https://www.queenlens.lk/images/logo/smLogo.png"
                       alt="Queenlens Loading..."
                       width={128}
                       height={128}

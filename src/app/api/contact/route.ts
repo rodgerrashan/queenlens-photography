@@ -79,7 +79,7 @@ export async function POST(request: Request) {
       <p>Thank you for reaching out to us regarding <strong>${body.service}</strong>. We have received your message and our team will get back to you shortly.</p>
 
 
-      
+      <img src="https://www.queenlens.lk/images/logo/brand.png" alt="QueenLens Photography" style="width: 80px; margin-top: 20px;">
       <p>Best regards,</p>
       <p><strong>QueenLens Photography Team</strong></p>
       
