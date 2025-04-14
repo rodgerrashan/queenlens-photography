@@ -23,15 +23,15 @@ export default function ModelGrace() {
         <Header />
 
 <Intro
-    title="Model Grace need to e make"
-    description="Celebrate the beauty of everyday life with our casual photography. From spontaneous smiles to candid moments, we create memories that feel natural and timeless."
+    title="Model Grace"
+    description="Model Grace brings timeless charm and versatility to every shoot with her graceful poses and expressive features"
 />
 
 <Packages packages={casualClicksPricings} />
 <Reachout
-    heading="Ready to capture life's simple joys?"
-    description="Let us help you turn ordinary moments into extraordinary memories that you’ll cherish forever."
-    buttonText="Contact us to get started"
+    heading="Let’s create your signature look"
+    description="From high-fashion poses to timeless glamour, we’ll help you build a standout portfolio that captures your unique style and beauty."
+    buttonText="Book your shoot now"
     buttonLink="/contact"
 />
 

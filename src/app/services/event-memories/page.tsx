@@ -23,15 +23,15 @@ const title = "Event Photography | Professional Coverage by Queenlens";
         <Header />
 
 <Intro
-    title="Event Memories need to e make"
-    description="Celebrate the beauty of everyday life with our casual photography. From spontaneous smiles to candid moments, we create memories that feel natural and timeless."
+    title="Event Memories"
+    description="From grand celebrations to intimate gatherings, we capture every meaningful moment. Let us turn your special event into a timeless visual story through our professional event photography."
 />
 
 <Packages packages={casualClicksPricings} />
 <Reachout
-    heading="Ready to capture life's simple joys?"
-    description="Let us help you turn ordinary moments into extraordinary memories that you’ll cherish forever."
-    buttonText="Contact us to get started"
+    heading="Let’s capture your next big event"
+    description="Whether it's a wedding, birthday, or corporate event, we’re here to preserve the laughter, emotions, and unforgettable memories in stunning detail."
+    buttonText="Book your event coverage"
     buttonLink="/contact"
 />
 
