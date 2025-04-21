@@ -14,7 +14,6 @@ export default function Dashboard() {
     <Suspense fallback={<Loading/>}>
     <div className='min-h-screen'>
     <AdminDashboardContent/>
-    <AdminDashboardSubmissions/>
     </div>
       <SoftwareVersion/>
       <HelloworldCopyrights />
