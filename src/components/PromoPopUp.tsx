@@ -10,7 +10,7 @@ export default function PromoPopup() {
   const [animationClass, setAnimationClass] = useState('opacity-0 scale-95');
   
   // Set the fixed expiration date - example: May 1, 2025 at 23:59:59
-  const expirationDate = new Date('2025-05-01T23:59:59');
+  const expirationDate = new Date('2025-05-05T23:59:59');
   
   // Unique ID for this specific popup campaign
   const popupId = 'queenlens-promo-popup-spring2025';
