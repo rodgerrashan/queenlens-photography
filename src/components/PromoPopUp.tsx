@@ -11,13 +11,22 @@ export default function PromoPopup() {
   
   // Set the fixed expiration date - example: May 1, 2025 at 23:59:59
   const expirationDate = new Date('2025-05-01T23:59:59');
+  
+  // Unique ID for this specific popup campaign
+  const popupId = 'queenlens-promo-popup-spring2025';
 
   useEffect(() => {
-    // Short delay before showing to allow for animation
-    const showTimer = setTimeout(() => {
-      setVisible(true);
-      setAnimationClass('opacity-100 scale-100');
-    }, 500);
+    // Check if popup was previously closed
+    const popupClosed = typeof window !== 'undefined' && localStorage.getItem(popupId) === 'closed';
+    
+    let showTimer: NodeJS.Timeout;
+    if (!popupClosed) {
+      // Short delay before showing to allow for animation
+      showTimer = setTimeout(() => {
+        setVisible(true);
+        setAnimationClass('opacity-100 scale-100');
+      }, 500);
+    }
 
     // Update countdown timer every second
     const timer = setInterval(() => {
@@ -47,6 +56,10 @@ export default function PromoPopup() {
 
   const closePopup = () => {
     setAnimationClass('opacity-0 scale-95');
+    // Store in localStorage that this popup has been closed
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(popupId, 'closed');
+    }
     setTimeout(() => setVisible(false), 300);
   };
 
