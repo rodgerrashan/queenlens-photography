@@ -5,6 +5,8 @@ import Router from "next/router";
 import { cinzelFont } from "@/styles/fonts";
 import HelloworldHeader from "@/components/HelloWorld/HelloworldHeader";
 import UserCard from "@/components/Dashboard/userCard";
+import Loading from "../Loading";
+import AdminDashboardSubmissions from "./AdminDashboardSubmissions";
 
 
 export default function AdminDashboardContent() {
@@ -105,7 +107,7 @@ export default function AdminDashboardContent() {
     }
   }
 
-  if (!user) return <><p>Redirecting...</p></>;
+  if (!user) return <><Loading/></>;
 
   return (
     <>
@@ -249,6 +251,7 @@ export default function AdminDashboardContent() {
         </div>
         </div>
       </div>
+      <AdminDashboardSubmissions/>
       
     </>
   );

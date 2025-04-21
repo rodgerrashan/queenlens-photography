@@ -66,8 +66,8 @@ export default function Dashboardcontent() {
     <div className="flex justify-center items-center min-h-screen">
       <div className="p-4">
         <Image
-          src="/Images/logo/smLogo.png"
-          alt="Loading..."
+          src="https://www.queenlens.lk/images/logo/smLogo.png"
+          alt="Redirecting"
           width={128}
           height={128}
           className="animate-pulse"

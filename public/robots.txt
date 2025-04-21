@@ -2,6 +2,11 @@
 User-agent: *
 Allow: /
 
+Disallow: /admin/
+Disallow: /private/
+Disallow: /user/
+Disallow: /*.php$
+
 # Host
 Host: https://www.queenlens.lk
 
