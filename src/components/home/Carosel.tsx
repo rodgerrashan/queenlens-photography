@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import { motion, AnimatePresence } from "framer-motion";
 import slides from "../../../public/data/carouselSlides.json";
 import Image from "next/image";
@@ -24,9 +25,30 @@ export default function Carousel() {
     return () => clearInterval(interval);
   }, []);
 
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => 
+      (prevIndex + 1) % slides.length
+    );
+  };
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => goToNext(),
+    onSwipedRight: () => goToPrevious(),
+    preventScrollOnSwipe: true,
+    trackMouse: true
+  });
+
+
+
   return (
     <div className="relative w-screen overflow-hidden">
-      <div className="relative h-[400px] sm:h-[500px] md:h-[600px]">
+      <div className="relative h-[400px] sm:h-[500px] md:h-[600px]" {...swipeHandlers}>
         <AnimatePresence mode="wait">
           <motion.div
             key={slides[currentIndex].src}
@@ -34,7 +56,7 @@ export default function Carousel() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5 , ease: "easeInOut"}}
           >
             <Image
               src={slides[currentIndex].src}
@@ -45,6 +67,7 @@ export default function Carousel() {
               priority={currentIndex === 0}
               loading={currentIndex === 0 ? "eager" : "lazy"}
               sizes="(max-width: 640px) 100vw, (max-width: 1280px) 80vw, 2000px"
+              draggable={false}
             />
 
             <div

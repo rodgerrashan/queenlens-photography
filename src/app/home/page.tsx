@@ -11,10 +11,9 @@ import Footer from '@/components/Footer';
 import Copyrights from '@/components/Copyrights';
 import WhatsAppButton from '@/components/Whatsapputton';
 import Head from 'next/head';
+import PromoPopup from '@/components/PromoPopUp';
 
 type HomeProps = object;
-
-
 
 const Home: React.FC<HomeProps> = () => {
   return (
@@ -60,6 +59,7 @@ const Home: React.FC<HomeProps> = () => {
     </Head>
     <main>
     <Header/>
+    <PromoPopup />
       <Carousel/>
       <Portfolio/>
       <BooksAreOpen/>

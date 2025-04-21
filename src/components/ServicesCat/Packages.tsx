@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 interface Package {
     title: string;
@@ -18,13 +19,15 @@ export default function Packages({ packages }: PackagesProps) {
     return (
         <div className="flex flex-col max-w-sm md:max-w-3xl lg:max-w-5xl md:flex-row justify-center items-center gap-6 p-6 mx-auto">
             {packages.map((pkg, index) => (
-                <motion.div
+                <Link href="/contact" key={index} className={`w-full md:w-1/3 `}>
+                    
+                    <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className={`w-full md:w-1/3 p-6 rounded-2xl shadow-lg border border-gray-200 
-                    ${pkg.highlight ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ duration: 0.3, delay: index * 0.2 }}
+                    className={`w-full p-6 rounded-2xl shadow-lg border border-gray-200 ${pkg.highlight ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 '}`}
                 >
                     <h3 className="text-xl font-bold mb-2 text-center">{pkg.title}</h3>
                     <p className="text-sm text-center mb-4">{pkg.description}</p>
@@ -51,6 +54,10 @@ export default function Packages({ packages }: PackagesProps) {
                     </ul>
                     <p className="text-lg font-semibold text-center">Starts at <span className={`${pkg.highlight? 'text-yellow-500': 'text-blue-700'} pl-1`}>{pkg.price}</span></p>
                 </motion.div>
+                </Link>
+                    
+              
+                
             ))}
         </div>
     );

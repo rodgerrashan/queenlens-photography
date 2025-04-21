@@ -85,7 +85,7 @@ const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images, columnsCountBre
   }
 
   return (
-    <>
+    <div className='min-h-screen p-4'>
       {images.length > 0 && (
         <ResponsiveMasonry columnsCountBreakPoints={columnsCountBreakPoints}>
           <Masonry gutter={`${gapSize}px`}>
@@ -120,7 +120,7 @@ const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images, columnsCountBre
           </Masonry>
         </ResponsiveMasonry>
       )}
-    </>
+    </div>
   );
 };
 
