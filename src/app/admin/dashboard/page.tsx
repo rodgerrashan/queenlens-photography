@@ -11,11 +11,14 @@ export default function Dashboard() {
   return (
     <>
     <Suspense fallback={<Loading/>}>
+    <>
     <div className='min-h-screen'>
     <AdminDashboardContent/>
     </div>
       <SoftwareVersion/>
       <HelloworldCopyrights />
+    </>
+    
     </Suspense>
       
     </>
