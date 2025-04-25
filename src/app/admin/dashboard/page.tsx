@@ -1,6 +1,6 @@
 
 import { Suspense } from 'react';
-import AdminDashboardContent from '@/components/Admin/AdminDashboardContent';
+// import AdminDashboardContent from '@/components/Admin/AdminDashboardContent';
 import Loading from '@/components/Loading';
 import SoftwareVersion from '@/components/Dashboard/software-version';
 import HelloworldCopyrights from '@/components/HelloWorld/HelloworldCopyrights';
