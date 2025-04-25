@@ -12,9 +12,9 @@ export default function Dashboard() {
     <>
     <Suspense fallback={<Loading/>}>
     <>
-    <div className='min-h-screen'>
+    {/* <div className='min-h-screen'>
     <AdminDashboardContent/>
-    </div>
+    </div> */}
       <SoftwareVersion/>
       <HelloworldCopyrights />
     </>
