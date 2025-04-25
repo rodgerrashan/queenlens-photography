@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 import { useState, useEffect, Key } from "react";
 import { useSearchParams } from 'next/navigation';
 import Router from "next/router";
@@ -6,7 +7,7 @@ import { cinzelFont } from "@/styles/fonts";
 import HelloworldHeader from "@/components/HelloWorld/HelloworldHeader";
 import UserCard from "@/components/Dashboard/userCard";
 import Loading from "../Loading";
-import AdminDashboardSubmissions from "./AdminDashboardSubmissions";
+// import AdminDashboardSubmissions from "./AdminDashboardSubmissions";  
 
 
 export default function AdminDashboardContent() {
@@ -14,7 +15,7 @@ export default function AdminDashboardContent() {
   const searchParams = useSearchParams();
   const userId = searchParams.get('userId');
   
-  interface User {
+  interface User {  
     _id: Key | null | undefined;
     email: string;
     role: string;
@@ -25,24 +26,26 @@ export default function AdminDashboardContent() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch current user data
-    fetch("/api/auth/me")
-      .then((res) => res.json())
-      .then((data) => {
+    const initializeData = async () => {
+      try {
+        const res = await fetch("/api/auth/me");
+        const data = await res.json();
+        
         if (data.user) {
           setUser(data.user);
-          getUserData(userId!);
-          // console.log("Current user:", data.user);
-          // Only fetch all users if the current user fetch was successful
-          fetchAllUsers();
+          if (userId) {
+            await getUserData(userId);
+          }
+          await fetchAllUsers();
         } else {
           Router.push("/login");
         }
-      })
-      .catch(() => {
-        // console.error("Error fetching user:", error);
+      } catch (error) {
         Router.push("/login");
-      });
+      }
+    };
+
+    initializeData();
   }, [userId]);
 
   const getUserData = async (id: string) => {
@@ -106,6 +109,7 @@ export default function AdminDashboardContent() {
       alert("An error occurred while deleting the user.");
     }
   }
+  if (!user || isLoading) return <Loading/>;
 
   if (!user) return <><Loading/></>;
 
@@ -251,7 +255,7 @@ export default function AdminDashboardContent() {
         </div>
         </div>
       </div>
-      <AdminDashboardSubmissions/>
+      {/* <AdminDashboardSubmissions/> */}
       
     </>
   );

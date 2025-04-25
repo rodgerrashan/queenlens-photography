@@ -1,6 +1,6 @@
 
 import { Suspense } from 'react';
-// import AdminDashboardContent from '@/components/Admin/AdminDashboardContent';
+import AdminDashboardContent from '@/components/Admin/AdminDashboardContent';
 import Loading from '@/components/Loading';
 import SoftwareVersion from '@/components/Dashboard/software-version';
 import HelloworldCopyrights from '@/components/HelloWorld/HelloworldCopyrights';
@@ -12,9 +12,9 @@ export default function Dashboard() {
     <>
     <Suspense fallback={<Loading/>}>
     <>
-    {/* <div className='min-h-screen'>
+    <div className='min-h-screen'>
     <AdminDashboardContent/>
-    </div> */}
+    </div>
       <SoftwareVersion/>
       <HelloworldCopyrights />
     </>
