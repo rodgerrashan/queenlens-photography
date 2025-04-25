@@ -109,7 +109,7 @@ export default function AdminDashboardContent() {
       alert("An error occurred while deleting the user.");
     }
   }
-  if (!user || isLoading) return <Loading/>;
+  // if (!user || isLoading) return <Loading/>;
 
   if (!user) return <><Loading/></>;
 
