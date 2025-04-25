@@ -40,7 +40,7 @@ export default function AdminDashboardContent() {
         } else {
           Router.push("/login");
         }
-      } catch (error) {
+      } catch {
         Router.push("/login");
       }
     };
