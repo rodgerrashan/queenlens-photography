@@ -16,10 +16,10 @@ export default function Reachus() {
                 </p>
                 <div className='pl-5'>
 
-                <a href='mailto:dinukanipun2001@gmail.com'>
+                <a href='mailto:queenlens024@gmail.com'>
                 <div className='flex flex-row px-5 pb-2 mt-5'>
                     <IoMail className='h-8 w-8'/>
-                    <p className='text-xs md:text-xl pl-2 font-bold my-auto'>contact@queenlensphotography.com</p>
+                    <p className='text-xs md:text-xl pl-2 font-bold my-auto'>queenlens024@gmail.com</p>
                 </div>
 
                 </a>

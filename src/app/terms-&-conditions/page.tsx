@@ -145,10 +145,10 @@ const TermsAndConditions: React.FC = () => {
 
         </div>
         <div className = 'flex flex-col items-center md:items-start justify-center gap-2 '>
-            <a href='mailto:dinukanipun2001@gmail.com'>
+            <a href='mailto:queenlens024@gmail.com'>
                             <div className='flex flex-row px-5 pb-2 items-center'>
                                 <IoMail className='h-6 w-6'/>
-                                <p className='text-lg pl-2 font-bold'>contact@queenlensphotography.com</p>
+                                <p className='text-lg pl-2 font-bold'>queenlens024@gmail.com</p>
                             </div>
             
                             </a>

@@ -1,16 +1,17 @@
 [
   {
-    "src": "/images/carosel/queenlens-wedding-photoshoot-kandy.jpg",
-    "title": "Beautiful Wedding Moments",
-    "description": "Capture the magic of your special day with our expert wedding photography services in Sri Lanka.",
-    "alt": "Bride and groom during a wedding ceremony in Kandy, Sri Lanka."
-  },
-  {
     "src": "/images/carosel/queenlens-model-photography.jpg",
     "title": "Professional model posing",
     "description": "Showcase your unique style with professional model photoshoots in Sri Lanka.",
     "alt": "Professional model posing elegantly in a studio setting."
   },
+  {
+    "src": "/images/carosel/queenlens-wedding-photoshoot-kandy.jpg",
+    "title": "Beautiful Wedding Moments",
+    "description": "Capture the magic of your special day with our expert wedding photography services in Sri Lanka.",
+    "alt": "Bride and groom during a wedding ceremony in Kandy, Sri Lanka."
+  },
+  
   {
     "src": "/images/carosel/queenlens-casual-photoshoot.jpg",
     "title": "Natural Outdoor Elegance",

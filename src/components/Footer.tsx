@@ -110,7 +110,7 @@ const Footer = () => {
               {[
                 { icon: FaWhatsapp, href: 'https://wa.me/+94719991164', color: 'text-green-600' },
                 { icon: FaTelegram, href: 'https://t.me/+94719991164', color: 'text-blue-500' },
-                { icon: FaEnvelope, href: 'mailto:dinukanipun2001@gmail.com', color: 'text-black' },
+                { icon: FaEnvelope, href: 'mailto:queenlens024@gmail.com', color: 'text-black' },
                 { icon: FaPhone, href: 'tel:+94719991164', color: 'text-black' },
               ].map(({ icon: Icon, href, color }) => (
                 <a key={href} href={href} target='_blank' rel='noopener noreferrer'>
