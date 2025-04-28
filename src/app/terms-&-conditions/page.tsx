@@ -63,7 +63,7 @@ const TermsAndConditions: React.FC = () => {
                 </p>
                 <h3 className={commonHeading3Styles}>b. Client Responsibilities</h3>
                 <p className={commonParagraphStyles}>
-                    It is the client&aposs responsibility to inform us of any special requirements or specific shots desired before the session or event. We recommend sharing a list of must-have shots to ensure we capture your key moments.
+                    It is the client&aposs; responsibility to inform us of any special requirements or specific shots desired before the session or event. We recommend sharing a list of must-have shots to ensure we capture your key moments.
                 </p>
                 <h3 className={commonHeading3Styles}>c. Post-Production and Editing</h3>
                 <p className={commonParagraphStyles}>
