@@ -217,6 +217,7 @@ export default function ContactForm() {
   };
 
   return (
+    
     <div className="mx-auto sm:max-w-lg bg-gray-200 p-6 sm:rounded-2xl mt-5 mb-5">
       <h2 className="text-xl font-semibold text-center">Contact Form</h2>
       

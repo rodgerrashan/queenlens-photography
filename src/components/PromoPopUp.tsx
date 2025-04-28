@@ -13,7 +13,7 @@ export default function PromoPopup() {
   const expirationDate = useMemo(() => new Date('2025-05-15T23:59:59'), []);
   
   // Unique ID for this specific popup campaign
-  const popupId = 'queenlens-promo-popup-spring2025';
+  const popupId = 'queenlens-promo-popup-spring202505';
 
   useEffect(() => {
     // Check if popup was previously closed

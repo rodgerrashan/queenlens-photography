@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Copyrights from '@/components/Copyrights';
@@ -32,7 +32,15 @@ const ContactPage = () => {
             <Header/>
             <PromoPopup/>
             <ContactIntro/>
-            <ContactForm/>
+            <Suspense fallback={
+            <div className='h-screen w-screen bg-gray-950 flex justify-center items-center'>
+                <div className='animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-black'></div>
+            </div>
+            }>
+                <ContactForm/>
+            </Suspense>
+            
+            
 
             <section id='reachus'>
             <Reachus/>

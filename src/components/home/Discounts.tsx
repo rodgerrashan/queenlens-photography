@@ -22,7 +22,6 @@ export default function Discounts() {
           
           // Calculate days and hours
           const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-          const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
           
           setDaysRemaining(days);
       };
@@ -49,7 +48,7 @@ export default function Discounts() {
                 
                 <div className="my-6 py-4 px-6 border border-purple-400 border-dashed rounded-lg bg-gray-900 bg-opacity-70 max-w-2xl mx-auto">
                     <p className={`${latoFont.className} text-lg`}>
-                        Capture your special moments with <span className="font-bold text-white">QueenLens Photography</span>. Whether it's a <span className="font-bold text-blue-400">wedding</span>,{" "}
+                        Capture your special moments with <span className="font-bold text-white">QueenLens Photography</span>. Whether it&apos;s a <span className="font-bold text-blue-400">wedding</span>,{" "}
                         <span className="font-bold text-blue-400">birthday</span>,{" "}<span className="font-bold text-blue-400">family session</span>, or <span className="font-bold text-blue-400">almost anything</span>, let us help you preserve memories that last a lifetime.
                     </p>
                     
