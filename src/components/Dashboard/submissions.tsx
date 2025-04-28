@@ -11,6 +11,7 @@ interface Submission {
   phone: string;
   service: string;
   message: string;
+  code: string;
   createdAt: string;
   read: boolean;
 }
@@ -78,6 +79,7 @@ export default function Submissions() {
                 <th className="py-3 px-4 text-left">Name</th>
                 <th className="py-3 px-4 text-left">Phone</th>
                 <th className="py-3 px-4 text-left">Service</th>
+                <th className="py-3 px-4 text-left">Referral Code</th>
                 <th className="py-3 px-4 text-left">Message</th>
                 <th className="py-3 px-4 text-center">Actions</th>
                 <th className="py-3 px-4 text-center">Chaecked</th>
@@ -96,6 +98,7 @@ export default function Submissions() {
                   <td className="py-2 px-4">{`${submission.firstName} ${submission.lastName}`}</td>
                   <td className="py-2 px-4">{submission.phone}</td>
                   <td className="py-2 px-4">{submission.service}</td>
+                  <td className="py-2 px-4">{submission.code}</td>
                   <td className="py-2 px-4">
                     {submission.message.length > 30
                       ? `${submission.message.substring(0, 30)}...`
@@ -197,6 +200,9 @@ export default function Submissions() {
                     </div>
                     <div>
                       <span className="font-medium">Service:</span> {submission.service}
+                    </div>
+                    <div>
+                      <span className="font-medium">Refferal Code:</span> {submission.code}
                     </div>
                     <div>
                       <span className="font-medium">Message:</span> {submission.message}

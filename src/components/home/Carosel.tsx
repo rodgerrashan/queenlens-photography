@@ -47,8 +47,8 @@ export default function Carousel() {
 
 
   return (
-    <div className="relative w-screen overflow-hidden">
-      <div className="relative h-[400px] sm:h-[500px] md:h-[600px]" {...swipeHandlers}>
+    <div className="relative w-screen overflow-hidden" {...swipeHandlers}>
+      <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px] touch-pan-y">
         <AnimatePresence mode="wait">
           <motion.div
             key={slides[currentIndex].src}

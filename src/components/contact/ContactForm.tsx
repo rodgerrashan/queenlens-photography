@@ -12,11 +12,26 @@ export default function ContactForm() {
     // If you are using query string ?section=baby-shoot
     const section = searchParams.get('section');
 
+    
+
     if (section) {
       const formatted = formatSectionName(section);
       setFormData(prev => ({
         ...prev,
         service: formatted
+      }));
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    const refcode = searchParams.get('refcode');
+
+    
+
+    if (refcode) {
+      setFormData(prev => ({
+        ...prev,
+        code: refcode
       }));
     }
   }, [searchParams]);
@@ -38,6 +53,7 @@ export default function ContactForm() {
     phone: '',
     service: '',
     message: '',
+    code:'',
     read:false,
     
   });
@@ -52,7 +68,9 @@ export default function ContactForm() {
     email: string;
     phone: string;
     service: string;
+    code:string;
     message: string;
+    
   }
   
   interface FormErrors {
@@ -61,7 +79,9 @@ export default function ContactForm() {
     email?: string;
     phone?: string;
     service?: string;
+    code?:string;
     message?: string;
+    
   }
   
   const validateForm = (formData: FormData, setErrors: (errors: FormErrors) => void): boolean => {
@@ -118,6 +138,13 @@ export default function ContactForm() {
       newErrors.service = 'Please select a service';
     } else if (isSuspiciousInput(formData.service)) {
       newErrors.service = 'Service contains invalid characters';
+    }
+
+    // Validate code 
+    if (isSuspiciousInput(formData.code)) {
+      newErrors.code = 'Code contains invalid characters';
+        } else if (formData.code && !['save10'].includes(formData.code)) {
+      newErrors.code = 'Referral code is not valid';
     }
   
     // Validate message (required)
@@ -280,6 +307,18 @@ export default function ContactForm() {
     <p className="text-red-500 text-xs mt-1 ml-2">{errors.service}</p>
   )}
 </div>
+
+<div className="mb-2">
+          <input 
+            type="text" 
+            name="code" 
+            placeholder="Referral code" 
+            value={formData.code} 
+            onChange={handleChange}
+            className={`w-full p-2 border rounded-full pl-5 ${errors.code ? 'border-red-500' : ''}`} 
+          />
+          {errors.code && <p className="text-red-500 text-xs mt-1 ml-2">{errors.code}</p>}
+        </div>
 
         
         <div className="mb-4">

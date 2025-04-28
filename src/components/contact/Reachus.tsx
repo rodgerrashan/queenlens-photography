@@ -19,7 +19,7 @@ export default function Reachus() {
                 <a href='mailto:queenlens024@gmail.com'>
                 <div className='flex flex-row px-5 pb-2 mt-5'>
                     <IoMail className='h-8 w-8'/>
-                    <p className='text-xs md:text-xl pl-2 font-bold my-auto'>queenlens024@gmail.com</p>
+                    <p className='text-sm md:text-xl pl-2 font-bold my-auto'>queenlens024@gmail.com</p>
                 </div>
 
                 </a>

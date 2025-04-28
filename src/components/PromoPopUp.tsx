@@ -137,7 +137,7 @@ export default function PromoPopup() {
         
         {/* Call to action button */}
         <a
-          href="/contact?ref=promo10"
+          href="/contact?refcode=save10"
           onClick={(e) => {
             e.preventDefault();
             closePopup();

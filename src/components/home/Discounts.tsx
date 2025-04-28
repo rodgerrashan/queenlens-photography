@@ -65,8 +65,8 @@ export default function Discounts() {
                         </svg>
                         <span>Only <span className="text-blue-400 font-bold"> {daysRemaining} days</span> left to claim your discount!</span>
                     </div>
-
-                    <Link href="/contact">
+                    
+                    <Link href="/contact?refcode=save10">
                         <button className="group relative px-8 py-3 overflow-hidden rounded-full bg-gradient-to-r from-green-500 to-blue-600 text-white font-bold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                             <div className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
                             Book Your Session Now
