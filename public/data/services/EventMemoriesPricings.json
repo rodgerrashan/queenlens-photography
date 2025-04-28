@@ -6,7 +6,8 @@
             "50+ Premium Edited Images",
             "100 Edited Softcopies"
         ],
-        "price": "LKR 9,790/="
+        "price": "LKR 9,790/=",
+        "contact":"/contact?section=event-coverage"
     },
     {
         "title": "Platinum Package",
@@ -19,7 +20,8 @@
 
         ],
         "price": "LKR 21,790/=",
-        "highlight": true
+        "highlight": true,
+        "contact":"/contact?section=event-coverage"
     },
     {
         "title": "Gold Package",
@@ -29,6 +31,7 @@
             "Cinematic Aftermovie",
 		    "150 Edited Softcopies"
         ],
-        "price": "LKR 13,790/="
+        "price": "LKR 13,790/=",
+        "contact":"/contact?section=event-coverage"
     }
 ]

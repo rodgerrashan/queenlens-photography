@@ -10,6 +10,7 @@ import FinalNotes from '@/components/contact/FinalNotes';
 import WhatsAppButton from '@/components/Whatsapputton';
 // import Image from 'next/image';
 import Seo from '@/components/Seo';
+import PromoPopup from '@/components/PromoPopUp';
 
 
 
@@ -29,6 +30,7 @@ const ContactPage = () => {
 
             <main>
             <Header/>
+            <PromoPopup/>
             <ContactIntro/>
             <ContactForm/>
 

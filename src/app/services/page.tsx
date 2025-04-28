@@ -7,6 +7,7 @@ import Faq from '@/components/Services/Faq';
 import WhatsAppButton from '@/components/Whatsapputton';
 import OtherServices from '@/components/Services/OtherServices';
 import Seo from '@/components/Seo';
+import PromoPopup from '@/components/PromoPopUp';
 
 
 
@@ -25,6 +26,7 @@ const ServicePage = () => {
       <main>
       <div>
             <Header/>
+            <PromoPopup/>
             <Intro/>
             <OtherServices />
            

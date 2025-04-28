@@ -1,11 +1,35 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 
 
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+  
+  useEffect(() => {
+    // If you are using query string ?section=baby-shoot
+    const section = searchParams.get('section');
+
+    if (section) {
+      const formatted = formatSectionName(section);
+      setFormData(prev => ({
+        ...prev,
+        service: formatted
+      }));
+    }
+  }, [searchParams]);
+
+  function formatSectionName(section:string) {
+    if (!section) return "";
+    return section
+      .split('-')                      // Split by hyphen
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize each word
+      .join(' ');                      // Join words with space
+  }
+
+
   const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -168,6 +192,7 @@ export default function ContactForm() {
   return (
     <div className="mx-auto sm:max-w-lg bg-gray-200 p-6 sm:rounded-2xl mt-5 mb-5">
       <h2 className="text-xl font-semibold text-center">Contact Form</h2>
+      
       <p className='text-sm font-medium text-center pt-4 '>Fill out the form below, and we&apos;ll get back to you as soon as possible.</p>
       <form onSubmit={handleSubmit} className="mt-4">
         <div className="mb-2">
@@ -229,8 +254,8 @@ export default function ContactForm() {
   >
     <option value="">Choose service</option>
     <option value="Wedding Shoot">Wedding Shoot</option>
-    <option value="Couple Shoot">Couple Shoots</option>
-    <option value="Birthday Shoot">Birthday Shoots</option>
+    <option value="Couple Shoot">Couple Shoot</option>
+    <option value="Birthday Shoot">Birthday Shoot</option>
     <option value="Model Photography">Model Photography</option>
     <option value="Baby Shoot">Baby Shoot</option>
     <option value="Event Coverage">Event Coverage</option>

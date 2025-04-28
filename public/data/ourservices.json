@@ -3,42 +3,50 @@
     "title": "Wedding Shoots",
     "description": "Experience the magic of your wedding day with our expert photographers.",
     "link": "/services/wedding-shoots",
-    "icon": "Heart"
+    "icon": "Heart",
+    "contact": "/contact/wedding-shoots"
   },
   {
     "title": "Couple Memories",
     "description": "Fall in love all over again with stunning couple portraits.",
     "link": "/services/couple-memories",
-    "icon": "Users"
+    "icon": "Users",
+    "contact": "/contact/couple-memories"
   },
   {
     "title": "Birthday Moments",
     "description": "Make birthdays unforgettable with vibrant photography services.",
     "link": "/services/birthday-moments",
-    "icon": "Cake"
+    "icon": "Cake",
+    "contact": "/contact/birthday-shoot"
+
   },
   {
     "title": "Model Grace",
     "description": "Unleash your inner model with professional photography sessions.",
     "link": "/services/model-grace",
-    "icon": "Camera"
+    "icon": "Camera",
+    "contact": "/contact/model-photography"
   },
   {
     "title": "Baby Smiles",
     "description": "Capture the innocence and joy of your little ones with family photography.",
     "link": "/services/baby-smiles",
-    "icon": "Baby"
+    "icon": "Baby",
+    "contact": "/contact/baby-shoot"
   },
   {
     "title": "Event Memories",
     "description": "Relive your special events with captivating photos taken by our experts.",
     "link": "/services/event-memories",
-    "icon": "Calendar"
+    "icon": "Calendar",
+    "contact": "/contact/event-coverage"
   },
   {
     "title": "Graduation Frames",
     "description": "Celebrate academic achievements with memorable graduation photos.",
     "link": "/services/graduation-frames",
-    "icon": "GraduationCap"
+    "icon": "GraduationCap",
+    "contact": "/contact/graduation-shoot"
   }
 ]

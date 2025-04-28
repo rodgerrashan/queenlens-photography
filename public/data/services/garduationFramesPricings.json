@@ -5,7 +5,8 @@
         "details": [
             "20+ Premium Edited Softcopies"
         ],
-        "price": "LKR 4,900/="
+        "price": "LKR 4,900/=",
+        "contact":"/contact?section=graduation-shoot"
     },
     {
         "title": "Platinum Package",
@@ -16,7 +17,8 @@
             "50 Edited Softcopies"
         ],
         "price": "LKR 8,900/=",
-        "highlight": true
+        "highlight": true,
+        "contact":"/contact?section=graduation-shoot"
     },
     {
         "title": "Gold Package",
@@ -25,6 +27,7 @@
             "25+ Premium Edited Softcopies",
             "50 Edited Softcopies"
         ],
-        "price": "LKR 5,900/="
+        "price": "LKR 5,900/=",
+        "contact":"/contact?section=graduation-shoot"
     }
 ]

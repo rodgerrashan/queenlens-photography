@@ -2,7 +2,8 @@ import React from 'react';
 import Header from '@/components/Header';
 import Carousel from '@/components/home/Carosel';
 import Portfolio from '@/components/home/Portfolio';
-import BooksAreOpen from '@/components/home/BooksAreOpen';
+// import BooksAreOpen from '@/components/home/BooksAreOpen';
+import Discounts from '@/components/home/Discounts';
 import OurServices from '../../components/home/OurServices';
 import TestimonialCarousel from '@/components/home/TestimonialCarousel';
 import InstaLink from '@/components/home/InstaLink';
@@ -62,7 +63,8 @@ const Home: React.FC<HomeProps> = () => {
     <PromoPopup />
       <Carousel/>
       <Portfolio/>
-      <BooksAreOpen/>
+      {/* <BooksAreOpen/> */}
+      <Discounts/>
       <OurServices/>
       <TestimonialCarousel/>
       <InstaLink/>

@@ -12,6 +12,8 @@ import BehindScenes from '@/components/About/BehindScene';
 // import Image from 'next/image';
 import Seo from '@/components/Seo';
 
+import PromoPopup from '@/components/PromoPopUp';
+
 const AboutPage = () => {
     
     const title = "About Queenlens Photography | Passionate Storytellers";
@@ -24,6 +26,7 @@ const AboutPage = () => {
             <Seo title={title} description={description} keywords={keywords}/>
             <main>
             <Header/>
+            <PromoPopup/>
             <Slogen/>
             <Intro/>
             <BehindScenes/>

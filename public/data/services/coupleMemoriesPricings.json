@@ -6,7 +6,9 @@
             "25+ Premium Edited Images",
             "100 Softcopies"
         ],
-        "price": "LKR 12,990/="
+        "price": "LKR 12,990/=",
+        "contact":"/contact?section=couple-shoot"
+        
     },
     {
         "title": "Platinum Package",
@@ -18,7 +20,8 @@
             "100 Edited Softcopies"
         ],
         "price": "LKR 24,990/=",
-        "highlight": true
+        "highlight": true,
+        "contact":"/contact?section=couple-shoot"
     },
     {
         "title": "Gold Package",
@@ -28,6 +31,7 @@
             "8”×12” Enlargement",
             "100 Edited Softcopies"
         ],
-        "price": "LKR 18,990/="
+        "price": "LKR 18,990/=",
+        "contact":"/contact?section=couple-shoot"
     }
 ]

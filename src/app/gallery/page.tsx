@@ -14,6 +14,8 @@ import section2_images from '../../../public/data/gallery/galleryLayout2.json';
 
 import Seo from '@/components/Seo';
 
+import PromoPopup from '@/components/PromoPopUp';
+
 
 type HomeProps = object;
 
@@ -42,6 +44,7 @@ const Gallery: React.FC<HomeProps> = () => {
 
     <main>
     <Header/>
+    <PromoPopup/>
     <SubHeading/>
 {/* Section 01 */}
     <div className = "container mx-auto py-2 px-4 max-w-5xl ">

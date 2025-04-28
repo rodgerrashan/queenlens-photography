@@ -30,7 +30,7 @@ const Header: React.FC = () => {
   
 
   return (
-    <header className="bg-slate-50 text-gray-900 p-3">
+    <header className="bg-slate-50 text-gray-900 p-3 sticky top-0 z-50 shadow-xs">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">
@@ -51,7 +51,7 @@ const Header: React.FC = () => {
               key={link.href}
               href={link.href}
               className={`hover:text-blue-900 transition-colors duration-200 ${
-                pathname === link.href ? "font-bold" : ""
+                pathname === link.href ? "font-extrabold" : ""
               }`}
             >
               {link.label}

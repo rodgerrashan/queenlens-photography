@@ -6,7 +6,8 @@
             "25+ Premium Edited Images",
             "100 Edited Softcopies"
         ],
-        "price": "LKR 11,790/="
+        "price": "LKR 11,790/=",
+        "contact":"/contact?section=birthday-shoot"
     },
     {
         "title": "Platinum Package",
@@ -18,7 +19,8 @@
             "100 Softcopies"
         ],
         "price": "LKR 19,790/=",
-        "highlight": true
+        "highlight": true,
+        "contact":"/contact?section=birthday-shoot"
     },
     {
         "title": "Gold Package",
@@ -28,6 +30,7 @@
             "8”×12” Enlargement",
             "100 Softcopies"
         ],
-        "price": "LKR 14,990/="
+        "price": "LKR 14,990/=",
+        "contact":"/contact?section=birthday-shoot"
     }
 ]

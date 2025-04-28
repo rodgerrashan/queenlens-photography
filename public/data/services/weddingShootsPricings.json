@@ -10,7 +10,8 @@
         "Going Away Shoot",
         "All Soft Copies"
       ],
-      "price": "LKR 85,000/="
+      "price": "LKR 85,000/=",
+      "contact":"/contact?section=wedding-shoot"
     },
     {
       "title": "Platinum Package",
@@ -27,7 +28,8 @@
         "Wedding Album (8”×12” or 12”×15”)"
       ],
       "price": "LKR 245,000/=",
-      "highlight": true
+      "highlight": true,
+      "contact":"/contact?section=wedding-shoot"
     },
     {
       "title": "Gold Package",
@@ -41,7 +43,8 @@
         "All Soft Copies",
         "Wedding Album (8”×12” or 12”×15”)"
       ],
-      "price": "LKR 135,000/="
+      "price": "LKR 135,000/=",
+      "contact":"/contact?section=wedding-shoot"
     }
   ]
   

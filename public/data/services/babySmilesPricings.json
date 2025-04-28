@@ -6,7 +6,8 @@
             "25+ Premium Edited Images",
             "100 Softcopies"
         ],
-        "price": "LKR 12,990/="
+        "price": "LKR 12,990/=",
+        "contact":"/contact?section=baby-shoot"
     },
     {
         "title": "Platinum Package",
@@ -18,7 +19,8 @@
             "100 Edited Softcopies"
         ],
         "price": "LKR 21,990/=",
-        "highlight": true
+        "highlight": true,
+         "contact":"/contact?section=baby-shoot"
     },
     {
         "title": "Gold Package",
@@ -28,6 +30,7 @@
             "8”×12” Enlargement",
             "100 Edited Softcopies"
         ],
-        "price": "LKR 16,990/="
+        "price": "LKR 16,990/=",
+        "contact":"/contact?section=baby-shoot"
     }
 ]

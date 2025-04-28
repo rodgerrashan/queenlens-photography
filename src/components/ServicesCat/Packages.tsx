@@ -9,6 +9,7 @@ interface Package {
     details: string[];
     price: string;
     highlight?: boolean;
+    contact:string;
 }
 
 interface PackagesProps {
@@ -19,7 +20,7 @@ export default function Packages({ packages }: PackagesProps) {
     return (
         <div className="flex flex-col max-w-sm md:max-w-3xl lg:max-w-5xl md:flex-row justify-center items-center gap-6 p-6 mx-auto">
             {packages.map((pkg, index) => (
-                <Link href="/contact" key={index} className={`w-full md:w-1/3 `}>
+                <Link href={pkg.contact} key={index} className={`w-full md:w-1/3 `}>
                     
                     <motion.div
                     key={index}
