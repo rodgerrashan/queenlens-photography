@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function PromoPopup() {
   const [visible, setVisible] = useState(false);
@@ -136,17 +137,18 @@ export default function PromoPopup() {
         </div>
         
         {/* Call to action button */}
-        <a
+        <Link
+        
           href="/contact?refcode=save10"
           onClick={(e) => {
             e.preventDefault();
             closePopup();
-            window.location.href = '/contact?ref=promo10';
+            window.location.href = '/contact?refcode=save10';
           }}
           className="inline-block bg-gradient-to-r from-gray-900 to-indigo-900 hover:from-gray-800 hover:to-indigo-800 text-white px-6 py-3 rounded-full font-bold shadow-lg transform transition duration-200 hover:scale-105 uppercase tracking-wide"
         >
           Claim Offer Now
-        </a>
+        </Link>
         
         <p className="mt-4 text-xs text-gray-500">
           *Offer ends May 15, 2025 at 11:59 PM
