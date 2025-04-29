@@ -122,7 +122,7 @@ export async function POST(request: Request) {
             <li><strong>Service:</strong> ${body.service}</li>
           </ul>
           <p>Please check the admin panel for more details:</p>
-          <a href="http://localhost:3000/user/dashboard/" style="
+          <a href="http://queenlens.lk/user/dashboard/" style="
             display: inline-block;
             padding: 10px 20px;
             margin-top: 10px;

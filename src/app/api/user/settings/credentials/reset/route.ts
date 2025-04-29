@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     });
 
     // Create a reset link
-    const resetLink = `http://localhost:3000/user/reset-password?token=${token}`;
+    const resetLink = `http://queenlens.lk/user/reset-password?token=${token}`;
 
     // Configure nodemailer
     const transporter = nodemailer.createTransport({
