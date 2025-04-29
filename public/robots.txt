@@ -4,7 +4,9 @@ Allow: /
 
 Disallow: /admin/
 Disallow: /private/
+Disallow: /login/
 Disallow: /user/
+
 Disallow: /*.php$
 
 # Host

@@ -181,33 +181,31 @@ export default function ContactForm() {
     setSuccess(null);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
       const notifyData = {
         message: `You have a new message from ${formData.firstName} ${formData.lastName}.`,
         time: new Date().toISOString(),
       };
-
-      const responseNotification = await fetch('/api/notifications', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(notifyData),
-      });
       
-      if (response.ok && responseNotification.ok) {
-        // setSuccess('Message sent successfully!');
-        // setFormData({ firstName: '', lastName: '', email: '', phone: '', service: '', message: '', read: false });
-        router.push('/thank-you');
-
-        
-      } else {
-        const data = await response.json();
-        setSuccess(data.message || 'Failed to send message. Please speak directly.');
-      }
+      // Navigate immediately
+      router.push('/thank-you');
+      
+      // Fire-and-forget the background fetches
+      setTimeout(() => {
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+      
+        fetch('/api/notifications', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(notifyData),
+        });
+      }, 1000);
+      
+      
+      
     } catch  {
       // console.error('Error:', error);
       setSuccess('Something went wrong! Please try again later.');
