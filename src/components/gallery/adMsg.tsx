@@ -10,7 +10,7 @@ interface AdMsgProps {
 const AdMsg: React.FC<AdMsgProps> = ({ title, description, button_text, bg_image }) => {
   return (
     <div
-      className="max-w-xl sm:max-w-3xl md:max-w-5xl relative flex flex-col items-center justify-center rounded-xl mx-auto my-4 overflow-hidden shadow-lg"
+      className="max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-4xl  relative flex flex-col items-center justify-center rounded-xl mx-auto my-1 overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85)), url(${bg_image})`,
         backgroundSize: 'cover',
