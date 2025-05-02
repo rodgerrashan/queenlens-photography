@@ -10,7 +10,7 @@ import FinalNotes from '@/components/contact/FinalNotes';
 import WhatsAppButton from '@/components/Whatsapputton';
 // import Image from 'next/image';
 import Seo from '@/components/Seo';
-import PromoPopup from '@/components/PromoPopUp';
+// import PromoPopup from '@/components/PromoPopUp';
 
 
 
@@ -30,7 +30,7 @@ const ContactPage = () => {
 
             <main>
             <Header/>
-            <PromoPopup/>
+            {/* <PromoPopup/> */}
             <ContactIntro/>
             <Suspense fallback={
             <div className='h-screen w-screen bg-gray-950 flex justify-center items-center'>

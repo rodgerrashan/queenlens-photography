@@ -12,7 +12,7 @@ import BehindScenes from '@/components/About/BehindScene';
 // import Image from 'next/image';
 import Seo from '@/components/Seo';
 
-import PromoPopup from '@/components/PromoPopUp';
+// import PromoPopup from '@/components/PromoPopUp';
 
 const AboutPage = () => {
     
@@ -26,7 +26,7 @@ const AboutPage = () => {
             <Seo title={title} description={description} keywords={keywords}/>
             <main>
             <Header/>
-            <PromoPopup/>
+            {/* <PromoPopup/> */}
             <Slogen/>
             <Intro/>
             <BehindScenes/>
