@@ -7,9 +7,12 @@ import MasonryGallery from '@/components/gallery/masonryGallery';
 // import Image from 'next/image';
 import MoreShots from '@/components/gallery/moreShots';
 import WhatsAppButton from '@/components/Whatsapputton';
+import QueenlensGalleryUpdate from '@/components/gallery/galleryUpdate';
 
 import section1_images from '../../../public/data/gallery/galleryLayout1.json';
 import section2_images from '../../../public/data/gallery/galleryLayout2.json';
+// import section3_images from '../../../public/data/gallery/galleryLayout3.json';
+
 
 
 import Seo from '@/components/Seo';
@@ -46,6 +49,22 @@ const Gallery: React.FC<HomeProps> = () => {
     <Header/>
     {/* <PromoPopup/> */}
     <SubHeading/>
+
+    <QueenlensGalleryUpdate/>
+
+    {/* Uncomment this section if you want to add a third section later */}
+
+    {/* Section 03
+    <div className = "container mx-auto py-2 px-4 max-w-5xl ">
+    <MasonryGallery
+      images={section3_images}
+      columnsCountBreakPoints={{ 350: 2, 900: 3}}
+      gapSize={12}
+      animateLoad={true}
+    />
+    </div>
+ */}
+
 {/* Section 01 */}
     <div className = "container mx-auto py-2 px-4 max-w-5xl ">
     <MasonryGallery

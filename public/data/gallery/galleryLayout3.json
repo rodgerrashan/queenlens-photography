@@ -1,0 +1,105 @@
+[
+  
+  
+  {
+    "id": 1,
+    "src": "/images/gallery/section1/natural-model-photography-queenlens.jpg",
+    "width": 2400,
+    "height": 1200,
+    "alt": "natural model photography queenlens - queenlens photography",
+    "blurDataURL": "/images/gallery/section1/natural-model-photography-queenlens.jpg"
+},
+  {
+    "id": 2,
+    "src": "/images/gallery/section1/blooming-flower-nature-photography-queenlens.jpg",
+    "width": 1200,
+    "height": 1200,
+    "alt": "blooming flower nature photography queenlens - queenlens photography",
+    "blurDataURL": "/images/gallery/section1/blooming-flower-nature-photography-queenlens.jpg"
+},
+{
+  "id": 3,
+  "src": "/images/gallery/section1/model-photoshoot-blooming-season-kandy.jpg",
+  "width": 1000,
+  "height": 1200,
+  "alt": "model photoshoot blooming season kandy - queenlens photography",
+  "blurDataURL": "/images/gallery/section1/model-photoshoot-blooming-season-kandy.jpg"
+},
+  {
+    "id": 4,
+    "src": "/images/gallery/section1/model-photoshoot-kandy.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": ":model photoshoot kandy - queenlens photography",
+    "blurDataURL":"/images/gallery/section1/model-photoshoot-kandy.jpg"
+},
+  
+  {
+      "id": 5,
+      "src": "/images/gallery/section1/casual-model-photography-queenlens.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "",
+      "blurDataURL": "/images/gallery/section1/graduation-photography-queenlens.jpg"
+  },
+  {
+      "id": 6,
+      "src": "/images/gallery/section1/model-photography-queenlens.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "model photography queenlens - queenlens photography",
+      "blurDataURL": "/images/gallery/section1/model-photography-queenlens.jpg"
+  },
+  
+  {
+      "id": 7,
+      "src": "/images/gallery/section1/reading-event-photography-queenlens.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "reading event photography queenlens - queenlens photography",
+      "blurDataURL": "/images/gallery/section1/reading-event-photography-queenlens.jpg"
+  },
+  {
+    "id": 8,
+    "src": "/images/gallery/section1/graduation-photography-queenlens.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": " graduation photography queenlens - queenlens photography",
+    "blurDataURL": "/images/gallery/section1/graduation-photography-queenlens.jpg"
+},
+  
+  
+  {
+      "id": 9,
+      "src": "/images/gallery/section1/model-photography-on-a-bench-queenlens.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "model photography on a bench queenlens - queenlens photography  ",
+      "blurDataURL": "/images/gallery/section1/model-photography-on-a-bench-queenlens.jpg"
+  },
+  {
+    "id": 10,
+    "src": "/images/gallery/section1/nature-photography-queenlens.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "nature photography queenlens - queenlens photography",
+    "blurDataURL": "/images/gallery/section1/nature-photography-queenlens.jpg"
+},
+  {
+      "id": 11,
+      "src": "/images/gallery/section1/wedding-shoot-kandy-queenlens-photography.jpg",
+      "width": 800,
+      "height": 600,
+      "alt": "wedding shoot kandy queenlens photography - queenlens photography",
+      "blurDataURL": "/images/gallery/section1/wedding-shoot-kandy-queenlens-photography.jpg"
+  },
+  {
+    "id": 12,
+    "src": "/images/gallery/section1/wedding-shoot-kandy-queenlens-photography-1.jpg",
+    "width": 800,
+    "height": 600,
+    "alt": "wedding shoot kandy queenlens photography 1 - queenlens photography",
+    "blurDataURL": "/images/gallery/section1/wedding-shoot-kandy-queenlens-photography-1.jpg"
+}
+  
+]
