@@ -3,23 +3,23 @@
         "title": "Silver Package",
         "description": "Best for small events and tight budgets. Get high-quality photos, fast delivery, and lasting memories at great value.",
         "details": [
+			"Up to 2 Hours Coverage",
             "50+ Premium Edited Images",
             "100 Edited Softcopies"
         ],
-        "price": "LKR 9,790/=",
+        "price": "LKR 14,500/=",
         "contact":"/contact?section=event-coverage"
     },
     {
         "title": "Platinum Package",
         "description": "Capture every detail with full-day coverage, drone shots, and cinematic video. Ideal for weddings, VIP events, and premium experiences.",
         "details": [
+			"Full day event coverage of video",
             "150+ Premium Edited Images",
-            "Full event coverage of video",
 		    "Cinematic Aftermovie",
 		    "350 Edited Softcopies"
-
         ],
-        "price": "LKR 21,790/=",
+        "price": "LKR 28,500/=",
         "highlight": true,
         "contact":"/contact?section=event-coverage"
     },
@@ -27,11 +27,12 @@
         "title": "Gold Package",
         "description": "Perfect for mid-sized events, this package includes expert photography, highlight video, and optional drone shots for stylish memories.",
         "details": [
+			"Up to 4 Hours Coverage",
             "70+ Premium Edited Images",
             "Cinematic Aftermovie",
 		    "150 Edited Softcopies"
         ],
-        "price": "LKR 13,790/=",
+        "price": "LKR 18,500/=",
         "contact":"/contact?section=event-coverage"
     }
 ]
