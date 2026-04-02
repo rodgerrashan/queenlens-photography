@@ -31,7 +31,7 @@ title="Graduation Frames"
 description="Celebrate your academic achievements with our premium graduation photography services. We specialize in capturing the pride, joy, and excitement of your big day, creating timeless memories that you can cherish forever."
 />
 
-<Packages packages={weddingShootsPricings} />
+<Packages packages={weddingShootsPricings} showPrices={false} />
 <Reachout
 
 heading="Ready to commemorate your graduation in style?"

@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -19,9 +23,28 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/lib/mongodb.ts", "src/scripts/seed-admin.js", "src/app/api/contact-submissions/route.js", "src/lib/dbConnect.js", "src/app/api/admin/delete-user/[id]/route.ts", "src/app/api/admin/get-users/route.ts", "src/app/api/contact-submissions/toggle/[id]/route.ts", "src/app/error.tsx", "src/app/error.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/lib/mongodb.ts",
+    "src/scripts/seed-admin.js",
+    "src/app/api/contact-submissions/route.js",
+    "src/lib/dbConnect.js",
+    "src/app/api/admin/delete-user/[id]/route.ts",
+    "src/app/api/admin/get-users/route.ts",
+    "src/app/api/contact-submissions/toggle/[id]/route.ts",
+    "src/app/error.tsx",
+    "src/app/error.tsx",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -14,9 +14,10 @@ interface Package {
 
 interface PackagesProps {
     packages: Package[];
+    showPrices?: boolean;
 }
 
-export default function Packages({ packages }: PackagesProps) {
+export default function Packages({ packages, showPrices = true }: PackagesProps) {
     return (
         <div className="flex flex-col max-w-sm md:max-w-3xl lg:max-w-5xl md:flex-row justify-center items-center gap-6 p-6 mx-auto">
             {packages.map((pkg, index) => (
@@ -53,7 +54,9 @@ export default function Packages({ packages }: PackagesProps) {
                             </li>
                         ))}
                     </ul>
-                    <p className="text-lg font-semibold text-center">Starts at <span className={`${pkg.highlight? 'text-yellow-500': 'text-blue-700'} pl-1`}>{pkg.price}</span></p>
+                    {showPrices && (
+                        <p className="text-lg font-semibold text-center">Starts at <span className={`${pkg.highlight? 'text-yellow-500': 'text-blue-700'} pl-1`}>{pkg.price}</span></p>
+                    )}
                 </motion.div>
                 </Link>
                     
